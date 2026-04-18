@@ -1,63 +1,80 @@
-interface LinkItem {
+interface LinkCard {
+  category: string;
+  categoryColor: string;
   label: string;
   description: string;
+  cta: string;
   href: string;
 }
 
-const links: LinkItem[] = [
+const links: LinkCard[] = [
   {
+    category: 'Live Project',
+    categoryColor: 'bg-indigo-50 text-indigo-600',
     label: 'mycareerintel.com',
     description: 'Career Intelligence app — live demo',
+    cta: 'Open project',
     href: 'https://mycareerintel.com',
   },
   {
+    category: 'Code',
+    categoryColor: 'bg-slate-100 text-slate-600',
     label: 'GitHub',
     description: 'github.com/ntxtthomas',
+    cta: 'View profile',
     href: 'https://github.com/ntxtthomas',
   },
   {
+    category: 'Network',
+    categoryColor: 'bg-blue-50 text-blue-600',
     label: 'LinkedIn',
     description: 'linkedin.com/in/ntxtthomas',
+    cta: 'Connect',
     href: 'https://www.linkedin.com/in/ntxtthomas',
   },
 ];
 
 export default function Links() {
   return (
-    <section className="py-10">
-      <h2 className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
-        Links
-      </h2>
-      <ul className="flex flex-col gap-3">
-        {links.map(({ label, href, description }) => (
-          <li key={href}>
+    <section className="bg-white py-16">
+      <div className="mx-auto max-w-4xl px-6">
+        <h2 className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
+          Work &amp; Presence
+        </h2>
+        <div className="grid gap-5 sm:grid-cols-3">
+          {links.map(({ category, categoryColor, label, description, cta, href }) => (
             <a
+              key={href}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between rounded-lg border border-slate-200 px-5 py-4 transition-all hover:border-indigo-400 hover:bg-indigo-50"
+              className="group flex flex-col rounded-xl border border-slate-200 p-6 transition-all hover:border-indigo-300 hover:shadow-md"
             >
-              <div>
-                <span className="font-semibold text-slate-800 group-hover:text-indigo-700">
-                  {label}
-                </span>
-                <p className="text-sm text-slate-500">{description}</p>
+              <span className={`mb-3 inline-block self-start rounded-full px-2.5 py-0.5 text-xs font-medium ${categoryColor}`}>
+                {category}
+              </span>
+              <h3 className="text-base font-semibold text-slate-900 group-hover:text-indigo-700">
+                {label}
+              </h3>
+              <p className="mt-1 text-sm text-slate-500">{description}</p>
+              <div className="mt-4 flex items-center text-xs text-slate-400 group-hover:text-indigo-500">
+                <span>{cta}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="ml-1 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-indigo-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
             </a>
-          </li>
-        ))}
-      </ul>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

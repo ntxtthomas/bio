@@ -1,21 +1,25 @@
 import Certifications from './components/Certifications';
 import Hero from './components/Hero';
 import Links from './components/Links';
-import ResumeDownload from './components/ResumeDownload';
 
 function App() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="mx-auto max-w-lg px-6 pb-16">
-        <Hero />
-        <hr className="border-slate-100" />
-        <ResumeDownload />
-        <hr className="border-slate-100" />
-        <Links />
-        <hr className="border-slate-100" />
-        <Certifications />
-      </div>
-    </main>
+    <div className="min-h-screen font-sans antialiased">
+      <Hero />
+      <Links />
+      <Certifications />
+      <footer className="bg-slate-900 py-6 text-center text-xs text-slate-500">
+        <p>
+          &copy; {new Date().getFullYear()} Terry Thomas &middot;{' '}
+          <a
+            href="mailto:apm.tthomas@gmail.com"
+            className="transition-colors hover:text-slate-300"
+          >
+            apm.tthomas@gmail.com
+          </a>
+        </p>
+      </footer>
+    </div>
   );
 }
 
