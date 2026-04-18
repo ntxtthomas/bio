@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const traits = [
   { label: 'Outdoors', detail: 'backpacking · trail running · kayaking' },
   { label: 'Lifelong learner', detail: 'always expanding the knowledge base' },
@@ -6,6 +8,8 @@ const traits = [
 ];
 
 export default function About() {
+  const [activePill, setActivePill] = useState<number | null>(null);
+
   return (
     <section className="bg-white py-16">
       <div className="mx-auto max-w-4xl px-6">
@@ -29,18 +33,32 @@ export default function About() {
         </div>
 
         {/* Trait pills */}
-        <div className="flex flex-wrap justify-center gap-3">
-          {traits.map(({ label, detail }) => (
-            <div
-              key={label}
-              className="group cursor-default rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-sm text-slate-600 transition-all duration-200 hover:border-indigo-200 hover:bg-indigo-50 hover:px-5 hover:text-indigo-700 hover:shadow-sm"
-            >
-              <span>{label}</span>
-              <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-200 group-hover:max-w-xs group-hover:opacity-100">
-                &ensp;·&ensp;{detail}
-              </span>
-            </div>
-          ))}
+        <div className="flex flex-wrap justify-start gap-3 sm:justify-center">
+          {traits.map(({ label, detail }, i) => {
+            const isActive = activePill === i;
+            return (
+              <div
+                key={label}
+                onClick={() => setActivePill(isActive ? null : i)}
+                className={`group cursor-pointer rounded-full border px-4 py-1.5 text-sm transition-all duration-200 hover:px-5 hover:shadow-sm ${
+                  isActive
+                    ? 'border-indigo-200 bg-indigo-50 px-5 text-indigo-700 shadow-sm'
+                    : 'border-slate-200 bg-slate-50 text-slate-600 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700'
+                }`}
+              >
+                <span>{label}</span>
+                <span
+                  className={`overflow-hidden whitespace-nowrap transition-all duration-200 ${
+                    isActive
+                      ? 'max-w-xs opacity-100'
+                      : 'max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100'
+                  }`}
+                >
+                  &ensp;·&ensp;{detail}
+                </span>
+              </div>
+            );
+          })}
         </div>
 
       </div>
