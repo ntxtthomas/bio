@@ -15,7 +15,7 @@ const certs: Cert[] = [
     color: 'bg-amber-50 border-amber-200 text-amber-800',
   },
   {
-    name: 'GitHub Foundations',
+    name: 'GitHub Actions',
     code: 'GH-200',
     issuer: 'GitHub',
     color: 'bg-slate-50 border-slate-200 text-slate-800',
