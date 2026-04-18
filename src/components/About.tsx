@@ -8,16 +8,15 @@ const traits = [
 export default function About() {
   return (
     <section className="bg-white py-16">
-      <div className="mx-auto max-w-2xl px-6">
+      <div className="mx-auto max-w-4xl px-6">
 
         {/* Professional bio */}
         <p className="text-base leading-relaxed text-slate-700">
-          Software engineer with 8+ years of experience building and scaling multi-tenant SaaS
-          platforms. Led a system-integration audit that improved data integrity and reduced API
-          costs, and refactored a Rails service supporting over a million users to increase
-          reliability and test coverage. Experienced with AWS infrastructure, CI/CD pipelines,
-          and observability tools for rapid issue resolution. Focused on delivering stable,
-          high-performing systems for mission-driven organizations.
+          I’m a software engineer who builds reliable, production-grade systems for real users. Over the past 8+ years 
+          in EdTech SaaS, I’ve worked on applications serving over a million users—improving data integrity, reducing 
+          operational costs, and making systems easier to trust and maintain. I’m at my best when I’m untangling complex 
+          systems, strengthening reliability, and helping teams ship with confidence so the product can do what it’s 
+          meant to do: <strong>deliver real value to the people using it.</strong>
         </p>
 
         {/* Divider */}
@@ -30,7 +29,7 @@ export default function About() {
         </div>
 
         {/* Trait pills */}
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap justify-center gap-3">
           {traits.map(({ label, detail }) => (
             <div
               key={label}
