@@ -11,12 +11,12 @@ export default function About() {
       <div className="mx-auto max-w-4xl px-6">
 
         {/* Professional bio */}
-        <p className="text-base leading-relaxed text-slate-700">
+        <p className="text-justify text-base leading-relaxed text-slate-700">
           I’m a software engineer who builds reliable, production-grade systems for real users. Over the past 8+ years 
           in EdTech SaaS, I’ve worked on applications serving over a million users—improving data integrity, reducing 
           operational costs, and making systems easier to trust and maintain. I’m at my best when I’m untangling complex 
           systems, strengthening reliability, and helping teams ship with confidence so the product can do what it’s 
-          meant to do: <strong>deliver real value to the people using it.</strong>
+          meant to do: <br /><strong>deliver real value to the people using it.</strong>
         </p>
 
         {/* Divider */}
@@ -33,10 +33,12 @@ export default function About() {
           {traits.map(({ label, detail }) => (
             <div
               key={label}
-              title={detail}
-              className="rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-sm text-slate-600"
+              className="group cursor-default rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-sm text-slate-600 transition-all duration-200 hover:border-indigo-200 hover:bg-indigo-50 hover:px-5 hover:text-indigo-700 hover:shadow-sm"
             >
-              {label}
+              <span>{label}</span>
+              <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-200 group-hover:max-w-xs group-hover:opacity-100">
+                &ensp;·&ensp;{detail}
+              </span>
             </div>
           ))}
         </div>
