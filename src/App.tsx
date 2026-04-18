@@ -1,3 +1,4 @@
+import About from './components/About';
 import Certifications from './components/Certifications';
 import Hero from './components/Hero';
 import Links from './components/Links';
@@ -6,6 +7,7 @@ function App() {
   return (
     <div className="min-h-screen font-sans antialiased">
       <Hero />
+      <About />
       <Links />
       <Certifications />
       <footer className="bg-slate-900 py-6 text-center text-xs text-slate-500">
