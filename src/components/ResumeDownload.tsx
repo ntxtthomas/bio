@@ -2,7 +2,7 @@ export default function ResumeDownload() {
   return (
     <section className="flex justify-center py-8">
       <a
-        href="/resume.pdf"
+        href="/terry_thomas_software_engineer_265a.pdf"
         download
         className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"
       >
