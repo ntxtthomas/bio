@@ -35,7 +35,7 @@ export default function Hero() {
         {/* Primary CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a
-            href="/terry_thomas_software_engineer_0426c.pdf"
+            href="/terry_thomas_software_engineer_265a.pdf"
             download
             className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-md transition-all hover:bg-indigo-50 hover:shadow-lg active:scale-95"
           >
