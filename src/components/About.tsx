@@ -15,16 +15,18 @@ export default function About() {
       <div className="mx-auto max-w-4xl px-6">
 
         {/* Professional bio */}
-        <p className="text-justify text-base leading-relaxed text-slate-700">
-          I’m a software engineer who builds reliable, production-grade systems for real users. 
+        <div className="text-justify text-base leading-relaxed text-slate-700">
+          <p className="mb-4">I’m a software engineer who builds reliable, production-grade systems for real users. 
           Over the past 8+ years in SaaS, I’ve worked on applications serving over a million users, 
           improving data integrity, reducing operational costs, and making systems easier to trust and maintain.
+          </p>
 
-          I’m drawn to the parts of software that aren’t always visible—data integrity, reliability, 
+          <p>I’m drawn to the parts of software that aren’t always visible—data integrity, reliability, 
           and the structure that helps teams move faster without breaking things. I enjoy untangling 
           complex, workflow-driven systems and working with teams to turn messy problems into solutions 
           that are clear, stable, and built to last.
-        </p>
+          </p>
+        </div>
 
         {/* Divider */}
         <div className="my-8 flex items-center gap-4">
