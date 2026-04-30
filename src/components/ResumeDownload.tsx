@@ -1,7 +1,12 @@
 export default function ResumeDownload() {
+  
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  
   return (
     <section className="flex justify-center py-8">
       <a
+        target={isIOS ? "_blank" : "_self"}
+        rel={isIOS ? "noopener noreferrer" : "undefined"}
         href="/resume.pdf"
         download
         className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"
