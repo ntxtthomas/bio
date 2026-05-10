@@ -1,12 +1,20 @@
+import { useState } from 'react';
 import About from './components/About';
 import Certifications from './components/Certifications';
 import Hero from './components/Hero';
 import Links from './components/Links';
+import ResumeViewer from './components/ResumeViewer';
 
 function App() {
+  const [viewingResume, setViewingResume] = useState(false);
+
+  if (viewingResume) {
+    return <ResumeViewer onBack={() => setViewingResume(false)} />;
+  }
+
   return (
     <div className="min-h-screen font-sans antialiased">
-      <Hero />
+      <Hero onViewResume={() => setViewingResume(true)} />
       <About />
       <Links />
       <Certifications />
