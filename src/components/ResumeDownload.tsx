@@ -3,14 +3,13 @@ export default function ResumeDownload() {
   const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
   
   return (
-    <section className="flex justify-center py-8">
-      <a
-        target={isIOS ? "_blank" : "_self"}
-        rel={isIOS ? "noopener noreferrer" : undefined}
-        href="/resume.pdf"
-        {...(isIOS ? {} : { download: true })}
-        className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"
-      >
+    <a
+      target={isIOS ? "_blank" : "_self"}
+      rel={isIOS ? "noopener noreferrer" : undefined}
+      href="/resume.pdf"
+      {...(isIOS ? {} : { download: true })}
+      className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-md transition-all hover:bg-indigo-50 hover:shadow-lg active:scale-95"
+    >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-4 w-4"
@@ -28,6 +27,5 @@ export default function ResumeDownload() {
         </svg>
         Download Resume
       </a>
-    </section>
   );
 }
