@@ -1,7 +1,11 @@
 import headshot from '../assets/tthomas_3.png';
 import ResumeDownload from './ResumeDownload';
 
-export default function Hero() {
+interface HeroProps {
+  onViewResume: () => void;
+}
+
+export default function Hero({ onViewResume }: HeroProps) {
   return (
     <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-6 py-24 text-white">
       <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
@@ -35,7 +39,7 @@ export default function Hero() {
 
         {/* Primary CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <ResumeDownload />
+          <ResumeDownload onViewResume={onViewResume} />
           <a
             href="mailto:apm.tthomas@gmail.com"
             className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white/10 active:scale-95"

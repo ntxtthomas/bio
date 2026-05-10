@@ -1,13 +1,11 @@
-export default function ResumeDownload() {
-  
-  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-  
+interface ResumeDownloadProps {
+  onViewResume: () => void;
+}
+
+export default function ResumeDownload({ onViewResume }: ResumeDownloadProps) {
   return (
-    <a
-      target={isIOS ? "_blank" : "_self"}
-      rel={isIOS ? "noopener noreferrer" : undefined}
-      href="/resume.pdf"
-      {...(isIOS ? {} : { download: true })}
+    <button
+      onClick={onViewResume}
       className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-md transition-all hover:bg-indigo-50 hover:shadow-lg active:scale-95"
     >
         <svg
@@ -26,6 +24,6 @@ export default function ResumeDownload() {
           />
         </svg>
         Download Resume
-      </a>
+      </button>
   );
 }
