@@ -3,6 +3,8 @@ interface TraitPanelItem {
   eyebrow: string;
   description: string;
   accent: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 interface TraitPanelProps {
@@ -96,12 +98,20 @@ export default function TraitPanel({
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
-            {items.map(({ title, eyebrow, description: itemDescription, accent }) => (
+            {items.map(({ title, eyebrow, description: itemDescription, accent, imageSrc, imageAlt }) => (
               <article
                 key={title}
                 className="group overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-900/70"
               >
-                <div className={`h-32 bg-gradient-to-br ${accent} transition-transform duration-300 group-hover:scale-[1.03]`} />
+                {imageSrc ? (
+                  <img
+                    src={imageSrc}
+                    alt={imageAlt ?? title}
+                    className="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
+                ) : (
+                  <div className={`h-32 bg-gradient-to-br ${accent} transition-transform duration-300 group-hover:scale-[1.03]`} />
+                )}
                 <div className="space-y-3 p-5">
                   <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-slate-400">
                     {eyebrow}

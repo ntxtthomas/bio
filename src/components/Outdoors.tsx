@@ -21,18 +21,24 @@ export default function Outdoors({ onClose }: OutdoorsProps) {
           eyebrow: 'Long-form reset',
           description: 'Multi-day trips keep me honest about preparation, tradeoffs, and staying calm when the plan changes.',
           accent: 'from-emerald-300 via-lime-200 to-stone-100',
+          imageSrc: '/outdoors-backpacking.jpg',
+          imageAlt: 'Terry backpacking outdoors',
         },
         {
           title: 'Trail Running',
           eyebrow: 'Momentum builder',
           description: 'Trail miles are where I sharpen pacing, recovery, and the habit of making good decisions while tired.',
           accent: 'from-amber-200 via-orange-100 to-rose-50',
+          imageSrc: '/outdoors-trail-running.jpg',
+          imageAlt: 'Terry trail running outdoors',
         },
         {
           title: 'Kayaking',
           eyebrow: 'Quiet systems check',
           description: 'Time on the water slows everything down enough to notice conditions, adapt early, and enjoy the work.',
           accent: 'from-sky-300 via-cyan-200 to-blue-50',
+          imageSrc: '/outdoors-kayaking.jpg',
+          imageAlt: 'Terry kayaking outdoors',
         },
       ]}
       onClose={onClose}

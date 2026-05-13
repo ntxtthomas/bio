@@ -21,18 +21,24 @@ export default function LifelongLearner({ onClose }: LifelongLearnerProps) {
           eyebrow: 'Pattern recognition',
           description: 'I like mapping how pieces interact, where failure spreads, and where small design changes buy disproportionate clarity.',
           accent: 'from-indigo-300 via-sky-200 to-cyan-50',
+          imageSrc: '/learning-systems.png',
+          imageAlt: 'Terry backpacking outdoors',
         },
         {
           title: 'Hands-on Labs',
           eyebrow: 'Applied practice',
           description: 'New ideas stick when I can test them under friction, not just read about them in the abstract.',
           accent: 'from-amber-200 via-yellow-100 to-stone-50',
+          imageSrc: '/learning-applied.jpg',
+          imageAlt: 'Terry backpacking outdoors',
         },
         {
           title: 'Clear Explanation',
           eyebrow: 'Signal over jargon',
           description: 'Learning is only complete when I can explain the tradeoffs cleanly to someone else on the team.',
           accent: 'from-emerald-300 via-teal-200 to-cyan-50',
+          imageSrc: '/learning-signal.jpg',
+          imageAlt: 'Terry backpacking outdoors',
         },
       ]}
       onClose={onClose}
