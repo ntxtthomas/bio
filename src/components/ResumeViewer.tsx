@@ -17,6 +17,37 @@ export default function ResumeViewer({ onBack }: ResumeViewerProps) {
     onBack();
   };
 
+  const handleDownload = async () => {
+    const resumeUrl = `${window.location.origin}/resume.pdf`;
+    const isStandalone =
+      window.matchMedia('(display-mode: standalone)').matches ||
+      // iOS Safari/PWA legacy standalone flag
+      (window.navigator as Navigator & { standalone?: boolean }).standalone === true;
+
+    // iOS PWAs can ignore `download` and trap users in a PDF screen.
+    // Prefer the Share sheet so users can Save to Files without losing navigation.
+    if (isStandalone && typeof navigator.share === 'function') {
+      try {
+        await navigator.share({
+          title: 'Resume',
+          text: 'Terry Thomas resume',
+          url: resumeUrl,
+        });
+        return;
+      } catch {
+        // User canceled share or share failed; continue to fallback.
+      }
+    }
+
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'terry_thomas_resume.pdf';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="h-screen w-screen flex flex-col bg-slate-900">
       {/* Control bar */}
@@ -42,9 +73,8 @@ export default function ResumeViewer({ onBack }: ResumeViewerProps) {
         
         <h1 className="text-sm font-semibold text-white">Resume</h1>
         
-        <a
-          href="/resume.pdf"
-          download="terry_thomas_resume.pdf"
+        <button
+          onClick={handleDownload}
           className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"
           aria-label="Download resume"
         >
@@ -60,7 +90,7 @@ export default function ResumeViewer({ onBack }: ResumeViewerProps) {
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
           Download
-        </a>
+        </button>
       </div>
 
       {/* PDF viewer */}

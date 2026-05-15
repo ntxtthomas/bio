@@ -1,14 +1,41 @@
 import { useState } from 'react';
+import Community from './Community';
+import HusbandFather from './HusbandFather';
+import LifelongLearner from './LifelongLearner';
+import Outdoors from './Outdoors';
 
 const traits = [
-  { label: 'Outdoors', detail: 'backpacking · trail running · kayaking' },
-  { label: 'Lifelong learner', detail: 'always expanding the knowledge base' },
-  { label: 'Husband & father', detail: 'raising two teenage daughters' },
-  { label: 'Community', detail: 'advocate against food & housing insecurity' },
+  { id: 'outdoors', label: 'Outdoors', detail: 'backpacking · trail running · kayaking' },
+  { id: 'lifelong-learner', label: 'Lifelong learner', detail: 'always expanding the knowledge base' },
+  { id: 'husband-father', label: 'Husband & father', detail: 'raising two teenage daughters' },
+  { id: 'community', label: 'Community', detail: 'advocate against food & housing insecurity' },
 ];
 
 export default function About() {
-  const [activePill, setActivePill] = useState<number | null>(null);
+  const [activePill, setActivePill] = useState<string | null>(null);
+  const hasActivePill = activePill !== null;
+  const orderedTraits = activePill
+    ? [...traits].sort((left, right) => Number(right.id === activePill) - Number(left.id === activePill))
+    : traits;
+
+  const closeActivePanel = () => {
+    setActivePill(null);
+  };
+
+  const renderActivePanel = () => {
+    switch (activePill) {
+      case 'outdoors':
+        return <Outdoors onClose={closeActivePanel} />;
+      case 'lifelong-learner':
+        return <LifelongLearner onClose={closeActivePanel} />;
+      case 'husband-father':
+        return <HusbandFather onClose={closeActivePanel} />;
+      case 'community':
+        return <Community onClose={closeActivePanel} />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <section className="bg-white py-16">
@@ -38,17 +65,24 @@ export default function About() {
         </div>
 
         {/* Trait pills */}
-        <div className="flex flex-wrap justify-start gap-3 sm:justify-center">
-          {traits.map(({ label, detail }, i) => {
-            const isActive = activePill === i;
+        <div className="flex flex-wrap justify-start gap-3 transition-all duration-300 sm:justify-center">
+          {orderedTraits.map(({ id, label, detail }) => {
+            const isActive = activePill === id;
+            const allowHoverExpansion = !hasActivePill;
             return (
-              <div
+              <button
                 key={label}
-                onClick={() => setActivePill(isActive ? null : i)}
-                className={`group cursor-pointer rounded-full border px-4 py-1.5 text-sm transition-all duration-200 hover:px-5 hover:shadow-sm ${
+                type="button"
+                onClick={() => setActivePill(isActive ? null : id)}
+                aria-expanded={isActive}
+                className={`group inline-flex cursor-pointer items-center rounded-full border px-4 py-1.5 text-sm transition-all duration-300 ${
                   isActive
                     ? 'border-indigo-200 bg-indigo-50 px-5 text-indigo-700 shadow-sm'
-                    : 'border-slate-200 bg-slate-50 text-slate-600 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700'
+                    : `border-slate-200 bg-slate-50 text-slate-600 ${
+                        allowHoverExpansion
+                          ? 'hover:border-indigo-200 hover:bg-indigo-50 hover:px-5 hover:text-indigo-700 hover:shadow-sm'
+                          : ''
+                      }`
                 }`}
               >
                 <span>{label}</span>
@@ -56,14 +90,26 @@ export default function About() {
                   className={`overflow-hidden whitespace-nowrap transition-all duration-200 ${
                     isActive
                       ? 'max-w-xs opacity-100'
-                      : 'max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100'
+                      : allowHoverExpansion
+                        ? 'max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100'
+                        : 'max-w-0 opacity-0'
                   }`}
                 >
                   &ensp;·&ensp;{detail}
                 </span>
-              </div>
+              </button>
             );
           })}
+        </div>
+
+        <div
+          className={`grid transition-[grid-template-rows,opacity,margin] duration-500 ease-out ${
+            hasActivePill ? 'mt-8 grid-rows-[1fr] opacity-100' : 'mt-0 grid-rows-[0fr] opacity-0'
+          }`}
+        >
+          <div className="overflow-hidden">
+            {renderActivePanel()}
+          </div>
         </div>
 
       </div>
