@@ -13,7 +13,7 @@ interface TraitPanelProps {
   description: string;
   focusLabel: string;
   focusCopy: string;
-  directionCopy: string;
+  directionCopy?: string;
   nextStepCopy?: string;
   nextStepVideo?: DirectionVideo;
   tags: string[];
@@ -93,9 +93,11 @@ export default function TraitPanel({
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-200">
                 Direction
               </p>
-              <p className="mt-4 text-sm leading-7 text-emerald-50/90">
-                {directionCopy}
-              </p>
+              {directionCopy && (
+                <p className="mt-4 text-sm leading-7 text-emerald-50/90">
+                  {directionCopy}
+                </p>
+              )}
               <div className="mt-6 rounded-[1.25rem] border border-white/10 bg-slate-950/55 p-4">
                 {!nextStepVideo && (
                   <p className="text-sm font-medium text-white">Next upgrade path</p>
