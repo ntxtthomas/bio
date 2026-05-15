@@ -12,8 +12,8 @@ export default function Outdoors({ onClose }: OutdoorsProps) {
       description="This is the early version of a more personal section. For now, it rounds out the story: I like disciplined work, long horizons, and environments that reward preparation without punishing curiosity."
       focusLabel="Off-screen credibility"
       focusCopy="I do some of my best thinking outdoors. The appeal is the same one that draws me to software reliability work: pay attention, respect the constraints, and keep moving with intent."
-      directionCopy="This block is ready to become a short reel, a photo strip, or a set of expandable stories. The interaction model stays the same."
-      nextStepCopy="Swap these placeholders for three outdoor images, or use this space for one autoplay-muted clip with still-image fallbacks on mobile."
+    //   directionCopy="This block is ready to become a short reel, a photo strip, or a set of expandable stories. The interaction model stays the same."
+    //   nextStepCopy="Swap these placeholders for three outdoor images, or use this space for one autoplay-muted clip with still-image fallbacks on mobile."
       tags={['Steady under load', 'Prepared, not precious', 'Enjoys the hard route']}
       items={[
         {
