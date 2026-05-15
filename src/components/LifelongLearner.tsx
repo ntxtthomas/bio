@@ -13,7 +13,11 @@ export default function LifelongLearner({ onClose }: LifelongLearnerProps) {
       focusLabel="Learning style"
       focusCopy="I learn best by building, refactoring, and tracing systems until the hidden assumptions show themselves. That habit translates directly into stronger engineering judgment."
       directionCopy="Speaking of learning, I taught myself GenAI using three different platforms to produce this little video metaphor on System Thinking, Hands-On Expirementation, and Clear Explanation!"
-      nextStepCopy="A good next version would show recent areas of study with one concrete outcome each: a refactor, a bug fix, a deployment, or a small experiment that changed how I think."
+      nextStepVideo={{
+        src: '/learning.mp4',
+        poster: '/learning_thumbnail.png',
+        title: 'System Thinking Video',
+      }}
       tags={['Builds to learn', 'Prefers first principles', 'Translates curiosity into output']}
       items={[
         {
