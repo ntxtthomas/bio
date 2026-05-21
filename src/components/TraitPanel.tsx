@@ -21,11 +21,11 @@ interface TraitPanelProps {
   onClose: () => void;
 }
 
-interface DirectionVideo {
-  src: string;
-  poster: string;
-  title?: string;
-}
+// interface DirectionVideo {
+//   src: string;
+//   poster: string;
+//   title?: string;
+// }
 
 export default function TraitPanel({
   sectionLabel,
