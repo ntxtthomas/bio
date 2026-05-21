@@ -68,7 +68,7 @@ export default function TraitPanel({
             </button>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 backdrop-blur-sm sm:p-6">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">
                 <span className="h-2 w-2 rounded-full bg-emerald-300" />
@@ -89,7 +89,7 @@ export default function TraitPanel({
               </div>
             </div>
 
-            <div className="rounded-[1.5rem] border border-emerald-400/20 bg-emerald-300/10 p-5 sm:p-6">
+            {/* <div className="rounded-[1.5rem] border border-emerald-400/20 bg-emerald-300/10 p-5 sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-200">
                 Direction
               </p>
@@ -116,7 +116,7 @@ export default function TraitPanel({
                   </p>
                 )}
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
