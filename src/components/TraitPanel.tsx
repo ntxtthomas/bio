@@ -13,9 +13,9 @@ interface TraitPanelProps {
   description: string;
   focusLabel: string;
   focusCopy: string;
-  directionCopy?: string;
-  nextStepCopy?: string;
-  nextStepVideo?: DirectionVideo;
+  // directionCopy?: string;
+  // nextStepCopy?: string;
+  // nextStepVideo?: DirectionVideo;
   tags: string[];
   items: TraitPanelItem[];
   onClose: () => void;
@@ -33,9 +33,9 @@ export default function TraitPanel({
   description,
   focusLabel,
   focusCopy,
-  directionCopy,
-  nextStepCopy,
-  nextStepVideo,
+  // directionCopy,
+  // nextStepCopy,
+  // nextStepVideo,
   tags,
   items,
   onClose,

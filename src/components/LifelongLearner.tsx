@@ -12,12 +12,12 @@ export default function LifelongLearner({ onClose }: LifelongLearnerProps) {
       description="The common thread in my learning is practical depth. I do not collect trivia; I build working understanding that helps me move faster and make better calls."
       focusLabel="Learning style"
       focusCopy="I learn best by building, refactoring, and tracing systems until the hidden assumptions show themselves. That habit translates directly into stronger engineering judgment."
-      directionCopy="Speaking of learning, I taught myself GenAI using three different platforms to produce this little video metaphor on System Thinking, Hands-On Expirementation, and Clear Explanation!"
-      nextStepVideo={{
-        src: '/learning.mp4',
-        poster: '/learning_thumbnail.png',
-        title: 'System Thinking Video',
-      }}
+      // directionCopy="Speaking of learning, I taught myself GenAI using three different platforms to produce this little video metaphor on System Thinking, Hands-On Expirementation, and Clear Explanation!"
+      // nextStepVideo={{
+      //   src: '/learning.mp4',
+      //   poster: '/learning_thumbnail.png',
+      //   title: 'System Thinking Video',
+      // }}
       tags={['Builds to learn', 'Prefers first principles', 'Translates curiosity into output']}
       items={[
         {
