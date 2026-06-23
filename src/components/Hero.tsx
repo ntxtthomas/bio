@@ -1,16 +1,28 @@
 import headshot from '../assets/tthomas_3.png';
+import type { CareerLens } from '../types/career';
+import { careerLensOptions } from '../types/career';
 import ResumeDownload from './ResumeDownload';
 
 interface HeroProps {
-  onViewResume: () => void;
+  lens: CareerLens;
+  onLensChange: (nextLens: CareerLens) => void;
 }
 
-export default function Hero({ onViewResume }: HeroProps) {
+const lensContent: Record<CareerLens, { title: string; subtitle: string }> = {
+  engineer: {
+    title: 'Senior Software Engineer',
+    subtitle: 'Software Engineer · Systems & Reliability · SaaS Platforms',
+  },
+  builder: {
+    title: 'Builder | Problem Solver | Operator',
+    subtitle: 'Business Leadership · Technology Sales · Operations · Engineering',
+  },
+};
+
+export default function Hero({ lens, onLensChange }: HeroProps) {
   return (
     <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-6 py-24 text-white">
       <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
-
-        {/* Headshot */}
         <div className="relative">
           <img
             src={headshot}
@@ -23,23 +35,51 @@ export default function Hero({ onViewResume }: HeroProps) {
           />
         </div>
 
-        {/* Name + tagline */}
+        <div className="w-full max-w-xl rounded-2xl border border-white/15 bg-white/5 p-2 backdrop-blur-sm">
+          <div className="grid gap-2 sm:grid-cols-2">
+            {careerLensOptions.map((option) => {
+              const isActive = option.id === lens;
+              return (
+                <button
+                  key={option.id}
+                  type="button"
+                  onClick={() => onLensChange(option.id)}
+                  aria-pressed={isActive}
+                  className={`rounded-xl px-3 py-2 text-left transition-all ${
+                    isActive
+                      ? 'bg-white text-slate-900 shadow-md'
+                      : 'bg-transparent text-slate-200 hover:bg-white/10'
+                  }`}
+                >
+                  <p className="text-xs font-semibold uppercase tracking-wider">{option.label}</p>
+                  <p className={`mt-1 text-[0.72rem] leading-5 ${isActive ? 'text-slate-600' : 'text-slate-300'}`}>
+                    {option.description}
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+          <p className="mt-3 px-1 text-xs leading-5 text-slate-300">
+            <p>Same mission, different lens: building reliable systems, driving business outcomes.</p> 
+            <p>Pick the lens that best matches the conversation.</p>
+          </p>
+        </div>
+
         <div className="space-y-3">
-          <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
-            Terry Thomas
-          </h1>
+          <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">Terry Thomas</h1>
+          <p className="text-lg font-semibold text-white/95">{lensContent[lens].title}</p>
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-slate-300">
-            <span>Software Engineer</span>
-            <span className="text-slate-600" aria-hidden="true">&middot;</span>
-            <span>Systems &amp; Reliability</span>
-            <span className="text-slate-600" aria-hidden="true">&middot;</span>
-            <span>SaaS Platforms</span>
+            {lensContent[lens].subtitle.split(' · ').map((segment, index, allSegments) => (
+              <div key={segment} className="flex items-center gap-3">
+                <span>{segment}</span>
+                {index < allSegments.length - 1 && <span className="text-slate-600" aria-hidden="true">&middot;</span>}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Primary CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <ResumeDownload onViewResume={onViewResume} />
+          <ResumeDownload lens={lens} />
           <a
             href="mailto:apm.tthomas@gmail.com"
             className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white/10 active:scale-95"
@@ -59,7 +99,6 @@ export default function Hero({ onViewResume }: HeroProps) {
           </a>
         </div>
 
-        {/* Social icon links */}
         <div className="flex items-center gap-6 border-t border-white/10 pt-4">
           <a
             href="https://github.com/ntxtthomas"
@@ -84,7 +123,6 @@ export default function Hero({ onViewResume }: HeroProps) {
             </svg>
           </a>
         </div>
-
       </div>
     </section>
   );
