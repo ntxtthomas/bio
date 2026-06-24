@@ -13,9 +13,6 @@ interface TraitPanelProps {
   description: string;
   focusLabel: string;
   focusCopy: string;
-  // directionCopy?: string;
-  // nextStepCopy?: string;
-  // nextStepVideo?: DirectionVideo;
   tags: string[];
   items: TraitPanelItem[];
   onClose: () => void;
@@ -27,9 +24,6 @@ export default function TraitPanel({
   description,
   focusLabel,
   focusCopy,
-  // directionCopy,
-  // nextStepCopy,
-  // nextStepVideo,
   tags,
   items,
   onClose,
@@ -82,35 +76,6 @@ export default function TraitPanel({
                 ))}
               </div>
             </div>
-
-            {/* <div className="rounded-[1.5rem] border border-emerald-400/20 bg-emerald-300/10 p-5 sm:p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-200">
-                Direction
-              </p>
-              {directionCopy && (
-                <p className="mt-4 text-sm leading-7 text-emerald-50/90">
-                  {directionCopy}
-                </p>
-              )}
-              <div className="mt-6 rounded-[1.25rem] border border-white/10 bg-slate-950/55 p-4">
-                {!nextStepVideo && (
-                  <p className="text-sm font-medium text-white">Next upgrade path</p>
-                )}
-                {nextStepVideo ? (
-                  <video
-                    src={nextStepVideo.src}
-                    poster={nextStepVideo.poster}
-                    title={nextStepVideo.title}
-                    controls
-                    className="w-full rounded-lg"
-                  />
-                ) : (
-                  <p className="mt-2 text-sm leading-6 text-slate-300">
-                    {nextStepCopy}
-                  </p>
-                )}
-              </div>
-            </div> */}
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
