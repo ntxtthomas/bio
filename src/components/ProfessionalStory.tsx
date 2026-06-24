@@ -7,6 +7,8 @@ interface StoryItem {
   eyebrow: string;
   description: string;
   accent: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 interface StoryTrack {
@@ -46,6 +48,8 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Audited and refactored integration flows to remove inconsistencies, improve trust in downstream data, and reduce avoidable platform costs.',
         accent: 'from-emerald-300 via-teal-200 to-cyan-50',
+        imageSrc: '/data_integrity.png',
+        imageAlt: 'Data integrity dashboard and quality checks',
       },
       {
         title: 'Safe Releases',
@@ -53,6 +57,8 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Owned release validation and rollback strategies, improving deployment reliability and reducing high-severity incidents.',
         accent: 'from-sky-300 via-cyan-200 to-blue-50',
+        imageSrc: '/opex_discipline.png',
+        imageAlt: 'Release pipeline and operational discipline visual',
       },
       {
         title: 'Observability',
@@ -60,6 +66,8 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Implemented monitoring and error tracking to shorten time-to-detection and make production issue resolution more predictable.',
         accent: 'from-indigo-300 via-violet-200 to-fuchsia-50',
+        imageSrc: '/observibility.png',
+        imageAlt: 'Observability and monitoring signal dashboards',
       },
     ],
   },
@@ -121,6 +129,8 @@ const builderTracks: StoryTrack[] = [
         description:
           'Investigated integration and data-quality issues that impacted customer outcomes and resolved them with durable, testable improvements.',
         accent: 'from-sky-300 via-cyan-200 to-blue-50',
+        imageSrc: '/debugging.jpeg',
+        imageAlt: 'Issue resolution and Problem Solving'
       },
       {
         title: 'Execution Across Teams',
@@ -128,6 +138,8 @@ const builderTracks: StoryTrack[] = [
         description:
           'Aligned product, QA, and engineering priorities to ship customer-facing improvements with clear ownership and predictable delivery.',
         accent: 'from-emerald-300 via-teal-200 to-cyan-50',
+        imageSrc: '/collaboration.jpeg',
+        imageAlt: 'Collaboration and Ownership'
       },
       {
         title: 'Platform Reliability',
@@ -135,6 +147,8 @@ const builderTracks: StoryTrack[] = [
         description:
           'Improved uptime, maintainability, and operational confidence through better patterns, diagnostics, and release practices.',
         accent: 'from-indigo-300 via-violet-200 to-fuchsia-50',
+        imageSrc: '/reliability.jpeg',
+        imageAlt: 'Reliability and Operational Confidence'
       },
     ],
   },
