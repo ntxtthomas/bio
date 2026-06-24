@@ -10,7 +10,7 @@ export const careerLensOptions: LensOption[] = [
   {
     id: 'engineer',
     label: 'Senior Software Engineer',
-    description: '2017-now systems, reliability, & SaaS delivery',
+    description: '2017-now: systems, reliability, & SaaS delivery',
   },
   {
     id: 'builder',
