@@ -28,6 +28,11 @@ interface ProfessionalStoryProps {
   lens: CareerLens;
 }
 
+const assetPath = (fileName: string) => {
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  return `${base}/${fileName}`;
+};
+
 const engineerTracks: StoryTrack[] = [
   {
     id: 'teaching-strategies',
@@ -48,7 +53,7 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Audited and refactored integration flows to remove inconsistencies, improve trust in downstream data, and reduce avoidable platform costs.',
         accent: 'from-emerald-300 via-teal-200 to-cyan-50',
-        imageSrc: '/data_integrity.png',
+        imageSrc: assetPath('data_integrity.png'),
         imageAlt: 'Data integrity dashboard and quality checks',
       },
       {
@@ -57,7 +62,7 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Owned release validation and rollback strategies, improving deployment reliability and reducing high-severity incidents.',
         accent: 'from-sky-300 via-cyan-200 to-blue-50',
-        imageSrc: '/opex_discipline.png',
+        imageSrc: assetPath('opex_discipline.png'),
         imageAlt: 'Release pipeline and operational discipline visual',
       },
       {
@@ -66,7 +71,7 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Implemented monitoring and error tracking to shorten time-to-detection and make production issue resolution more predictable.',
         accent: 'from-indigo-300 via-violet-200 to-fuchsia-50',
-        imageSrc: '/observibility.png',
+        imageSrc: assetPath('observibility.png'),
         imageAlt: 'Observability and monitoring signal dashboards',
       },
     ],
@@ -90,7 +95,7 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Targeted reliability fixes and performance improvements that lowered downtime and improved day-to-day confidence in the platform.',
         accent: 'from-amber-300 via-orange-200 to-rose-50',
-        imageSrc: '/health.jpeg',
+        imageSrc: assetPath('health.jpeg'),
         imageAlt: 'Production Health'
       },
       {
@@ -99,7 +104,7 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Worked closely with product partners and stakeholders to scope and ship features that reduced friction in key user journeys.',
         accent: 'from-cyan-300 via-sky-200 to-blue-50',
-        imageSrc: '/team_collaboration.jpeg',
+        imageSrc: assetPath('team_collaboration.jpeg'),
         imageAlt: 'Execution and Collaboration'
       },
       {
@@ -108,7 +113,7 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Introduced cleaner service boundaries to improve reliability, simplify debugging, and support faster future iteration.',
         accent: 'from-lime-300 via-emerald-200 to-green-50',
-        imageSrc: '/maintainable.jpeg',
+        imageSrc: assetPath('maintainable.jpeg'),
         imageAlt: 'Maintainability and Clean Archittecture'
       },
     ],
@@ -135,7 +140,7 @@ const builderTracks: StoryTrack[] = [
         description:
           'Investigated integration and data-quality issues that impacted customer outcomes and resolved them with durable, testable improvements.',
         accent: 'from-sky-300 via-cyan-200 to-blue-50',
-        imageSrc: '/debugging.jpeg',
+        imageSrc: assetPath('debugging.jpeg'),
         imageAlt: 'Issue resolution and Problem Solving'
       },
       {
@@ -144,7 +149,7 @@ const builderTracks: StoryTrack[] = [
         description:
           'Aligned product, QA, and engineering priorities to ship customer-facing improvements with clear ownership and predictable delivery.',
         accent: 'from-emerald-300 via-teal-200 to-cyan-50',
-        imageSrc: '/collaboration.jpeg',
+        imageSrc: assetPath('collaboration.jpeg'),
         imageAlt: 'Collaboration and Ownership'
       },
       {
@@ -153,7 +158,7 @@ const builderTracks: StoryTrack[] = [
         description:
           'Improved uptime, maintainability, and operational confidence through better patterns, diagnostics, and release practices.',
         accent: 'from-indigo-300 via-violet-200 to-fuchsia-50',
-        imageSrc: '/reliability.jpeg',
+        imageSrc: assetPath('reliability.jpeg'),
         imageAlt: 'Reliability and Operational Confidence'
       },
     ],
@@ -177,7 +182,7 @@ const builderTracks: StoryTrack[] = [
         description:
           'Implemented systems that reduced friction in core workflows and improved consistency across daily operations.',
         accent: 'from-amber-300 via-orange-200 to-rose-50',
-        imageSrc: '/process_improvement.jpeg',
+        imageSrc: assetPath('process_improvement.jpeg'),
         imageAlt: 'Process Improvement'
       },
       {
@@ -186,7 +191,7 @@ const builderTracks: StoryTrack[] = [
         description:
           'Researched and rolled out platforms that automated administrative and field workflows, then trained staff on implementation.',
         accent: 'from-lime-300 via-emerald-200 to-green-50',
-        imageSrc: '/technology_adoption.jpeg',
+        imageSrc: assetPath('technology_adoption.jpeg'),
         imageAlt: 'Technology Adoption'
       },
       {
@@ -195,7 +200,7 @@ const builderTracks: StoryTrack[] = [
         description:
           'Coordinated contractors, staff, and service partners to maintain quality standards and dependable outcomes.',
         accent: 'from-slate-300 via-slate-200 to-stone-50',
-        imageSrc: '/people_and_vendor_mgmt.jpeg',
+        imageSrc: assetPath('people_and_vendor_mgmt.jpeg'),
         imageAlt: 'People & Vendor Management'
       },
     ],
@@ -219,7 +224,7 @@ const builderTracks: StoryTrack[] = [
         description:
           'Guided evaluations and implementations that helped customers understand capability, risk, and practical integration paths.',
         accent: 'from-cyan-300 via-sky-200 to-blue-50',
-        imageSrc: '/customer_enablement.jpeg',
+        imageSrc: assetPath('customer_enablement.jpeg'),
         imageAlt: 'Customer Enablement'
       },
       {
@@ -228,7 +233,7 @@ const builderTracks: StoryTrack[] = [
         description:
           'Bridged customer requirements with product and engineering priorities to improve fit and speed up decisions.',
         accent: 'from-violet-300 via-fuchsia-200 to-rose-50',
-        imageSrc: '/cross_functional_alignment.jpeg',
+        imageSrc: assetPath('cross_functional_alignment.jpeg'),
         imageAlt: 'Cross-Functional Alignment'
       },
       {
@@ -237,7 +242,7 @@ const builderTracks: StoryTrack[] = [
         description:
           'Developed and supported partner channels through technical demonstrations, training, and ongoing enablement support.',
         accent: 'from-emerald-300 via-teal-200 to-cyan-50',
-        imageSrc: '/global_distribution.jpeg',
+        imageSrc: assetPath('global_distribution.jpeg'),
         imageAlt: 'Global Distribution Growth'
       },
     ],
