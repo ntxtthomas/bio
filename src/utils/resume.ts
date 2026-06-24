@@ -18,7 +18,7 @@ export function getResumeVariant(lens: CareerLens): ResumeVariant {
       title: 'Builder Resume',
       preferredPath: getAssetPath('terry_thomas_throughline_266a.pdf'),
       fallbackPath: getAssetPath('resume.pdf'),
-      downloadFileName: 'terry_thomas_throughline_266a.pdf',
+      downloadFileName: 'terry_thomas_builder_266a.pdf',
     };
   }
 
