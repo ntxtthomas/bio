@@ -41,17 +41,15 @@ export default function About() {
     <section className="bg-white py-16">
       <div className="mx-auto max-w-4xl px-6">
 
-        {/* Professional bio */}
         <div className="text-justify text-base leading-relaxed text-slate-700">
-          <p className="mb-4">I’m a software engineer who builds reliable, production-grade systems for real users. 
-          Over the past 8+ years in SaaS, I’ve worked on applications serving over a million users, 
-          improving data integrity, reducing operational costs, and making systems easier to trust and maintain.
+          <p className="mb-4">
+            Work is one part of my story. Outside of role titles, I care about the habits and values that
+            carry across every chapter: being useful, staying accountable, and treating people with respect.
           </p>
 
-          <p>I’m drawn to the parts of software that aren’t always visible—data integrity, reliability, 
-          and the structure that helps teams move faster without breaking things. I enjoy untangling 
-          complex, workflow-driven systems and working with teams to turn messy problems into solutions 
-          that are clear, stable, and built to last.
+          <p>
+            These sections give more context on what shapes how I show up day to day. They are not
+            separate from my professional work, but they are where a lot of the perspective behind it is built.
           </p>
         </div>
 

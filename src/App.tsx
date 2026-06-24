@@ -1,23 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import About from './components/About';
 import Certifications from './components/Certifications';
 import Hero from './components/Hero';
 import Links from './components/Links';
-import ResumeViewer from './components/ResumeViewer';
+import ProfessionalStory from './components/ProfessionalStory';
+import type { CareerLens } from './types/career';
+
+function getInitialLens(): CareerLens {
+  const params = new URLSearchParams(window.location.search);
+  const lensParam = params.get('lens');
+  return lensParam === 'builder' ? 'builder' : 'engineer';
+}
 
 function App() {
-  const [viewingResume, setViewingResume] = useState(false);
+  const [activeLens, setActiveLens] = useState<CareerLens>(getInitialLens);
 
-  if (viewingResume) {
-    return <ResumeViewer onBack={() => setViewingResume(false)} />;
-  }
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    params.set('lens', activeLens);
+    const nextQuery = params.toString();
+    const nextUrl = `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ''}${window.location.hash}`;
+    window.history.replaceState({}, '', nextUrl);
+  }, [activeLens]);
 
   return (
     <div className="min-h-screen font-sans antialiased">
-      <Hero onViewResume={() => setViewingResume(true)} />
+      <Hero
+        lens={activeLens}
+        onLensChange={setActiveLens}
+      />
+      <ProfessionalStory lens={activeLens} />
       <About />
-      <Links />
-      <Certifications />
+      <Links lens={activeLens} />
+      <Certifications lens={activeLens} />
       <footer className="bg-slate-900 py-6 text-center text-xs text-slate-500">
         <p>
           &copy; {new Date().getFullYear()} Terry Thomas &middot;{' '}

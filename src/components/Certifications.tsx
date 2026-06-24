@@ -1,3 +1,5 @@
+import type { CareerLens } from '../types/career';
+
 interface Cert {
   name: string;
   code?: string;
@@ -5,6 +7,10 @@ interface Cert {
   color: string;
   href?: string;
   year?: string;
+}
+
+interface CertificationsProps {
+  lens: CareerLens;
 }
 
 const certs: Cert[] = [
@@ -32,13 +38,18 @@ const certs: Cert[] = [
 const inProgress = certs.filter((c) => !c.year);
 const completed = certs.filter((c) => c.year);
 
-export default function Certifications() {
+export default function Certifications({ lens }: CertificationsProps) {
   return (
     <section className="bg-slate-50 py-16">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
-          Credentials
+        <h2 className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
+          {lens === 'engineer' ? 'Credentials' : 'Credentials and Training'}
         </h2>
+        <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-7 text-slate-600">
+          {lens === 'engineer'
+            ? 'Validation for cloud architecture, CI/CD practice, and software engineering foundation.'
+            : 'Training and certifications that support technology delivery, operations, and continuous skill growth.'}
+        </p>
 
         {/* In Progress */}
         <div className="mb-8">
