@@ -90,6 +90,8 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Targeted reliability fixes and performance improvements that lowered downtime and improved day-to-day confidence in the platform.',
         accent: 'from-amber-300 via-orange-200 to-rose-50',
+        imageSrc: '/health.jpeg',
+        imageAlt: 'Production Health'
       },
       {
         title: 'Product Collaboration',
@@ -97,6 +99,8 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Worked closely with product partners and stakeholders to scope and ship features that reduced friction in key user journeys.',
         accent: 'from-cyan-300 via-sky-200 to-blue-50',
+        imageSrc: '/team_collaboration.jpeg',
+        imageAlt: 'Execution and Collaboration'
       },
       {
         title: 'Maintainable Architecture',
@@ -104,6 +108,8 @@ const engineerTracks: StoryTrack[] = [
         description:
           'Introduced cleaner service boundaries to improve reliability, simplify debugging, and support faster future iteration.',
         accent: 'from-lime-300 via-emerald-200 to-green-50',
+        imageSrc: '/maintainable.jpeg',
+        imageAlt: 'Maintainability and Clean Archittecture'
       },
     ],
   },
@@ -171,6 +177,8 @@ const builderTracks: StoryTrack[] = [
         description:
           'Implemented systems that reduced friction in core workflows and improved consistency across daily operations.',
         accent: 'from-amber-300 via-orange-200 to-rose-50',
+        imageSrc: '/process_improvement.jpeg',
+        imageAlt: 'Process Improvement'
       },
       {
         title: 'Technology Adoption',
@@ -178,6 +186,8 @@ const builderTracks: StoryTrack[] = [
         description:
           'Researched and rolled out platforms that automated administrative and field workflows, then trained staff on implementation.',
         accent: 'from-lime-300 via-emerald-200 to-green-50',
+        imageSrc: '/technology_adoption.jpeg',
+        imageAlt: 'Technology Adoption'
       },
       {
         title: 'People & Vendor Management',
@@ -185,6 +195,8 @@ const builderTracks: StoryTrack[] = [
         description:
           'Coordinated contractors, staff, and service partners to maintain quality standards and dependable outcomes.',
         accent: 'from-slate-300 via-slate-200 to-stone-50',
+        imageSrc: '/people_and_vendor_mgmt.jpeg',
+        imageAlt: 'People & Vendor Management'
       },
     ],
   },
@@ -207,6 +219,8 @@ const builderTracks: StoryTrack[] = [
         description:
           'Guided evaluations and implementations that helped customers understand capability, risk, and practical integration paths.',
         accent: 'from-cyan-300 via-sky-200 to-blue-50',
+        imageSrc: '/customer_enablement.jpeg',
+        imageAlt: 'Customer Enablement'
       },
       {
         title: 'Cross-Functional Alignment',
@@ -214,6 +228,8 @@ const builderTracks: StoryTrack[] = [
         description:
           'Bridged customer requirements with product and engineering priorities to improve fit and speed up decisions.',
         accent: 'from-violet-300 via-fuchsia-200 to-rose-50',
+        imageSrc: '/cross_functional_alignment.jpeg',
+        imageAlt: 'Cross-Functional Alignment'
       },
       {
         title: 'Global Distribution Growth',
@@ -221,6 +237,8 @@ const builderTracks: StoryTrack[] = [
         description:
           'Developed and supported partner channels through technical demonstrations, training, and ongoing enablement support.',
         accent: 'from-emerald-300 via-teal-200 to-cyan-50',
+        imageSrc: '/global_distribution.jpeg',
+        imageAlt: 'Global Distribution Growth'
       },
     ],
   },
