@@ -37,30 +37,17 @@ export default function ResumeViewer({ lens, onBack }: ResumeViewerProps) {
 
   const handleDownload = async () => {
     const resumeUrl = `${window.location.origin}${resumePath}`;
-    const isStandalone =
-      window.matchMedia('(display-mode: standalone)').matches ||
-      (window.navigator as Navigator & { standalone?: boolean }).standalone === true;
+    const openedWindow = window.open(resumeUrl, '_blank', 'noopener,noreferrer');
 
-    if (isStandalone && typeof navigator.share === 'function') {
-      try {
-        await navigator.share({
-          title: variant.title,
-          text: `Terry Thomas ${variant.title.toLowerCase()}`,
-          url: resumeUrl,
-        });
-        return;
-      } catch {
-        // User canceled share or share failed; continue to fallback.
-      }
+    if (!openedWindow) {
+      const link = document.createElement('a');
+      link.href = resumeUrl;
+      link.download = variant.downloadFileName;
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
-
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = variant.downloadFileName;
-    link.rel = 'noopener noreferrer';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
