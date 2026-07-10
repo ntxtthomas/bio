@@ -42,32 +42,20 @@ export default function ResumeDownload({ lens }: ResumeDownloadProps) {
     };
   }, [variant]);
 
-  const canShareResumeFile =
-    resumeFile !== null &&
-    typeof navigator !== 'undefined' &&
-    typeof navigator.share === 'function' &&
-    typeof navigator.canShare === 'function' &&
-    navigator.canShare({ files: [resumeFile] });
-
   const handleDownload = async () => {
-    if (canShareResumeFile && resumeFile) {
-      await navigator.share({
-        title: variant.title,
-        text: `${variant.title} - Terry Thomas`,
-        files: [resumeFile],
-      });
-      return;
-    }
-
     if (resumeFile) {
       const objectUrl = URL.createObjectURL(resumeFile);
-      const link = document.createElement('a');
-      link.href = objectUrl;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      const openedWindow = window.open(objectUrl, '_blank', 'noopener,noreferrer');
+
+      if (!openedWindow) {
+        const link = document.createElement('a');
+        link.href = objectUrl;
+        link.download = variant.downloadFileName;
+        link.rel = 'noopener noreferrer';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
 
       window.setTimeout(() => {
         URL.revokeObjectURL(objectUrl);
