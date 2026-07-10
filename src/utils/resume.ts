@@ -16,7 +16,7 @@ export function getResumeVariant(lens: CareerLens): ResumeVariant {
   if (lens === 'builder') {
     return {
       title: 'Builder Resume',
-      preferredPath: getAssetPath('terry_thomas_throughline_266a.pdf'),
+      preferredPath: getAssetPath('terry_thomas_builder_266a.pdf'),
       fallbackPath: getAssetPath('resume.pdf'),
       downloadFileName: 'terry_thomas_builder_266a.pdf',
     };
