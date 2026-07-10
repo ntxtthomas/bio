@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import type { CareerLens } from '../types/career';
 import { getResumeVariant } from '../utils/resume';
 
@@ -8,59 +8,11 @@ interface ResumeDownloadProps {
 
 export default function ResumeDownload({ lens }: ResumeDownloadProps) {
   const variant = useMemo(() => getResumeVariant(lens), [lens]);
-  const [resumeFile, setResumeFile] = useState<File | null>(null);
-
-  useEffect(() => {
-    const controller = new AbortController();
-    let isActive = true;
-
-    const preloadResume = async () => {
-      try {
-        const response = await fetch(variant.preferredPath, { signal: controller.signal });
-        if (!response.ok) {
-          throw new Error(`Failed to load resume: ${response.status}`);
-        }
-
-        const blob = await response.blob();
-        if (!isActive) {
-          return;
-        }
-
-        setResumeFile(new File([blob], variant.downloadFileName, { type: blob.type || 'application/pdf' }));
-      } catch {
-        if (isActive) {
-          setResumeFile(null);
-        }
-      }
-    };
-
-    void preloadResume();
-
-    return () => {
-      isActive = false;
-      controller.abort();
-    };
-  }, [variant]);
 
   const handleDownload = async () => {
-    if (resumeFile) {
-      const objectUrl = URL.createObjectURL(resumeFile);
-      const openedWindow = window.open(objectUrl, '_blank', 'noopener,noreferrer');
+    const openedWindow = window.open(variant.preferredPath, '_blank', 'noopener,noreferrer');
 
-      if (!openedWindow) {
-        const link = document.createElement('a');
-        link.href = objectUrl;
-        link.download = variant.downloadFileName;
-        link.rel = 'noopener noreferrer';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-
-      window.setTimeout(() => {
-        URL.revokeObjectURL(objectUrl);
-      }, 1000);
-
+    if (openedWindow) {
       return;
     }
 
