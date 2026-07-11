@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { CareerLens } from '../types/career';
 import { getResumeVariant, resolveResumePath } from '../utils/resume';
+import { trackPosthogEvent } from '../utils/posthog';
 
 interface ResumeViewerProps {
   lens: CareerLens;
@@ -36,6 +37,11 @@ export default function ResumeViewer({ lens, onBack }: ResumeViewerProps) {
   }, []);
 
   const handleDownload = async () => {
+    trackPosthogEvent('resume_button_click', {
+      lens,
+      location: 'viewer',
+    });
+
     const resumeUrl = `${window.location.origin}${resumePath}`;
     const openedWindow = window.open(resumeUrl, '_blank', 'noopener,noreferrer');
 
