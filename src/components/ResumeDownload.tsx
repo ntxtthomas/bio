@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import type { CareerLens } from '../types/career';
 import { getResumeVariant } from '../utils/resume';
+import { trackPosthogEvent } from '../utils/posthog';
 
 interface ResumeDownloadProps {
   lens: CareerLens;
@@ -10,6 +11,11 @@ export default function ResumeDownload({ lens }: ResumeDownloadProps) {
   const variant = useMemo(() => getResumeVariant(lens), [lens]);
 
   const handleDownload = async () => {
+    trackPosthogEvent('resume_button_click', {
+      lens,
+      location: 'hero',
+    });
+
     const openedWindow = window.open(variant.preferredPath, '_blank', 'noopener,noreferrer');
 
     if (openedWindow) {

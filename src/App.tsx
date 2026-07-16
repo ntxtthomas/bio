@@ -3,6 +3,7 @@ import About from './components/About';
 import Certifications from './components/Certifications';
 import Hero from './components/Hero';
 import Links from './components/Links';
+import MeetTerry from './components/MeetTerry';
 import ProfessionalStory from './components/ProfessionalStory';
 import type { CareerLens } from './types/career';
 
@@ -29,6 +30,7 @@ function App() {
         lens={activeLens}
         onLensChange={setActiveLens}
       />
+      <MeetTerry lens={activeLens} />
       <ProfessionalStory lens={activeLens} />
       <About />
       <Links lens={activeLens} />

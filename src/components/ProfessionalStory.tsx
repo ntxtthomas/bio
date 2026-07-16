@@ -293,7 +293,7 @@ export default function ProfessionalStory({ lens }: ProfessionalStoryProps) {
           Select a chapter to expand details
         </p>
 
-        <div className="mt-3 grid gap-3 sm:grid-cols-3">
+        <div className="mx-auto mt-3 flex max-w-4xl flex-wrap justify-center gap-3">
           {tracks.map(({ id, title, period, summary }) => {
             const isActive = resolvedActiveTrackId === id;
             return (
@@ -305,7 +305,7 @@ export default function ProfessionalStory({ lens }: ProfessionalStoryProps) {
                   setIsPanelOpen(true);
                 }}
                 aria-pressed={isActive}
-                className={`h-full w-full rounded-2xl border px-4 py-3 text-left transition-all ${
+                className={`h-full w-full max-w-sm rounded-2xl border px-4 py-3 text-center transition-all sm:w-[calc(50%-0.375rem)] lg:w-[calc(50%-0.375rem)] ${
                   isActive
                     ? 'border-slate-900 bg-slate-900 text-white shadow-lg'
                     : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:shadow-sm'

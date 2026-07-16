@@ -124,6 +124,23 @@ export default function Hero({ lens, onLensChange }: HeroProps) {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-end">
+              <a
+                href="#meet-terry"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white/10 active:scale-95"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-6.518-3.74A1 1 0 007 8.295v7.41a1 1 0 001.234.97l6.518-1.67a1 1 0 00.742-.97v-2.19a1 1 0 00-.742-.97z" />
+                </svg>
+                Watch intro
+              </a>
               <ResumeDownload lens={lens} />
               <a
                 href="mailto:apm.tthomas@gmail.com"
