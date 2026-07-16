@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # needed to push to gh-pages branch
+      contents: write # needed to push to gh-pages branch
 
     steps:
       - name: Checkout
@@ -32,6 +32,8 @@ jobs:
 
       - name: Build
         # --base sets the asset base path to /bio/ for GitHub Pages project site
+        env:
+          VITE_MEET_TERRY_VIDEO_URL: ${{ vars.VITE_MEET_TERRY_VIDEO_URL }}
         run: npx vite build --base /bio/
 
       - name: Deploy to gh-pages branch
