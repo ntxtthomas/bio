@@ -37,7 +37,6 @@ npm run build
 
 echo "▶ Syncing dist/ to s3://$BUCKET ..."
 aws s3 sync dist/ "s3://$BUCKET" \
-  --exclude "*.mp4" \
   --delete \
   --profile "$AWS_PROFILE"
 

@@ -26,7 +26,7 @@ export default function Outdoors({ onClose }: OutdoorsProps) {
         },
         {
           title: 'Trail Running',
-          eyebrow: 'Momentum builder',
+          eyebrow: 'Momentum',
           description: 'Trail miles are where I sharpen pacing, recovery, and the habit of making good decisions while tired.',
           accent: 'from-amber-200 via-orange-100 to-rose-50',
           imageSrc: '/outdoors-trail-running.jpg',

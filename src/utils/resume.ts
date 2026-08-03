@@ -12,21 +12,12 @@ function getAssetPath(fileName: string): string {
   return `${base}/${fileName}`;
 }
 
-export function getResumeVariant(lens: CareerLens): ResumeVariant {
-  if (lens === 'builder') {
-    return {
-      title: 'Builder Resume',
-      preferredPath: getAssetPath('terry_thomas_builder_266a.pdf'),
-      fallbackPath: getAssetPath('resume.pdf'),
-      downloadFileName: 'terry_thomas_builder_266a.pdf',
-    };
-  }
-
+export function getResumeVariant(_lens: CareerLens): ResumeVariant {
   return {
-    title: 'Engineer Resume',
-    preferredPath: getAssetPath('terry_thomas_software_engineer_266a.pdf'),
+    title: 'Download Resume',
+    preferredPath: getAssetPath('terry_thomas_software_engineer_267a.pdf'),
     fallbackPath: getAssetPath('resume.pdf'),
-    downloadFileName: 'terry_thomas_software_engineer_266a.pdf',
+    downloadFileName: 'terry_thomas_software_engineer_267a.pdf',
   };
 }
 

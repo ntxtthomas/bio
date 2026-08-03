@@ -1,165 +1,118 @@
+import { useMemo } from 'react';
 import headshot from '../assets/tthomas_3.png';
-import type { CareerLens } from '../types/career';
-import { careerLensOptions } from '../types/career';
+import { getMeetTerryMediaConfig } from '../utils/meetTerry';
 import ResumeDownload from './ResumeDownload';
 
-interface HeroProps {
-  lens: CareerLens;
-  onLensChange: (nextLens: CareerLens) => void;
-}
-
-const lensContent: Record<CareerLens, { title: string; subtitle: string }> = {
-  engineer: {
-    title: 'Senior Software Engineer',
-    subtitle: 'Software Engineer · Systems & Reliability · SaaS Platforms',
-  },
-  builder: {
-    title: 'Builder | Problem Solver | Operator',
-    subtitle: 'Business Leadership · Technology Sales · Operations · Engineering',
-  },
-};
-
-export default function Hero({ lens, onLensChange }: HeroProps) {
-  const isBuilderLens = lens === 'builder';
-
-  const handleToggleLens = () => {
-    onLensChange(isBuilderLens ? 'engineer' : 'builder');
-  };
+export default function Hero() {
+  const mediaConfig = useMemo(() => getMeetTerryMediaConfig(), []);
 
   return (
     <section className="bg-[radial-gradient(circle_at_15%_20%,rgba(56,189,248,0.22),transparent_32%),radial-gradient(circle_at_85%_0%,rgba(16,185,129,0.2),transparent_35%),linear-gradient(145deg,#020617,#0f172a_45%,#111827)] px-6 py-16 text-white sm:py-20">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-slate-900/50 p-6 shadow-[0_32px_90px_-40px_rgba(14,165,233,0.45)] backdrop-blur-md sm:p-8">
           <div className="absolute -right-20 top-8 h-48 w-48 rounded-full bg-cyan-300/10 blur-3xl" aria-hidden="true" />
           <div className="absolute -left-16 bottom-0 h-44 w-44 rounded-full bg-emerald-300/10 blur-3xl" aria-hidden="true" />
 
-          <div className="relative grid gap-8 lg:grid-cols-[auto,1fr] lg:items-center">
-            <div className="mx-auto w-fit lg:mx-0">
-              <div className="relative">
-                <img
-                  src={headshot}
-                  alt="Terry Thomas"
-                  className="h-36 w-36 rounded-full object-cover shadow-2xl ring-4 ring-white/20 sm:h-40 sm:w-40"
-                />
-                <span
-                  className="absolute bottom-2 right-2 h-3.5 w-3.5 rounded-full bg-emerald-400 ring-2 ring-slate-900"
-                  aria-hidden="true"
-                />
-              </div>
+          <div className="relative grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div className="order-2 lg:order-1">
+              {mediaConfig.videoUrl ? (
+                <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950 shadow-2xl">
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster={headshot}
+                    className="block aspect-video w-full bg-black"
+                  >
+                    <source src={mediaConfig.videoUrl} />
+                  </video>
+                </div>
+              ) : (
+                <div className="flex aspect-video items-center justify-center rounded-[1.5rem] border border-white/10 bg-slate-950/80 px-8 text-center">
+                  <div className="max-w-sm space-y-3 text-white">
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-white/15 bg-white/10">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        aria-hidden="true"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-6.518-3.74A1 1 0 007 8.295v7.41a1 1 0 001.234.97l6.518-1.67a1 1 0 00.742-.97v-2.19a1 1 0 00-.742-.97z" />
+                      </svg>
+                    </div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200/80">
+                      Video placeholder
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
 
-            <div className="space-y-4 text-center lg:text-left">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200/90">
-                Product-minded technologist
-              </p>
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                Terry Thomas
-              </h1>
-              <p className="text-xl font-semibold text-slate-100 sm:text-2xl">
-                {lensContent[lens].title}
-              </p>
-              <p className="text-sm leading-7 text-slate-300 sm:text-base">
-                {lensContent[lens].subtitle}
-              </p>
-            </div>
-        </div>
+            <div className="order-1 space-y-6 text-center lg:order-2 lg:text-left">
+              <div className="space-y-4">
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                  Terry Thomas
+                </h1>
+                <p className="text-xl font-semibold text-slate-100 sm:text-2xl">
+                  Senior Software Engineer
+                </p>
+                </div>
 
-          <div className="relative mt-8 grid gap-4 lg:grid-cols-[1fr,auto] lg:items-end">
-            <div className="rounded-2xl border border-white/15 bg-white/[0.04] p-3">
-              <p className="px-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-300">
-                Choose your lens
-              </p>
-              <div className="mt-2 grid gap-2 sm:grid-cols-2">
-                {careerLensOptions.map((option) => {
-                  const isActive = option.id === lens;
-                  return (
-                    <button
-                      key={option.id}
-                      type="button"
-                      onClick={() => onLensChange(option.id)}
-                      aria-pressed={isActive}
-                      className={`rounded-xl border px-3 py-2.5 text-left transition-all ${
-                        isActive
-                          ? 'border-cyan-200/80 bg-white text-slate-900 shadow-md'
-                          : 'border-white/10 bg-transparent text-slate-200 hover:border-white/25 hover:bg-white/5'
-                      }`}
-                    >
-                      <p className="text-xs font-semibold uppercase tracking-[0.12em]">{option.label}</p>
-                      <p className={`mt-1 text-[0.72rem] leading-5 ${isActive ? 'text-slate-600' : 'text-slate-300'}`}>
-                        {option.description}
-                      </p>
-                    </button>
-                  );
-                })}
+              <div className="rounded-2xl border border-white/15 bg-white/[0.04] p-4">
+                <p className="px-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-300">
+                  Core strengths
+                </p>
+                <p className="mt-2 px-1 text-sm leading-6 text-slate-300">
+                  Ruby on Rails · React · PostgreSQL · AWS · CI/CD · Observability · API design
+                </p>
               </div>
 
-              <div className="mt-3 flex items-center justify-center gap-3 rounded-xl border border-white/10 bg-slate-950/30 px-3 py-2 sm:justify-start">
-                <span className={`text-xs font-semibold uppercase tracking-wide ${!isBuilderLens ? 'text-white' : 'text-slate-400'}`}>
-                  Engineer
-                </span>
-                <button
-                  type="button"
-                  role="switch"
-                  aria-checked={isBuilderLens}
-                  aria-label="Toggle career lens"
-                  onClick={handleToggleLens}
-                  className={`relative inline-flex h-7 w-14 items-center rounded-full border transition-colors ${
-                    isBuilderLens ? 'border-emerald-300/70 bg-emerald-400/70' : 'border-cyan-300/70 bg-cyan-400/70'
-                  }`}
+              <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+                <ResumeDownload />
+                <a
+                  href="mailto:apm.tthomas@gmail.com"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white/10 active:scale-95"
                 >
-                  <span
-                    className={`h-5 w-5 rounded-full bg-white shadow transition-transform ${
-                      isBuilderLens ? 'translate-x-8' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-                <span className={`text-xs font-semibold uppercase tracking-wide ${isBuilderLens ? 'text-white' : 'text-slate-400'}`}>
-                  Builder
-                </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Contact me
+                </a>
               </div>
-
-              <p className="mt-2 px-1 text-xs leading-5 text-slate-300">
-                Same mission, different lens: reliable systems, measurable outcomes, real people served.
-              </p>
             </div>
+          </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-end">
-              <a
-                href="#meet-terry"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white/10 active:scale-95"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-6.518-3.74A1 1 0 007 8.295v7.41a1 1 0 001.234.97l6.518-1.67a1 1 0 00.742-.97v-2.19a1 1 0 00-.742-.97z" />
-                </svg>
-                Watch intro
-              </a>
-              <ResumeDownload lens={lens} />
-              <a
-                href="mailto:apm.tthomas@gmail.com"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white/10 active:scale-95"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Get in Touch
-              </a>
-            </div>
+          <div className="relative mt-8 grid gap-3 md:grid-cols-3">
+            {[
+              {
+                title: 'What I build',
+                body: 'Reliable products, workflows, and platform systems that support real users and real operations.',
+              },
+              {
+                title: 'How I operate',
+                body: 'Ship carefully, diagnose quickly, and keep quality high when complexity rises.',
+              },
+              {
+                title: 'What I value',
+                body: 'Ownership, thoughtful execution, and long-term product health over short-term churn.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+                <p className="text-sm font-semibold text-white">{item.title}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{item.body}</p>
+              </div>
+            ))}
           </div>
 
           <div className="relative mt-7 flex items-center justify-center gap-6 border-t border-white/10 pt-4">
