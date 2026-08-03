@@ -1,17 +1,12 @@
 import { useEffect, useMemo, useRef } from 'react';
-import type { CareerLens } from '../types/career';
 import { getResumeVariant } from '../utils/resume';
 import { getMeetTerryMediaConfig } from '../utils/meetTerry';
 import { trackPosthogEvent } from '../utils/posthog';
 
-interface MeetTerryProps {
-  lens: CareerLens;
-}
-
 const milestones = [50, 90];
 
-export default function MeetTerry({ lens }: MeetTerryProps) {
-  const resumeVariant = useMemo(() => getResumeVariant(lens), [lens]);
+export default function MeetTerry() {
+  const resumeVariant = useMemo(() => getResumeVariant('engineer'), []);
   const mediaConfig = useMemo(() => getMeetTerryMediaConfig(), []);
   const sectionRef = useRef<HTMLElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -34,7 +29,7 @@ export default function MeetTerry({ lens }: MeetTerryProps) {
 
         hasTrackedViewRef.current = true;
         trackPosthogEvent('meet_terry_section_view', {
-          lens,
+          lens: 'engineer',
           has_video: Boolean(mediaConfig.videoUrl),
         });
         observer.disconnect();
@@ -47,7 +42,7 @@ export default function MeetTerry({ lens }: MeetTerryProps) {
     return () => {
       observer.disconnect();
     };
-  }, [lens, mediaConfig.videoUrl]);
+  }, [mediaConfig.videoUrl]);
 
   const handlePlay = () => {
     if (hasTrackedPlayRef.current) {
@@ -56,7 +51,7 @@ export default function MeetTerry({ lens }: MeetTerryProps) {
 
     hasTrackedPlayRef.current = true;
     trackPosthogEvent('meet_terry_video_play', {
-      lens,
+      lens: 'engineer',
       video_url: mediaConfig.videoUrl || 'unset',
     });
   };
@@ -74,7 +69,7 @@ export default function MeetTerry({ lens }: MeetTerryProps) {
       if (watchedPercent >= milestone && !trackedMilestonesRef.current.has(milestone)) {
         trackedMilestonesRef.current.add(milestone);
         trackPosthogEvent('meet_terry_video_progress', {
-          lens,
+          lens: 'engineer',
           milestone,
           watched_percent: watchedPercent,
         });
@@ -84,14 +79,14 @@ export default function MeetTerry({ lens }: MeetTerryProps) {
 
   const handleEnded = () => {
     trackPosthogEvent('meet_terry_video_complete', {
-      lens,
+      lens: 'engineer',
       video_url: mediaConfig.videoUrl || 'unset',
     });
   };
 
   const handleResumeClick = () => {
     trackPosthogEvent('resume_button_click', {
-      lens,
+      lens: 'engineer',
       location: 'meet-terry',
     });
   };
@@ -103,15 +98,11 @@ export default function MeetTerry({ lens }: MeetTerryProps) {
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
             <div className="space-y-6">
               <div className="space-y-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
-                  Before the résumé
-                </p>
                 <h2 className="max-w-xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                   Meet Terry
                 </h2>
                 <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                  A quick 2-3 minute introduction to who I am, how I work, what I’m building today,
-                  and what I’m looking for next.
+                  A concise look at how I work, what I build, and the kind of engineering environments where I thrive.
                 </p>
               </div>
 
@@ -139,9 +130,9 @@ export default function MeetTerry({ lens }: MeetTerryProps) {
 
               <div className="flex flex-wrap items-center gap-3">
                 <a
-                    href={resumeVariant.preferredPath}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  href={resumeVariant.preferredPath}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={handleResumeClick}
                   className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-slate-800 active:scale-95"
                 >
@@ -162,14 +153,9 @@ export default function MeetTerry({ lens }: MeetTerryProps) {
                   href="mailto:apm.tthomas@gmail.com"
                   className="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-all hover:border-slate-400 hover:bg-slate-100 active:scale-95"
                 >
-                  Ask a question
+                  Contact me
                 </a>
               </div>
-
-              <p className="text-sm leading-6 text-slate-500">
-                This is meant to be an easy yes/no filter: if the tone fits, keep going. If not,
-                you’ve learned that in under three minutes.
-              </p>
             </div>
 
             <div className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-slate-950 shadow-[0_24px_70px_-35px_rgba(15,23,42,0.45)]">
@@ -218,7 +204,6 @@ export default function MeetTerry({ lens }: MeetTerryProps) {
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
                     <p className="font-semibold text-white">2-3 minute overview</p>
-                    <p className="text-slate-400">Captions on, S3 hosted, measured in PostHog.</p>
                   </div>
                   <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-slate-300">
                     <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Play</span>

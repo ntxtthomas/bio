@@ -3,7 +3,7 @@ export interface MeetTerryMediaConfig {
   posterUrl: string;
 }
 
-const DEFAULT_MEET_TERRY_VIDEO_URL = 'https://terrythomas.com/builder.mp4';
+const DEFAULT_MEET_TERRY_VIDEO_URL = '/builder.mp4';
 
 function getEnvValue(value: string | undefined): string {
   return value?.trim() ?? '';

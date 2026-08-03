@@ -1,20 +1,12 @@
-import type { CareerLens } from '../types/career';
-
-interface LinksProps {
-  lens: CareerLens;
-}
-
-export default function Links({ lens }: LinksProps) {
+export default function Links() {
   return (
     <section className="bg-slate-50 py-16">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
-          {lens === 'engineer' ? 'Featured Engineering Work' : 'Selected Builder Work'}
+          Featured Engineering Work
         </h2>
         <p className="mx-auto mb-8 max-w-2xl text-center text-sm leading-7 text-slate-600">
-          {lens === 'engineer'
-            ? 'Recent projects that highlight Rails development, system design, and operational reliability.'
-            : 'Examples of end-to-end delivery, technical execution, and business-minded problem solving.'}
+          Selected projects that highlight systems thinking, product delivery, and operational reliability.
         </p>
         <div className="grid gap-5 sm:grid-cols-2">
 

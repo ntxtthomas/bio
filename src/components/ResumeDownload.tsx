@@ -1,18 +1,13 @@
 import { useMemo } from 'react';
-import type { CareerLens } from '../types/career';
 import { getResumeVariant } from '../utils/resume';
 import { trackPosthogEvent } from '../utils/posthog';
 
-interface ResumeDownloadProps {
-  lens: CareerLens;
-}
-
-export default function ResumeDownload({ lens }: ResumeDownloadProps) {
-  const variant = useMemo(() => getResumeVariant(lens), [lens]);
+export default function ResumeDownload() {
+  const variant = useMemo(() => getResumeVariant('engineer'), []);
 
   const handleDownload = async () => {
     trackPosthogEvent('resume_button_click', {
-      lens,
+      lens: 'engineer',
       location: 'hero',
     });
 
@@ -52,7 +47,7 @@ export default function ResumeDownload({ lens }: ResumeDownloadProps) {
           d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
         />
       </svg>
-      {lens === 'engineer' ? 'Engineer Resume' : 'Builder Resume'}
+      Download Resume
     </button>
   );
 }

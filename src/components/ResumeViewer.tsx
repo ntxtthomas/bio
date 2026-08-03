@@ -1,15 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { CareerLens } from '../types/career';
 import { getResumeVariant, resolveResumePath } from '../utils/resume';
 import { trackPosthogEvent } from '../utils/posthog';
 
 interface ResumeViewerProps {
-  lens: CareerLens;
   onBack: () => void;
 }
 
-export default function ResumeViewer({ lens, onBack }: ResumeViewerProps) {
-  const variant = useMemo(() => getResumeVariant(lens), [lens]);
+export default function ResumeViewer({ onBack }: ResumeViewerProps) {
+  const variant = useMemo(() => getResumeVariant('engineer'), []);
   const [resumePath, setResumePath] = useState<string>(variant.fallbackPath);
 
   useEffect(() => {
@@ -38,7 +36,7 @@ export default function ResumeViewer({ lens, onBack }: ResumeViewerProps) {
 
   const handleDownload = async () => {
     trackPosthogEvent('resume_button_click', {
-      lens,
+      lens: 'engineer',
       location: 'viewer',
     });
 
