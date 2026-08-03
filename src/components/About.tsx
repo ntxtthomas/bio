@@ -14,9 +14,7 @@ const traits = [
 export default function About() {
   const [activePill, setActivePill] = useState<string | null>(null);
   const hasActivePill = activePill !== null;
-  const orderedTraits = activePill
-    ? [...traits].sort((left, right) => Number(right.id === activePill) - Number(left.id === activePill))
-    : traits;
+  const orderedTraits = traits;
 
   const closeActivePanel = () => {
     setActivePill(null);
@@ -63,37 +61,28 @@ export default function About() {
         </div>
 
         {/* Trait pills */}
-        <div className="flex flex-wrap justify-start gap-3 transition-all duration-300 sm:justify-center">
+        <div className="mx-[-0.5rem] flex flex-nowrap justify-center gap-3 overflow-x-auto px-2 py-2 transition-all duration-300">
           {orderedTraits.map(({ id, label, detail }) => {
             const isActive = activePill === id;
-            const allowHoverExpansion = !hasActivePill;
             return (
               <button
                 key={label}
                 type="button"
                 onClick={() => setActivePill(isActive ? null : id)}
                 aria-expanded={isActive}
-                className={`group inline-flex cursor-pointer items-center rounded-full border px-4 py-1.5 text-sm transition-all duration-300 ${
+                className={`flex h-full min-h-[4.5rem] w-[13rem] flex-shrink-0 flex-col items-center justify-center rounded-full border px-4 py-2.5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${
                   isActive
-                    ? 'border-indigo-200 bg-indigo-50 px-5 text-indigo-700 shadow-sm'
-                    : `border-slate-200 bg-slate-50 text-slate-600 ${
-                        allowHoverExpansion
-                          ? 'hover:border-indigo-200 hover:bg-indigo-50 hover:px-5 hover:text-indigo-700 hover:shadow-sm'
-                          : ''
-                      }`
+                    ? 'border-slate-900 bg-slate-900 text-white shadow-lg'
+                    : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
                 }`}
               >
-                <span>{label}</span>
+                <span className="text-sm font-semibold">{label}</span>
                 <span
-                  className={`overflow-hidden whitespace-nowrap transition-all duration-200 ${
-                    isActive
-                      ? 'max-w-xs opacity-100'
-                      : allowHoverExpansion
-                        ? 'max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100'
-                        : 'max-w-0 opacity-0'
+                  className={`mt-1 text-[0.72rem] leading-5 ${
+                    isActive ? 'text-white/80' : 'text-slate-500'
                   }`}
                 >
-                  &ensp;·&ensp;{detail}
+                  {detail}
                 </span>
               </button>
             );

@@ -118,7 +118,7 @@ const engineerTracks: StoryTrack[] = [
 export default function ProfessionalStory() {
   const tracks = engineerTracks;
   const [activeTrackId, setActiveTrackId] = useState<string>(tracks[0].id);
-  const [isPanelOpen, setIsPanelOpen] = useState(true);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
 
   const resolvedActiveTrackId = tracks.some((track) => track.id === activeTrackId)
     ? activeTrackId
@@ -157,15 +157,15 @@ export default function ProfessionalStory() {
                   setIsPanelOpen(true);
                 }}
                 aria-pressed={isActive}
-                className={`h-full w-full max-w-sm rounded-2xl border px-4 py-3 text-center transition-all sm:w-[calc(50%-0.375rem)] lg:w-[calc(50%-0.375rem)] ${
+                className={`h-full w-full max-w-[16rem] rounded-full border px-4 py-2.5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md sm:w-[calc(50%-0.375rem)] lg:w-[calc(50%-0.375rem)] ${
                   isActive
                     ? 'border-slate-900 bg-slate-900 text-white shadow-lg'
-                    : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:shadow-sm'
+                    : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
                 }`}
               >
-                <p className="text-xs font-semibold uppercase tracking-wider opacity-70">{period}</p>
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] opacity-70">{period}</p>
                 <p className="mt-1 text-sm font-semibold">{title}</p>
-                <p className="mt-1 text-xs leading-5 opacity-75">{summary}</p>
+                <p className="mt-1 text-[0.72rem] leading-5 opacity-75">{summary}</p>
               </button>
             );
           })}

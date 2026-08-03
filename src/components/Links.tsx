@@ -10,6 +10,48 @@ export default function Links() {
         </p>
         <div className="grid gap-5 sm:grid-cols-2">
 
+        {/* Live passion projetct */}
+          <a
+            // href=""
+            // target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col rounded-2xl border border-indigo-100 bg-white p-7 shadow-sm transition-all hover:border-indigo-300 hover:shadow-md"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <span className="inline-block rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-600">
+                Passion Project
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 shrink-0 text-slate-300 transition-all group-hover:translate-x-0.5 group-hover:text-indigo-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </div>
+            <h3 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-indigo-700">
+              Lenses
+            </h3>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-500">
+              A safe space for life's hard moments — built with Rails 8, 
+              a deterministic wisdom engine, RAG/pgVector, and  
+              HITL AI orchestration, from concept to code.  
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {['Ruby on Rails', 'AI Context Engineering'].map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </a>
           {/* Live demo card */}
           <a
             href="https://mycareerintel.com"
@@ -34,14 +76,14 @@ export default function Links() {
               </svg>
             </div>
             <h3 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-indigo-700">
-              mycareerintel.com
+              MyCareerIntel.com
             </h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-500">
               A career intelligence platform that helps users track job market trends,
               benchmark roles, and make data-driven career decisions.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {['React', 'Ruby on Rails', 'PostgreSQL', 'AWS'].map((tag) => (
+              {['React', 'Ruby on Rails', 'Hotwire', 'REST API'].map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500"
@@ -128,7 +170,7 @@ export default function Links() {
             </div>
             
           </a>
-          <a
+          {/* <a
             href="https://github.com/ntxtthomas/measurement#readme"
             target="_blank"
             rel="noopener noreferrer"
@@ -164,7 +206,7 @@ export default function Links() {
               ))}
             </div>
             
-          </a>
+          </a> */}
 
         </div>
       </div>
