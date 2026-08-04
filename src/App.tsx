@@ -3,7 +3,7 @@ import About from './components/About';
 import Certifications from './components/Certifications';
 import Hero from './components/Hero';
 import Links from './components/Links';
-import LensesProjectPage from './components/LensesProjectPage';
+import LensesProjectPage from './pages/Lenses';
 import ProfessionalStory from './components/ProfessionalStory';
 
 function HomePage() {
