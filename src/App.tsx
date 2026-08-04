@@ -1,10 +1,12 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './components/About';
 import Certifications from './components/Certifications';
 import Hero from './components/Hero';
 import Links from './components/Links';
+import LensesProjectPage from './components/LensesProjectPage';
 import ProfessionalStory from './components/ProfessionalStory';
 
-function App() {
+function HomePage() {
   return (
     <div className="min-h-screen font-sans antialiased">
       <Hero />
@@ -24,6 +26,17 @@ function App() {
         </p>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/lenses" element={<LensesProjectPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

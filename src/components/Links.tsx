@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Links() {
   return (
     <section className="bg-slate-50 py-16">
@@ -11,10 +13,8 @@ export default function Links() {
         <div className="grid gap-5 sm:grid-cols-2">
 
         {/* Live passion projetct */}
-          <a
-            // href=""
-            // target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/lenses"
             className="group flex flex-col rounded-2xl border border-indigo-100 bg-white p-7 shadow-sm transition-all hover:border-indigo-300 hover:shadow-md"
           >
             <div className="flex items-start justify-between gap-4">
@@ -51,7 +51,7 @@ export default function Links() {
                 </span>
               ))}
             </div>
-          </a>
+          </Link>
           {/* Live demo card */}
           <a
             href="https://mycareerintel.com"
