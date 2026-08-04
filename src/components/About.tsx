@@ -61,7 +61,7 @@ export default function About() {
         </div>
 
         {/* Trait pills */}
-        <div className="mx-[-0.5rem] flex flex-nowrap justify-center gap-3 overflow-x-auto px-2 py-2 transition-all duration-300">
+        <div className="mx-[-0.5rem] grid grid-cols-1 gap-3 px-2 py-2 transition-all duration-300 sm:mx-0 sm:grid-cols-2 sm:px-0">
           {orderedTraits.map(({ id, label, detail }) => {
             const isActive = activePill === id;
             return (
@@ -70,7 +70,7 @@ export default function About() {
                 type="button"
                 onClick={() => setActivePill(isActive ? null : id)}
                 aria-expanded={isActive}
-                className={`flex h-full min-h-[4.5rem] w-[13rem] flex-shrink-0 flex-col items-center justify-center rounded-full border px-4 py-2.5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${
+                className={`flex h-[4.75rem] w-full flex-col items-center justify-center rounded-full border px-4 py-2.5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${
                   isActive
                     ? 'border-slate-900 bg-slate-900 text-white shadow-lg'
                     : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'

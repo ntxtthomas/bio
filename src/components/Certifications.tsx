@@ -5,6 +5,8 @@ interface Cert {
   color: string;
   href?: string;
   year?: string;
+  timeline?: string;
+  language?: string;
 }
 
 const certs: Cert[] = [
@@ -13,12 +15,14 @@ const certs: Cert[] = [
     code: 'SAA-C03',
     issuer: 'Amazon Web Services',
     color: 'bg-amber-50 border-amber-200 text-amber-800',
+    timeline: 'Oct 2026',
   },
   {
     name: 'GitHub Actions',
     code: 'GH-200',
     issuer: 'GitHub',
     color: 'bg-slate-50 border-slate-200 text-slate-800',
+    timeline: 'Aug 2026',
   },
   {
     name: 'Full Stack Software Development',
@@ -26,6 +30,7 @@ const certs: Cert[] = [
     color: 'bg-blue-50 border-blue-200 text-blue-800',
     href: 'https://www.codingdojo.com/software-development-part-time-accelerated',
     year: '2016',
+    language: 'Ruby on Rails • MEAN • LAMP',
   },
 ];
 
@@ -49,7 +54,7 @@ export default function Certifications() {
             In Progress
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
-            {inProgress.map(({ name, code, issuer, color }) => (
+            {inProgress.map(({ name, code, issuer, color, timeline }) => (
               <div key={name} className={`rounded-xl border p-5 ${color}`}>
                 <div className="flex items-start justify-between gap-3">
                   <div>
@@ -60,7 +65,7 @@ export default function Certifications() {
                   </div>
                   <span className="flex shrink-0 items-center gap-1.5 rounded-full border border-current/20 bg-white/60 px-2.5 py-1 text-xs font-medium opacity-80">
                     <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-current" aria-hidden="true" />
-                    May 2026
+                    {timeline ?? 'TBD'}
                   </span>
                 </div>
               </div>
@@ -74,7 +79,7 @@ export default function Certifications() {
             Education
           </p>
           <div className="grid gap-4">
-            {completed.map(({ name, code, issuer, color, href, year }) => {
+            {completed.map(({ name, code, issuer, color, href, year, language }) => {
               const inner = (
                 <div className={`rounded-xl border p-5 transition-all ${color} ${href ? 'hover:shadow-md' : ''}`}>
                   <div className="flex items-start justify-between gap-3">
@@ -82,6 +87,9 @@ export default function Certifications() {
                       <p className="font-semibold">{name}</p>
                       <p className="mt-0.5 text-sm opacity-60">
                         {issuer}{code ? ` · ${code}` : ''}
+                      </p>
+                      <p className="mt-0.5 text-sm opacity-60">
+                        {language}
                       </p>
                     </div>
                     <span className="flex shrink-0 items-center gap-1.5 rounded-full border border-current/20 bg-white/60 px-2.5 py-1 text-xs font-medium opacity-80">
