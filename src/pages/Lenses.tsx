@@ -110,7 +110,7 @@ export default function Lenses() {
               poster="/biolens.webp"
               controls
               playsInline
-              className="w-full rounded-xl shadow-lg"
+              className="aspect-video w-full rounded-xl shadow-lg"
               style={{ display: 'block' }}
             />
           </div>
