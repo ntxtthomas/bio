@@ -105,20 +105,14 @@ export default function Lenses() {
         {/* ── SECTION 1: VIDEO ───────────────────────────────────────────── */}
         <section style={{ backgroundColor: C.teal }} className="w-full py-12 px-6">
           <div className="mx-auto w-full max-w-[800px]">
-            {/* TODO: replace src with actual video URL */}
-            <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
-              <div
-                className="absolute inset-0 flex items-center justify-center rounded-xl"
-                style={{ backgroundColor: 'rgba(0,0,0,0.25)' }}
-              >
-                <span className="text-sm" style={{ color: C.darkText, opacity: 0.6 }}>
-                  Video coming soon
-                </span>
-              </div>
-            </div>
-            <p className="mt-3 text-center text-xs" style={{ color: 'rgba(245,240,232,0.6)', fontFamily: "'Inter', system-ui, sans-serif" }}>
-              A 90-second overview
-            </p>
+            <video
+              src="/lenses.mp4"
+              poster="/biolens.webp"
+              controls
+              playsInline
+              className="w-full rounded-xl shadow-lg"
+              style={{ display: 'block' }}
+            />
           </div>
         </section>
 
