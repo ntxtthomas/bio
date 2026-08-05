@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { trackPosthogEvent } from '../utils/posthog';
 
 // ─── Brand tokens ────────────────────────────────────────────────────────────
 const C = {
@@ -82,6 +83,34 @@ const stats = [
 // ─── Component ───────────────────────────────────────────────────────────────
 export default function Lenses() {
   const [deepDiveOpen, setDeepDiveOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const halfwayFired = useRef(false);
+
+  // Page visit
+  useEffect(() => {
+    trackPosthogEvent('lenses_page_viewed');
+  }, []);
+
+  // Video play and 50% milestone
+  const handleVideoPlay = () => {
+    trackPosthogEvent('lenses_video_play');
+  };
+
+  const handleVideoTimeUpdate = () => {
+    const video = videoRef.current;
+    if (!video || halfwayFired.current) return;
+    if (video.duration > 0 && video.currentTime / video.duration >= 0.5) {
+      halfwayFired.current = true;
+      trackPosthogEvent('lenses_video_50_percent');
+    }
+  };
+
+  // Deep dive toggle with tracking
+  const handleDeepDiveToggle = () => {
+    const opening = !deepDiveOpen;
+    setDeepDiveOpen(opening);
+    if (opening) trackPosthogEvent('lenses_deep_dive_opened');
+  };
 
   return (
     <>
@@ -106,10 +135,13 @@ export default function Lenses() {
         <section style={{ backgroundColor: C.teal }} className="w-full py-12 px-6">
           <div className="mx-auto w-full max-w-[800px]">
             <video
+              ref={videoRef}
               src="/lenses.mp4"
               poster="/biolens.webp"
               controls
               playsInline
+              onPlay={handleVideoPlay}
+              onTimeUpdate={handleVideoTimeUpdate}
               className="aspect-video w-full rounded-xl shadow-lg"
               style={{ display: 'block' }}
             />
@@ -306,7 +338,7 @@ export default function Lenses() {
               <div>
                 <button
                   type="button"
-                  onClick={() => setDeepDiveOpen((o) => !o)}
+                  onClick={() => handleDeepDiveToggle()}
                   className="mb-6 flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
                   style={{ color: C.amber }}
                 >
