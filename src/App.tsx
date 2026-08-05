@@ -1,10 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import About from './components/About';
 import Certifications from './components/Certifications';
 import Hero from './components/Hero';
 import Links from './components/Links';
 import LensesProjectPage from './pages/Lenses';
 import ProfessionalStory from './components/ProfessionalStory';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function HomePage() {
   return (
@@ -32,6 +41,7 @@ function HomePage() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/lenses" element={<LensesProjectPage />} />
