@@ -15,9 +15,9 @@ function getAssetPath(fileName: string): string {
 export function getResumeVariant(_lens: CareerLens): ResumeVariant {
   return {
     title: 'Download Resume',
-    preferredPath: getAssetPath('terry_thomas_software_engineer_267a.pdf'),
+    preferredPath: getAssetPath('terry_thomas_software_engineer_268a.pdf'),
     fallbackPath: getAssetPath('resume.pdf'),
-    downloadFileName: 'terry_thomas_software_engineer_267a.pdf',
+    downloadFileName: 'terry_thomas_software_engineer_268a.pdf',
   };
 }
 

@@ -73,7 +73,7 @@ export default function Hero() {
               <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
                 <ResumeDownload />
                 <a
-                  href="mailto:apm.tthomas@gmail.com"
+                  href="mailto:rightfit2027@gmail.com"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white/10 active:scale-95"
                 >
                   <svg

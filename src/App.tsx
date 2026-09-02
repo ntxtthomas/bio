@@ -27,7 +27,7 @@ function HomePage() {
         <p>
           &copy; {new Date().getFullYear()} Terry Thomas &middot;{' '}
           <a
-            href="mailto:apm.tthomas@gmail.com"
+            href="mailto:rightfit2027@gmail.com"
             className="transition-colors hover:text-slate-300"
           >
             apm.tthomas@gmail.com
