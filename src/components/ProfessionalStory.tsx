@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { assetPath } from '../utils/assets';
 import TraitPanel from './TraitPanel';
 
 interface StoryItem {
@@ -22,11 +23,6 @@ interface StoryTrack {
   tags: string[];
   items: StoryItem[];
 }
-
-const assetPath = (fileName: string) => {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-  return `${base}/${fileName}`;
-};
 
 const engineerTracks: StoryTrack[] = [
   {

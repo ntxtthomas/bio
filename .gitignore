@@ -24,4 +24,6 @@ dist-ssr
 *.sw?
 
 wiki/*
+wiki/docs/*
 .env.local
+
