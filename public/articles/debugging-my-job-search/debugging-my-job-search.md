@@ -113,7 +113,7 @@ That is the problem I actually need to debug.
 
 ### E - Explore
 
-This can be a fun stage in the problem solving process. It allows you to be creative and think of all kinds of different ways to approach a problem, without committing to any of them. I've been exploring all throughout this journey by hypothesizing and generating plausible strategies. When I first entered the workforce I was in Silicon Valley and the market was brutal. I'd heard stories of someone dressed in a chicken suit walking into the lobby of a prospective employer with their resume. Another writing their resume in Crayola. So, I have some wide parameters to work with. Some of my ideas I've already employed, some I abandoned before employing. This will be an ongoing effort, maybe one that causes me to finally end up in a chicken suit myself one day.
+This can be a fun stage in the problem solving process. It allows you to be creative and think of all kinds of different ways to approach a problem, without committing to any of them. I've been exploring all throughout this journey by hypothesizing and generating plausible strategies. When I first entered the workforce I was in Silicon Valley and the market was brutal. I'd heard stories of someone dressed in a chicken suit walking into the lobby of a prospective employer with their resume. Another writing their resume in Crayola. So, I have some wide parameters to work with. Some of my ideas I've already employed, some I abandoned before employing. This is an ongoing effort, maybe one that causes me to finally end up in a chicken suit myself one day.
 
 To explore the problem rather than immediately prescribe a solution, I pulled several tools from the toolbox: Five Whys, First Principles, Inversion, and Hypothesis-Driven Debugging.
 
@@ -196,23 +196,23 @@ Experiment: Fit Map cohort versus conventional application cohort. Measure inter
 
 **H4 — Rails isn't the problem; market concentration might be.**
 This distinction matters enormously. Maybe Rails skills aren't undesirable. Maybe there simply aren't enough Rails openings relative to Rails applicants.
-Experiment: Begin tracking qualified opportunities found/week, not merely applications, (for Rails, Python backend, Data Engineering, Solutions/Sales Engineering). After several weeks I'll know whether another ecosystem actually gives me materially more addressable opportunities. That's much better evidence than “I'm seeing Python everywhere.”
+Experiment: I'm tracking qualified opportunities found/week, not merely applications, (for Rails, Python backend, Data Engineering, Solutions/Sales Engineering). After several weeks I'll know whether another ecosystem actually gives me materially more addressable opportunities. That's much better evidence than “I'm seeing Python everywhere.”
 
 ### A - Act
 
 This is where it gets experimental, where I want this to become operational rather than philosophical.
-For the next 30 days, I don't “look for a job”, I run a job-search experiment. I built in simple additional analytics to my "Career Intelligence Application" and started treating every application like a **test case** — inputs, lanes, expected outcome, actual outcome.
 
-My "Career Intelligence Application" is almost purpose-built for this.
+**DIVIDE & CONQUER**
+For the next 30 days, I'm not simply “looking for a job.” I'm running a job-search experiment. I've added additional analytics to my Career Intelligence Application and I'm treating every application like a test case — inputs, lane, expected outcome, actual outcome.
 
-I established four experimental lanes:
-A — Software Engineering --> Keep pursuing the thing I'm demonstrably qualified to do today.
+Rather than treating every opportunity as part of one giant job market, I'm dividing the search into distinct career lanes so I can compare how each performs. I'm currently testing four experimental lanes:
 
-B — Sales Engineer/Solutions Engineer --> Spefically in EdTech & PropTech. Continue testing—not “transitioning.”
+A — Software Engineering → Keep pursuing the work I'm demonstrably qualified to do today.
+B — Sales Engineer / Solutions Engineer → Continue testing this part of my earlier career without treating it as a “transition.”
+C — Data Engineering → Begin exposing myself to roles and assessing the actual gaps while learning Python.
+D — Entry-Level Product Management → Test whether my engineering, business, customer, and product-adjacent experience translates into an entry point on the Product side.
 
-C — Data Engineering --> Begin exposing myself to roles and assessing the actual gaps while learning Python.
-
-D — Entry Level Product Management -->
+I'm also separating career lane from domain match. Those aren't the same variable. A Software Engineering role at an EdTech company and a Sales Engineering role at that same company belong to different career lanes, but both benefit from my prior EdTech experience. So I'm tracking domain alignment independently as None, Adjacent, Direct, or Deep. That lets me test whether one career lane actually performs better, whether domain experience is the stronger signal, or whether there's an interaction between the two.
 
 The unit I'm interested in is **interview conversions / qualified opportunities pursued** not applications sent.
 
@@ -247,7 +247,7 @@ That's the breakpoint I'm putting `binding.pry` on and I'm not proceeding to ano
 
 I don't know what the data will show yet. That's the point. I'll update this article as the experiments produce enough evidence to support—or reject—the hypotheses. If the Fit Map does nothing, I'll say so. If Python opens a larger market but doesn't improve conversion, I'll say so. If the thing I've blamed for ten months turns out not to be the problem at all, that may be the most useful result.
 
-The next phase should be RSIHEVL applied specifically to that failure point, (_Reproduce → Simplify → Inspect → Isolate → Hypothesize → Experiment → Verify → Learn & Record_), using my actual application history as the logs. That gives me a methodical way to determine whether I'm debugging market selection, discovery, channel, positioning, differentiation, qualification, or something I haven't recognized yet, before prescribing the fix.
+The next phase is to apply RSIHEVL specifically to that failure point, (_Reproduce → Simplify → Inspect → Isolate → Hypothesize → Experiment → Verify → Learn & Record_), using my actual application history as the logs. That gives me a methodical way to determine whether I'm debugging market selection, discovery, channel, positioning, differentiation, qualification, or something I haven't recognized yet, before prescribing the fix.
 
 In the meantime, you can read more about how I think about systems like this over on my [Lenses project page](https://www.terrythomas.com/lenses).
 
