@@ -117,16 +117,16 @@ This can be a fun stage in the problem solving process. It allows you to be crea
 
 To explore the problem rather than immediately prescribe a solution, I pulled several tools from the toolbox: Five Whys, First Principles, Inversion, and Hypothesis-Driven Debugging.
 
-**FIVE WHYS**
+**FIVE WHYS**\
 This one seemed a little obvious, but still worthwhile;
 
-1. Why am I unemployed?
+1. Why am I unemployed?\
    _Because I haven't received an acceptable offer._
 
-2. Why haven't I received an offer?
+2. Why haven't I received an offer?\
    _Because I'm not reaching enough late-stage interviews._
 
-3. Why am I not reaching late-stage interviews?
+3. Why am I not reaching late-stage interviews?\
    _Primarily because I'm not getting enough first interviews._
 
 4. Why am I not getting enough first interviews?
@@ -134,7 +134,7 @@ This one seemed a little obvious, but still worthwhile;
 This is where evidence ends. That's actually a breakthrough in defining the problem.
 I can't continue with "because I don't know Python", or "because I'm aged out", or "because AI destroyed software engineering", and so on. Those would be unverified fifth Whys. The root-cause investigation therefore currently terminates here with _Insufficient conversion from qualified application/candidate discovery → first interview._ Everything downstream is starved. That means spending enormous amounts of energy practicing LeetCode, system design, learning Django, studying Kubernetes, earning another certification, etc. cannot currently be justified as the primary intervention. Those optimize later stages of a pipeline we're rarely entering.
 
-**FIRST PRINCIPLES**
+**FIRST PRINCIPLES**\
 This is an interesting yet simple approach that I'm told is heavily used by Elon Musk.
 
 Stripping careers, titles, Rails, resumes and LinkedIn away. What absolutely must happen for me to become employed?
@@ -154,7 +154,7 @@ _Discovery → Credibility → Differentiation → Agreement_
 
 My current "failure" appears overwhelmingly concentrated around **Discovery/Credibility/Differentiation**, before **Agreement** is ever tested.
 
-**INVERSION**
+**INVERSION**\
 This one should always be asked when problem solving. It can be very revealing.
 
 How can I guarantee that this job search continues failing? Pretty easy;
@@ -173,14 +173,14 @@ How can I guarantee that this job search continues failing? Pretty easy;
 
 So the inverse gives us part of our solution.
 
-**HYPOTHESIS-DRIVEN DEBUGGING**
+**HYPOTHESIS-DRIVEN DEBUGGING**\
 This tends to be the most used approach in solving engineering problems in real time. This is all about running experiments against theories.
 
-**H1 — Cold application volume is not the primary solution.**
+**H1 — Cold application volume is not the primary solution.**\
 Prediction: Increasing applications without changing acquisition channels won't materially change first-interview conversion. I already have substantial supporting evidence.
 Action: Don't stop applying but stop optimizing for application count.
 
-**H2 — Extreme relevance should outperform generic qualification.**
+**H2 — Extreme relevance should outperform generic qualification.**\
 Prediction: Roles where I have both the technical AND domain/business alignment will produce better response rates.
 Examples:
 Rails + EdTech
@@ -188,13 +188,13 @@ Rails + PropTech
 Sales Engineer/Solutions Engineer + PropTech (or EdTech) + Technical Sales Mgr
 Experiment: Create a cohort of the next 10 unusually domain-aligned positions. Fit Map where appropriate. Tailored resume. Short human cover letter. Measure first-interview conversion separately.
 
-**H3 — My broader career is differentiation, not noise.**
+**H3 — My broader career is differentiation, not noise.**\
 My resume contains three unusually complementary bodies of experience:
 _Software Engineering + Real Estate / Business Operations + Technical Sales / Product Enablement_
 A generic recruiter may see career changes. A well aligned domain-amplified company may see _PropTech customer + SaaS engineer + technical seller_
 Experiment: Fit Map cohort versus conventional application cohort. Measure interviews.
 
-**H4 — Rails isn't the problem; market concentration might be.**
+**H4 — Rails isn't the problem; market concentration might be.**\
 This distinction matters enormously. Maybe Rails skills aren't undesirable. Maybe there simply aren't enough Rails openings relative to Rails applicants.
 Experiment: I'm tracking qualified opportunities found/week, not merely applications, (for Rails, Python backend, Data Engineering, Solutions/Sales Engineering). After several weeks I'll know whether another ecosystem actually gives me materially more addressable opportunities. That's much better evidence than “I'm seeing Python everywhere.”
 
@@ -202,7 +202,7 @@ Experiment: I'm tracking qualified opportunities found/week, not merely applicat
 
 This is where it gets experimental, where I want this to become operational rather than philosophical.
 
-**DIVIDE & CONQUER**
+**DIVIDE & CONQUER**\
 For the next 30 days, I'm not simply “looking for a job.” I'm running a job-search experiment. I've added additional analytics to my Career Intelligence Application and I'm treating every application like a test case — inputs, lane, expected outcome, actual outcome.
 
 Rather than treating every opportunity as part of one giant job market, I'm dividing the search into distinct career lanes so I can compare how each performs. I'm currently testing four experimental lanes:
@@ -216,7 +216,7 @@ I'm also separating career lane from domain match. Those aren't the same variabl
 
 The unit I'm interested in is **interview conversions / qualified opportunities pursued** not applications sent.
 
-**Define The Invariants**
+**Define The Invariants**\
 Here are some things that need to remain fundamentally true throughout execution;
 Invariant 1: I don't abandon demonstrated professional capital without evidence.
 Invariant 2: Learning should increase optionality or address an observed deficiency.
