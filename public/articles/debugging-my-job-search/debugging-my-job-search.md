@@ -10,33 +10,33 @@ After months of getting nowhere in this tech job market, I decided to apply the 
 
 ## The backstory
 
-Like so many others, I was laid off. My last day on the job was ten months ago. I held a software engineering role in the EdTech market for over eight years. Our techstack was intention simple; Ruby on Rails monolith, MySQL, some React here and there, GraphQL endpoints, Heroku, GitLab. At the time, we weren't allowed to use AI. I had a deep desire to learn more, to widen and deepen my knowledge, but I was limited to our stack, and we weren't expanding. We were sunsetting our product and folding it into the main platform. The main platform was run on different languages and developed by different teams. My days were numbered and when layoffs came, I went with it. I wasn't surpised that my name was on the list. I had high hopes that my 8+ years experience would land me something, likely in EdTech, or, in another domain I have expertise in. With that, I could continue to grow and master my craft. I was wrong.
+Like so many others, I was laid off. My last day on the job was ten months ago. I held a software engineering role in the EdTech market for over eight years. Our tech stack was intentionally simple; Ruby on Rails monolith, MySQL, some React here and there, GraphQL endpoints, Heroku, GitLab. At the time, we weren't allowed to use AI. I had a deep desire to learn more, to widen and deepen my knowledge, but I was limited to our stack, and we weren't expanding. We were sunsetting our product and folding it into the main platform. The main platform was run on different languages and developed by different teams. My days were numbered and when layoffs came, I went with it. I wasn't surprised that my name was on the list. I had high hopes that my 8+ years of experience would land me something, likely in EdTech, or, in another domain I have expertise in. With that, I could continue to grow and master my craft. I was wrong.
 
 ## The problem
 
-The market had changed, compressed. AI was eating the software world and I hadn't seen it. Entry to Mid level roles were gone. Only expereinced Senior level developers were being considered now. System Design is now a requirement. Fluency in React and Hotwire, required. AI proficiency, required. AI had entered the building. An engineer would spend years mastering a language but now code became cheap. The bar was raised, the role expanded. "Ok, no problem" I thought, "I'll dig in and learn these things while I'm applying for different roles. I'll adjust or refine my learning focus as I get feedback from the market." I did just that. I deepend and widend my knowledge base, all the while learning how to navigate the market, interview at different levels, take coding challenges, etc... All of the role I've applied for since I began this journey have been highly matched for my skillset. Still, no offers came, even for the roles where my engineering experience + domain-alignment position exceptionally well.
+The market I returned to looked very different than the one I left. The roles i was finding seemed increasingly senior. System design appeared constantly. Rails roles increasingly wanted React or Hotwire. AI proficiency was showing up everywhere. Whether these represented the market as a whole or simply the slice of it I was seeing, I didn't know. But the bar appeared to have moved. An engineer would spend years mastering a language but now code has become cheap. The bar was raised, the role expanded. "Ok, no problem" I thought, "I'll dig in and learn these things while I'm applying for different roles. I'll adjust or refine my learning focus as I get feedback from the market." I did just that. I deepened and widened my knowledge base, all the while learning how to navigate the market, interview at different levels, take coding challenges, etc... All of the roles I've applied for since I began this journey have been highly matched for my skillset. Still, no offers came, even for the roles where my engineering experience + domain-alignment position exceptionally well.
 
-This is a problem, but I didn't know what the problem was. There are no observability tools, no logs, no feedback, no one to ask. The rejection letters, if I was lucky enough to get one, never offered any insight that would help me adjust my positioning in the future. It became a guessing game. Months go by and despite all the effort I'm still coming up empty handed. I've since leveraged my entire career of domain expeterise and hunting for those roles; Sales Engineering, Solutions Engineering, entry level product management, but nothing is moving the needle and I don't have any difinitive reason as to why. Sure, markets expand and contract and clearly we're in one of the contractions. Right? Again, kinda guessing here.
+This is a problem, but I didn't know what the problem was. There are no observability tools, no logs, no feedback, no one to ask. The rejection letters, if I was lucky enough to get one, never offered any insight that would help me adjust my positioning in the future. It became a guessing game. Months go by and despite all the effort I'm still coming up empty handed. I've since leveraged my entire career of domain expertise and hunting for those roles; Sales Engineering, Solutions Engineering, entry level product management, but nothing is moving the needle and I don't have any definitive reason as to why. Sure, markets expand and contract and clearly we're in one of the contractions. Right? Again, kinda guessing here.
 
 A few things are "for sure" though. I caught on to some patterns and identified them as something I was going to have to navigate;
 
 - Ghost listings: The majority of roles that I had applied to months prior were still being promoted.
 - Competition: Due to the layoff trends that are sweeping through the market, every role has hundreds of applicants before I even see it.
-- Positioning: Armed with wisdom, willingness, and experience, I'm competing against at least two other generations who are mostly better educated than me, in a industry known for ageism.
+- Positioning: My career doesn't fit neatly into a conventional résumé. Software engineering is only one chapter of it, alongside technical sales, commercial real estate, and business ownership.
 - Analytics: I have built a "Career Intelligence Application" to track all the assessed and/or applied roles.
-- Lack of Empathy: The companies I was applying to owe me nothing and they let me know that at every turn. My last rejection letter (and again, I was lucky to get one), literally read as follows,... **"Dear Candidate First Name,..."**.
+- Automation: Much of the process is opaque and impersonal. My most recent rejection email literally began, **"Dear Candidate First Name,..."**.
 
 ## The turning point
 
-I'll be the first, and maybe the only, guy to tell you, "I'm a pretty smart guy". That said, I'm at a loss with this market. The process is broken. Reaching a place of surrender, it occurred to me that I have some formal problem solving frameworks. I used them for engineering, but honestly, they could be used for anything. I wondered if it might provide some insight to this problem I'm expereincing right now.
+I'll be the first, and maybe the only, guy to tell you, "I'm a pretty smart guy". And yet, after ten months of this, I couldn't explain why what I was doing wasn't working. Reaching a place of surrender, it occurred to me that I have some formal problem solving frameworks. I used them for engineering, but honestly, they could be used for anything. I wondered if it might provide some insight to this problem I'm experiencing right now.
 
-I decided to use the I-D-E-A-L framework and employ a handful problem-soving methods within that framework in hopes to either solve the problem or gain some helpful insight. If you're thinking in engineering terms, this can be viewed as a reusable problem-solving engine, with its own methods. Here's my approach;
+I decided to use the I-D-E-A-L framework and employ a handful of problem solving methods within that framework in hopes to either solve the problem or gain some helpful insight. If you're thinking in engineering terms, this can be viewed as a reusable problem-solving engine, with its own methods. Here's my approach;
 
 ### I - Identify the problem
 
-To be clear, the problem isn't _"I need a job"_, it's bigger then that. That's merely a symptom-level descritpion. A more useful engineering formulation is _"I have marketable professional experience, I am actively presenting it to employers, but the system is not converting that experience into enough interviews to produce an employment offer."_. That gives me something to investigate.
+To be clear, the problem isn't _"I need a job"_, it's bigger than that. That's merely a symptom-level description. A more useful engineering formulation is _"I have marketable professional experience, I am actively presenting it to employers, but the system is not converting that experience into enough interviews to produce an employment offer."_. That gives me something to investigate.
 
-The desired outcome isn't just to get more applications out, its to "obtain sustainable, gainful employment that makes reasonable use of my existing professional capital, at compensation sufficient to justify the work, within a timeframe that acknowledges my financial runway."
+The desired outcome isn't just to get more applications out, it's to "obtain sustainable, gainful employment that makes reasonable use of my existing professional capital, at compensation sufficient to justify the work, within a timeframe that acknowledges my financial runway."
 
 ### D - Define and represent the problem
 
@@ -57,7 +57,7 @@ To begin this process I separate the knowns, assumptions, and unknowns so that I
 - I've begun testing a Fit Map specifically because conventional resumes may require recruiters to connect too many dots themselves.
 
 **Assumptions**\
-It would be easy to just to say "the market is dead" and that would be the end of it. It certainly feels like exactly that from someone sitting in my perspective. But, that's an observation about response rate, not yet an explanation. So, some other assumptions I've entertained;
+It would be easy to just say "the market is dead" and that would be the end of it. It certainly feels like exactly that from someone sitting in my perspective. But, that's an observation about response rate, not yet an explanation. So, some other assumptions I've entertained;
 
 - Rails is too narrow.
 - Senior expectations have moved beyond my experience.
@@ -65,7 +65,7 @@ It would be easy to just to say "the market is dead" and that would be the end o
 - My lack of modern frontend depth is hurting me.
 - My lack of system design depth is hurting me.
 - My lack of Python is hurting me.
-- My resume isn't differentiating me.
+- My resume doesn't differentiate me.
 - ATS is filtering me.
 - Recruiters aren't understanding my career throughline.
 - Being unemployed is hurting me.
@@ -80,7 +80,7 @@ Some of these may be true but they haven't been isolated yet.
 
 1. Where exactly does the funnel fail?
    Search → qualified posting → application → human review → recruiter screen → hiring manager → technical interview → final → offer.
-   Based on what I've experienced, I know overwhelmingly that failure occurs before interview.
+   Based on what I've experienced, I know overwhelmingly that failure occurs before an interview.
 
 2. Are applications actually reaching humans?
    Unknown.
@@ -101,7 +101,7 @@ Some of these may be true but they haven't been isolated yet.
    I don't have enough controlled data.
 
 8. Does the Fit-Map tool I created to submit with some applications improve conversion?
-   Experiment just started.
+   The experiment just started.
 
 9. Does inbound sourcing convert better than outbound applications?
    Promising signal, insufficient sample.
@@ -109,7 +109,13 @@ Some of these may be true but they haven't been isolated yet.
 10. Is my problem qualification, differentiation, discoverability, positioning, market selection, or some combination?
     Unknown.
 
-That is the problem I actual need to debug. Here are a few methods I'll use and how they play out;
+That is the problem I actually need to debug.
+
+### E - Explore
+
+This can be a fun stage in the problem solving process. It allows you to be creative and think of all kinds of different ways to approach a problem, without committing to any of them. I've been exploring all throughout this journey by hypothesizing and generating plausible strategies. When I first entered the workforce I was in Silicon Valley and the market was brutal. I'd heard stories of someone dressed in a chicken suit walking into the lobby of a prospective employer with their resume. Another writing their resume in Crayola. So, I have some wide parameters to work with. Some of my ideas I've already employed, some I abandoned before employing. This will be an ongoing effort, maybe one that causes me to finally end up in a chicken suit myself one day.
+
+To explore the problem rather than immediately prescribe a solution, I pulled several tools from the toolbox: Five Whys, First Principles, Inversion, and Hypothesis-Driven Debugging.
 
 **FIVE WHYS**
 This one seemed a little obvious, but still worthwhile;
@@ -128,7 +134,7 @@ This one seemed a little obvious, but still worthwhile;
 This is where evidence ends. That's actually a breakthrough in defining the problem.
 I can't continue with "because I don't know Python", or "because I'm aged out", or "because AI destroyed software engineering", and so on. Those would be unverified fifth Whys. The root-cause investigation therefore currently terminates here with _Insufficient conversion from qualified application/candidate discovery → first interview._ Everything downstream is starved. That means spending enormous amounts of energy practicing LeetCode, system design, learning Django, studying Kubernetes, earning another certification, etc. cannot currently be justified as the primary intervention. Those optimize later stages of a pipeline we're rarely entering.
 
-**FIRST PRINCIPLE**
+**FIRST PRINCIPLES**
 This is an interesting yet simple approach that I'm told is heavily used by Elon Musk.
 
 Stripping careers, titles, Rails, resumes and LinkedIn away. What absolutely must happen for me to become employed?
@@ -167,15 +173,15 @@ How can I guarantee that this job search continues failing? Pretty easy;
 
 So the inverse gives us part of our solution.
 
-**HYPOTHESIS**
-This tends to be the most used approach in solving engineering problems real time. This is all about running expirements againts theories.
+**HYPOTHESIS-DRIVEN DEBUGGING**
+This tends to be the most used approach in solving engineering problems in real time. This is all about running experiments against theories.
 
 **H1 — Cold application volume is not the primary solution.**
-Prediction: Increasing applications without changing acquisition channel won't materially change first-interview conversion. I already have substantial supporting evidence.
+Prediction: Increasing applications without changing acquisition channels won't materially change first-interview conversion. I already have substantial supporting evidence.
 Action: Don't stop applying but stop optimizing for application count.
 
 **H2 — Extreme relevance should outperform generic qualification.**
-Prediction: Roles where I've both the technical AND domain/business alignment will produce better response rates.
+Prediction: Roles where I have both the technical AND domain/business alignment will produce better response rates.
 Examples:
 Rails + EdTech
 Rails + PropTech
@@ -192,30 +198,26 @@ Experiment: Fit Map cohort versus conventional application cohort. Measure inter
 This distinction matters enormously. Maybe Rails skills aren't undesirable. Maybe there simply aren't enough Rails openings relative to Rails applicants.
 Experiment: Begin tracking qualified opportunities found/week, not merely applications, (for Rails, Python backend, Data Engineering, Solutions/Sales Engineering). After several weeks I'll know whether another ecosystem actually gives me materially more addressable opportunities. That's much better evidence than “I'm seeing Python everywhere.”
 
-### E - Explore
-
-This can be a fun stage in the problem solving process. It allows you to be creative and think of all kinds of different ways to approach a problem, without committing to any of them. I've been exploring all throughout this journey by hypothosizing and generating plausible strategies. When I first entered the workforce I was in Silicon Valley and the market was brutal. I'd heard stories of someone dressed in chicken suit walking into the lobby of a prospective employer with their resume. Another writing their resume in Crayola. So, I have some wide parameters to work with. Some I've my ideas I've already employed, some I abandoned before employing. This will be an ongoing effort, maybe one that causes me to finally end up in a chicken suit myself one day.
-
 ### A - Act
 
-This is where it gets hardcore scientific, where I want this to become operational rather than philosophical.
-For the next 30 days, I don't “look for a job”, I run a job-search experiment. I built in simple additional analytics to my "Career Intelligence Application" and started treating every application like a **test case** — inputs, lanes, expected outcome, actual outcome. Some patterns showed up almost immediately.
+This is where it gets experimental, where I want this to become operational rather than philosophical.
+For the next 30 days, I don't “look for a job”, I run a job-search experiment. I built in simple additional analytics to my "Career Intelligence Application" and started treating every application like a **test case** — inputs, lanes, expected outcome, actual outcome.
 
 My "Career Intelligence Application" is almost purpose-built for this.
 
 I established four experimental lanes:
-A — Rails/SWE --> Keep pursuing the thing I'm demonstrably qualified to do today.
+A — Software Engineering --> Keep pursuing the thing I'm demonstrably qualified to do today.
 
-B — Domain-amplified SWE --> EdTech, PropTech and unusually strong intersections.
+B — Sales Engineer/Solutions Engineer --> Spefically in EdTech & PropTech. Continue testing—not “transitioning.”
 
-C — SE/Solutions --> Continue testing—not “transitioning.”
+C — Data Engineering --> Begin exposing myself to roles and assessing the actual gaps while learning Python.
 
-D — Python/Data-adjacent --> Begin exposing myself to roles and assessing the actual gaps while learning Python.
+D — Entry Level Product Management -->
 
 The unit I'm interested in is **interview conversions / qualified opportunities pursued** not applications sent.
 
 **Define The Invariants**
-Here are some things that need to remain fundementally true throughout execution;
+Here are some things that need to remain fundamentally true throughout execution;
 Invariant 1: I don't abandon demonstrated professional capital without evidence.
 Invariant 2: Learning should increase optionality or address an observed deficiency.
 Invariant 3: A rejection does not establish its cause.
@@ -243,9 +245,11 @@ Therefore my immediate problem is not interview performance, not offer negotiati
 
 That's the breakpoint I'm putting `binding.pry` on and I'm not proceeding to another giant list of things I should do from here. My own framework says that's random debugging.
 
+I don't know what the data will show yet. That's the point. I'll update this article as the experiments produce enough evidence to support—or reject—the hypotheses. If the Fit Map does nothing, I'll say so. If Python opens a larger market but doesn't improve conversion, I'll say so. If the thing I've blamed for ten months turns out not to be the problem at all, that may be the most useful result.
+
 The next phase should be RSIHEVL applied specifically to that failure point, (_Reproduce → Simplify → Inspect → Isolate → Hypothesize → Experiment → Verify → Learn & Record_), using my actual application history as the logs. That gives me a methodical way to determine whether I'm debugging market selection, discovery, channel, positioning, differentiation, qualification, or something I haven't recognized yet, before prescribing the fix.
 
-You can read more about how I think about systems like this over on my [Lenses project page](https://www.terrythomas.com/lenses).
+In the meantime, you can read more about how I think about systems like this over on my [Lenses project page](https://www.terrythomas.com/lenses).
 
 ---
 

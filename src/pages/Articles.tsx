@@ -44,14 +44,14 @@ export default function Articles() {
         <p className="mt-6 text-sm text-muted">No articles yet.</p>
       )}
 
-      <ul className="mt-8 flex flex-col divide-y divide-border">
+      <ul className="mt-8 flex flex-col">
         {articles.map(({ slug, frontmatter }) => (
-          <li key={slug} className="py-6 first:pt-0">
+          <li key={slug} className="border-b-[0.5px] border-border py-6 first:pt-0 last:border-b-0">
             <Link to={`/articles/${slug}`} className="group block">
-              <p className="text-xs font-semibold uppercase tracking-widest text-muted">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted/70">
                 {formatArticleDate(frontmatter.date)}
               </p>
-              <h2 className="mt-1 text-xl font-semibold text-foreground transition-colors group-hover:text-accent">
+              <h2 className="mt-1 font-medium text-foreground underline decoration-transparent underline-offset-4 transition-colors group-hover:text-accent group-hover:decoration-current">
                 {frontmatter.title}
               </h2>
               <p className="mt-1 text-sm text-muted">{frontmatter.dek}</p>

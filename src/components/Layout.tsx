@@ -4,7 +4,7 @@ import Footer from './Footer';
 export default function Layout() {
   return (
     <div className="flex min-h-screen flex-col bg-background font-sans text-foreground antialiased">
-      <header className="border-b border-border">
+      <header className="sticky top-0 z-50 border-b border-border bg-background">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link to="/" className="text-sm font-semibold tracking-tight text-foreground">
             Terry Thomas
