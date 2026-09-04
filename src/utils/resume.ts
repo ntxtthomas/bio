@@ -1,4 +1,5 @@
 import type { CareerLens } from '../types/career';
+import { assetPath } from './assets';
 
 export interface ResumeVariant {
   title: string;
@@ -7,16 +8,11 @@ export interface ResumeVariant {
   downloadFileName: string;
 }
 
-function getAssetPath(fileName: string): string {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-  return `${base}/${fileName}`;
-}
-
 export function getResumeVariant(_lens: CareerLens): ResumeVariant {
   return {
     title: 'Download Resume',
-    preferredPath: getAssetPath('terry_thomas_software_engineer_268a.pdf'),
-    fallbackPath: getAssetPath('resume.pdf'),
+    preferredPath: assetPath('terry_thomas_software_engineer_268a.pdf'),
+    fallbackPath: assetPath('resume.pdf'),
     downloadFileName: 'terry_thomas_software_engineer_268a.pdf',
   };
 }

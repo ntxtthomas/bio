@@ -3,7 +3,10 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import About from './components/About';
 import Certifications from './components/Certifications';
 import Hero from './components/Hero';
+import Layout from './components/Layout';
 import Links from './components/Links';
+import Article from './pages/Article';
+import Articles from './pages/Articles';
 import LensesProjectPage from './pages/Lenses';
 import ProfessionalStory from './components/ProfessionalStory';
 
@@ -17,24 +20,13 @@ function ScrollToTop() {
 
 function HomePage() {
   return (
-    <div className="min-h-screen font-sans antialiased">
+    <>
       <Hero />
       <ProfessionalStory />
       <About />
       <Links />
       <Certifications />
-      <footer className="bg-slate-900 py-6 text-center text-xs text-slate-500">
-        <p>
-          &copy; {new Date().getFullYear()} Terry Thomas &middot;{' '}
-          <a
-            href="mailto:rightfit2027@gmail.com"
-            className="transition-colors hover:text-slate-300"
-          >
-            apm.tthomas@gmail.com
-          </a>
-        </p>
-      </footer>
-    </div>
+    </>
   );
 }
 
@@ -43,7 +35,11 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/:slug" element={<Article />} />
+        </Route>
         <Route path="/lenses" element={<LensesProjectPage />} />
       </Routes>
     </BrowserRouter>
