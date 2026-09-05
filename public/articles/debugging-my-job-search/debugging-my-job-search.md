@@ -2,9 +2,11 @@
 title: "Debugging My Job Search"
 dek: "How I stopped treating my job search like a black box and started treating it like a broken build."
 slug: "debugging-my-job-search"
-date: "2026-08-27"
-hero: "/articles/debugging-my-job-search/hero.webp"
+date: "2026-9-5"
+hero: "/articles/debugging-my-job-search/tthomas_3.webp"
 ---
+
+![Problem Solving](/articles/debugging-my-job-search/problem-solving.webp)
 
 After months of getting nowhere in this tech job market, I decided to apply the same problem-solving methods to my unemployment that I'd use on a difficult production problem.
 
@@ -237,10 +239,6 @@ That's the breakpoint I'm putting `binding.pry` on and I'm not proceeding to ano
 I don't know what the data will show yet. That's the point. I'll update this article as the experiments produce enough evidence to support—or reject—the hypotheses. If the Fit Map does nothing, I'll say so. If Python opens a larger market but doesn't improve conversion, I'll say so. If the thing I've blamed for ten months turns out not to be the problem at all, that may be the most useful result.
 
 The next phase is to apply RSIHEVL specifically to that failure point, (_Reproduce → Simplify → Inspect → Isolate → Hypothesize → Experiment → Verify → Learn & Record_), using my actual application history as the logs. That gives me a methodical way to determine whether I'm debugging market selection, discovery, channel, positioning, differentiation, qualification, or something I haven't recognized yet, before prescribing the fix.
-
-In the meantime, you can read more about how I think about systems like this over on my [Lenses Project](https://www.terrythomas.com/lenses).
-
----
 
 ## Social Teasers
 

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown, { type Components } from 'react-markdown';
+import AuthorBioCard from '../components/AuthorBioCard';
 import { formatArticleDate, loadArticle, type ArticleContent } from '../utils/articles';
 import { trackPosthogEvent } from '../utils/posthog';
 
@@ -24,9 +25,12 @@ const markdownComponents: Components = {
   ul: ({ node: _node, ...props }) => <ul {...props} className="list-disc space-y-1 pl-6" />,
   ol: ({ node: _node, ...props }) => <ol {...props} className="list-decimal space-y-1 pl-6" />,
   hr: ({ node: _node, ...props }) => <hr {...props} className="my-10 border-border" />,
-  img: ({ node: _node, ...props }) => (
-    <img {...props} className="rounded-lg border border-border" />
-  ),
+  img: ({ node: _node, title, ...props }) => {
+    const sizeClass =
+      title === 'small' ? 'mx-auto w-[300px] max-w-full' : title === 'medium' ? 'mx-auto w-[60%]' : 'w-full';
+
+    return <img {...props} className={`rounded-lg border border-border ${sizeClass}`} />;
+  },
 };
 
 export default function Article() {
@@ -130,6 +134,8 @@ export default function Article() {
       <div className="mt-10 space-y-5 text-base leading-7 text-foreground/90">
         <ReactMarkdown components={markdownComponents}>{body}</ReactMarkdown>
       </div>
+
+      <AuthorBioCard />
     </article>
   );
 }
