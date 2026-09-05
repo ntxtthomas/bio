@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown, { type Components } from 'react-markdown';
 import { formatArticleDate, loadArticle, type ArticleContent } from '../utils/articles';
+import { trackPosthogEvent } from '../utils/posthog';
+
+const SCROLL_MILESTONES = [25, 50, 75, 100] as const;
 
 const markdownComponents: Components = {
   a: ({ node: _node, ...props }) => (
@@ -30,6 +33,7 @@ export default function Article() {
   const { slug } = useParams<{ slug: string }>();
   const [article, setArticle] = useState<ArticleContent | null>(null);
   const [notFound, setNotFound] = useState(false);
+  const firedMilestones = useRef(new Set<number>());
 
   useEffect(() => {
     if (!slug) {
@@ -40,6 +44,7 @@ export default function Article() {
     let cancelled = false;
     setArticle(null);
     setNotFound(false);
+    firedMilestones.current = new Set();
 
     loadArticle(slug)
       .then((loaded) => {
@@ -59,6 +64,30 @@ export default function Article() {
       document.title = `${article.frontmatter.title} — Terry Thomas`;
     }
   }, [article]);
+
+  // Scroll depth tracking, one event per milestone per article view
+  useEffect(() => {
+    if (!article) return;
+
+    const handleScroll = () => {
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = scrollableHeight <= 0 ? 100 : (window.scrollY / scrollableHeight) * 100;
+
+      for (const milestone of SCROLL_MILESTONES) {
+        if (percent >= milestone && !firedMilestones.current.has(milestone)) {
+          firedMilestones.current.add(milestone);
+          trackPosthogEvent(`article_scroll_${milestone}`, { slug });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [article, slug]);
 
   if (notFound) {
     return (
