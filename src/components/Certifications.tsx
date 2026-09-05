@@ -14,7 +14,7 @@ const certs: Cert[] = [
     name: 'AWS Certified Solutions Architect',
     code: 'SAA-C03',
     issuer: 'Amazon Web Services',
-    color: 'bg-amber-50 border-amber-200 text-amber-800',
+    color: 'bg-white border-slate-200 text-slate-800',
     timeline: 'Oct 2026',
   },
   {
@@ -22,12 +22,12 @@ const certs: Cert[] = [
     code: 'GH-200',
     issuer: 'GitHub',
     color: 'bg-slate-50 border-slate-200 text-slate-800',
-    timeline: 'Aug 2026',
+    timeline: 'Oct 2026',
   },
   {
     name: 'Full Stack Software Development',
     issuer: 'Coding Dojo',
-    color: 'bg-blue-50 border-blue-200 text-blue-800',
+    color: 'bg-white border-slate-200 text-white-800',
     href: 'https://www.codingdojo.com/software-development-part-time-accelerated',
     year: '2016',
     language: 'Ruby on Rails • MEAN • LAMP',
