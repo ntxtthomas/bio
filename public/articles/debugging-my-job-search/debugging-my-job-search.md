@@ -8,29 +8,25 @@ hero: "/articles/debugging-my-job-search/hero.webp"
 
 After months of getting nowhere in this tech job market, I decided to apply the same problem-solving methods to my unemployment that I'd use on a difficult production problem.
 
-## The backstory
+## How I got here
 
-Like so many others, I was laid off. My last day on the job was ten months ago. I held a software engineering role in the EdTech market for over eight years. Our tech stack was intentionally simple; Ruby on Rails monolith, MySQL, some React here and there, GraphQL endpoints, Heroku, GitLab. At the time, we weren't allowed to use AI. I had a deep desire to learn more, to widen and deepen my knowledge, but I was limited to our stack, and we weren't expanding. We were sunsetting our product and folding it into the main platform. The main platform was run on different languages and developed by different teams. My days were numbered and when layoffs came, I went with it. I wasn't surprised that my name was on the list. I had high hopes that my 8+ years of experience would land me something, likely in EdTech, or, in another domain I have expertise in. With that, I could continue to grow and master my craft. I was wrong.
+I was laid off after more than eight years as a software engineer in EdTech. My strongest production experience is Ruby on Rails, SaaS, APIs, databases, testing, AWS and CI/CD. I expected that experience, particularly when combined with domain expertise in EdTech or my earlier career in real estate and technical sales, would translate into another role. It hasn't.
 
-## The problem
+The market I returned to looked different from the one I left. System design appeared constantly. Rails roles increasingly wanted React or Hotwire. AI proficiency was showing up everywhere. So I did what seemed reasonable,... I started filling gaps while continuing to apply. React. System design. AWS. CI/CD. AI-assisted development. Certifications. Interview preparation. More recently, Python. Meanwhile, I kept applying to roles that appeared strongly aligned with my experience. Still, almost nothing was converting into first-round interviews.
 
-The market I returned to looked very different than the one I left. The roles i was finding seemed increasingly senior. System design appeared constantly. Rails roles increasingly wanted React or Hotwire. AI proficiency was showing up everywhere. Whether these represented the market as a whole or simply the slice of it I was seeing, I didn't know. But the bar appeared to have moved. An engineer would spend years mastering a language but now code has become cheap. The bar was raised, the role expanded. "Ok, no problem" I thought, "I'll dig in and learn these things while I'm applying for different roles. I'll adjust or refine my learning focus as I get feedback from the market." I did just that. I deepened and widened my knowledge base, all the while learning how to navigate the market, interview at different levels, take coding challenges, etc... All of the roles I've applied for since I began this journey have been highly matched for my skillset. Still, no offers came, even for the roles where my engineering experience + domain-alignment position exceptionally well.
+## The Black Box
 
-This is a problem, but I didn't know what the problem was. There are no observability tools, no logs, no feedback, no one to ask. The rejection letters, if I was lucky enough to get one, never offered any insight that would help me adjust my positioning in the future. It became a guessing game. Months go by and despite all the effort I'm still coming up empty handed. I've since leveraged my entire career of domain expertise and hunting for those roles; Sales Engineering, Solutions Engineering, entry level product management, but nothing is moving the needle and I don't have any definitive reason as to why. Sure, markets expand and contract and clearly we're in one of the contractions. Right? Again, kinda guessing here.
+The hardest part wasn't rejection. It was that I couldn't observe the system. There were no logs, traces, or error messages. Occasionally I would be able to ask a couple of questions during a round of interviews, but aside from that there was no human feedback to learn from. A rejection email might tell me another candidate was selected, but it couldn't tell me whether my application reached a human, whether the recruiter understood the fit, whether a missing skill mattered, or whether I was ever seriously considered. The system is broken and impersonal. One recent rejection literally began, “Dear Candidate First Name,...”.
 
-A few things are "for sure" though. I caught on to some patterns and identified them as something I was going to have to navigate;
+None of this happens in a vacuum. I'm navigating a market where listings can remain active for months, visible applicant counts can reach into the hundreds within hours, and much of the application process is automated and anonymous. At the same time, my own positioning isn't particularly simple: software engineering is only one chapter of a career that also includes technical sales, real estate, and business ownership. Any of those things could matter. The problem is that I can't yet tell which ones actually affect the outcome.
 
-- Ghost listings: The majority of roles that I had applied to months prior were still being promoted.
-- Competition: Due to the layoff trends that are sweeping through the market, every role has hundreds of applicants before I even see it.
-- Positioning: My career doesn't fit neatly into a conventional résumé. Software engineering is only one chapter of it, alongside technical sales, commercial real estate, and business ownership.
-- Analytics: I have built a "Career Intelligence Application" to track all the assessed and/or applied roles.
-- Automation: Much of the process is opaque and impersonal. My most recent rejection email literally began, **"Dear Candidate First Name,..."**.
+I had built a Career Intelligence application to track the roles I was assessing and applying to, but I was still doing what engineers are trained not to do, _guessing at root causes_.
 
 ## The turning point
 
-I'll be the first, and maybe the only, guy to tell you, "I'm a pretty smart guy". And yet, after ten months of this, I couldn't explain why what I was doing wasn't working. Reaching a place of surrender, it occurred to me that I have some formal problem solving frameworks. I used them for engineering, but honestly, they could be used for anything. I wondered if it might provide some insight to this problem I'm experiencing right now.
+I'll be the first, and maybe the only, guy to tell you, "I'm a pretty smart guy". And yet, after ten months of this, I couldn't explain why what I was doing wasn't working. So I stopped asking, “What else should I do?” and started asking, “What problem am I actually trying to solve?”. That's when I pulled out the same problem solving frameworks I'd use in engineering.
 
-I decided to use the I-D-E-A-L framework and employ a handful of problem solving methods within that framework in hopes to either solve the problem or gain some helpful insight. If you're thinking in engineering terms, this can be viewed as a reusable problem-solving engine, with its own methods. Here's my approach;
+I decided to use the I-D-E-A-L framework and employ a handful of problem solving methods within that framework in hopes of either solving the problem or gaining some helpful insight. If you're thinking in engineering terms, this can be viewed as a reusable problem-solving engine, with its own methods. Here's my approach;
 
 ### I - Identify the problem
 
@@ -44,20 +40,16 @@ To begin this process I separate the knowns, assumptions, and unknowns so that I
 
 **Knowns**
 
-- I have 8+ years professional software-engineering experience.
 - My strongest production stack is Ruby/Rails.
-- I have substantial SaaS, API/integration, database, testing, AWS, CI/CD and production-support experience.
-- I also have substantial earlier experience in technical sales/product enablement and commercial real estate/business ownership.
-- I have applied across junior/mid/senior SWE positions, predominantly Rails/backend/full-stack.
-- I've also tested Solutions Engineer/Sales Engineer roles.
+- I've applied across junior/mid/senior SWE roles, predominantly Rails/backend/full-stack.
 - I've applied to unusually high-fit positions and still been rejected before round one.
-- 50% of the roles I've applied for have matched 90% or better when assessed through my role-fit rubric, most rejected pre-round one, or unresponded.
-- My 11 SE/Solutions applications produced only one first-round interview, (“switch to Sales Engineering because that market will respond better” is not currently supported by evidence).
-- My background appears strongest where multiple dimensions intersect: Rails/SaaS + EdTech, Rails/SaaS + PropTech, engineering + integrations, etc.
-- I've begun testing a Fit Map specifically because conventional resumes may require recruiters to connect too many dots themselves.
+- 51% of the roles I've applied to have scored 90% or greater using my role-fit rubric.
+- My 11 SE/Solutions applications produced one first-round interview.
+- My background appears strongest where multiple dimensions intersect: Rails/SaaS + EdTech, Rails/SaaS + PropTech, engineering + integrations.
+- I've begun testing a Fit Map to make those intersections explicit.
 
 **Assumptions**\
-It would be easy to just say "the market is dead" and that would be the end of it. It certainly feels like exactly that from someone sitting in my perspective. But, that's an observation about response rate, not yet an explanation. So, some other assumptions I've entertained;
+In the absence of a feedback loop or meaningful observability, I've found myself guessing at causes. “The market is dead” certainly feels true from where I'm sitting, but that's an observation about response rate, not an explanation. Other explanations I've entertained:
 
 - Rails is too narrow.
 - Senior expectations have moved beyond my experience.
@@ -88,7 +80,7 @@ Some of these may be true but they haven't been isolated yet.
 3. When humans see the application, do they understand the fit?
    Unknown.
 
-4. Is Rails demand insufficient, or merely oversupplied?
+4. Is Rails demand insufficient or oversupplied?
    Unknown.
 
 5. Would Python materially increase interview conversion?
@@ -97,17 +89,11 @@ Some of these may be true but they haven't been isolated yet.
 6. Does domain-alignment improve conversion?
    Some evidence has supported this but sample size is small.
 
-7. Does networking/referral materially outperform cold applications for you?
+7. Does different acquisition channels materially change conversion?
    I don't have enough controlled data.
 
-8. Does the Fit-Map tool I created to submit with some applications improve conversion?
-   The experiment just started.
-
-9. Does inbound sourcing convert better than outbound applications?
-   Promising signal, insufficient sample.
-
-10. Is my problem qualification, differentiation, discoverability, positioning, market selection, or some combination?
-    Unknown.
+8. Is my problem qualification, differentiation, discoverability, positioning, market selection, or some combination?
+   Unknown.
 
 That is the problem I actually need to debug.
 
@@ -115,27 +101,10 @@ That is the problem I actually need to debug.
 
 This can be a fun stage in the problem solving process. It allows you to be creative and think of all kinds of different ways to approach a problem, without committing to any of them. I've been exploring all throughout this journey by hypothesizing and generating plausible strategies. When I first entered the workforce I was in Silicon Valley and the market was brutal. I'd heard stories of someone dressed in a chicken suit walking into the lobby of a prospective employer with their resume. Another writing their resume in Crayola. So, I have some wide parameters to work with. Some of my ideas I've already employed, some I abandoned before employing. This is an ongoing effort, maybe one that causes me to finally end up in a chicken suit myself one day.
 
-To explore the problem rather than immediately prescribe a solution, I pulled several tools from the toolbox: Five Whys, First Principles, Inversion, and Hypothesis-Driven Debugging.
-
-**FIVE WHYS**\
-This one seemed a little obvious, but still worthwhile;
-
-1. Why am I unemployed?\
-   _Because I haven't received an acceptable offer._
-
-2. Why haven't I received an offer?\
-   _Because I'm not reaching enough late-stage interviews._
-
-3. Why am I not reaching late-stage interviews?\
-   _Primarily because I'm not getting enough first interviews._
-
-4. Why am I not getting enough first interviews?
-
-This is where evidence ends. That's actually a breakthrough in defining the problem.
-I can't continue with "because I don't know Python", or "because I'm aged out", or "because AI destroyed software engineering", and so on. Those would be unverified fifth Whys. The root-cause investigation therefore currently terminates here with _Insufficient conversion from qualified application/candidate discovery → first interview._ Everything downstream is starved. That means spending enormous amounts of energy practicing LeetCode, system design, learning Django, studying Kubernetes, earning another certification, etc. cannot currently be justified as the primary intervention. Those optimize later stages of a pipeline we're rarely entering.
+To explore the problem rather than immediately prescribe a solution, I pulled several tools from the toolbox: First Principles, Five Whys, Inversion, and Hypothesis-Driven Debugging.
 
 **FIRST PRINCIPLES**\
-This is an interesting yet simple approach that I'm told is heavily used by Elon Musk.
+Strip away assumptions and reduce the problem to the fundamental things that must be true.
 
 Stripping careers, titles, Rails, resumes and LinkedIn away. What absolutely must happen for me to become employed?
 
@@ -152,10 +121,27 @@ Everything else, (resume, Rails, LinkedIn, Fit Map, Python, recruiter, portfolio
 
 _Discovery → Credibility → Differentiation → Agreement_
 
-My current "failure" appears overwhelmingly concentrated around **Discovery/Credibility/Differentiation**, before **Agreement** is ever tested.
+My current failure appears to occur somewhere across _Discovery → Credibility → Differentiation_, before _Agreement_ is ever meaningfully tested.
+
+**FIVE WHYS**\
+A root-cause analysis technique that repeatedly asks “why?” to work backward from a symptom toward its underlying cause.
+
+1. Why am I unemployed?\
+   _Because I haven't received an acceptable offer._
+
+2. Why haven't I received an offer?\
+   _Because I'm not reaching enough late-stage interviews._
+
+3. Why am I not reaching late-stage interviews?\
+   _Primarily because I'm not getting enough first interviews._
+
+4. Why am I not getting enough first interviews?
+
+This is where evidence ends. That's actually a breakthrough in defining the problem.
+I can't continue with "because I don't know Python", or "because I'm aged out", or "because AI destroyed software engineering", and so on. Those would be unverified fifth Whys. The root-cause investigation therefore currently terminates here with _Insufficient conversion from qualified application/candidate discovery → first interview._ Everything downstream is starved. That means spending enormous amounts of energy practicing LeetCode, system design, learning Django, studying Kubernetes, earning another certification, etc. cannot currently be justified as the primary intervention. Those optimize later stages of a pipeline we're rarely entering.
 
 **INVERSION**\
-This one should always be asked when problem solving. It can be very revealing.
+Instead of asking how to succeed, ask how you could guarantee failure, then examine what that reveals.
 
 How can I guarantee that this job search continues failing? Pretty easy;
 
@@ -174,42 +160,45 @@ How can I guarantee that this job search continues failing? Pretty easy;
 So the inverse gives us part of our solution.
 
 **HYPOTHESIS-DRIVEN DEBUGGING**\
-This tends to be the most used approach in solving engineering problems in real time. This is all about running experiments against theories.
+Turn possible explanations into testable predictions, then use evidence to support, reject, or refine them. This tends to be the most commonly used approach in solving engineering problems in real time.
 
 **H1 — Cold application volume is not the primary solution.**\
-Prediction: Increasing applications without changing acquisition channels won't materially change first-interview conversion. I already have substantial supporting evidence.
-Action: Don't stop applying but stop optimizing for application count.
+**Prediction:** Increasing applications without changing acquisition channels won't materially change first-interview conversion. I already have substantial supporting evidence.\
+**Action:** Don't stop applying but stop optimizing for application count.
 
 **H2 — Extreme relevance should outperform generic qualification.**\
-Prediction: Roles where I have both the technical AND domain/business alignment will produce better response rates.
+**Prediction:** Roles where I have both the technical AND domain/business alignment will produce better response rates.
 Examples:
 Rails + EdTech
 Rails + PropTech
 Sales Engineer/Solutions Engineer + PropTech (or EdTech) + Technical Sales Mgr
-Experiment: Create a cohort of the next 10 unusually domain-aligned positions. Fit Map where appropriate. Tailored resume. Short human cover letter. Measure first-interview conversion separately.
+**Experiment:** Create a cohort of the next 10 unusually domain-aligned positions. Fit Map where appropriate. Tailored resume. Short human cover letter. Measure first-interview conversion separately.
 
-**H3 — My broader career is differentiation, not noise.**\
-My resume contains three unusually complementary bodies of experience:
-_Software Engineering + Real Estate / Business Operations + Technical Sales / Product Enablement_
-A generic recruiter may see career changes. A well aligned domain-amplified company may see _PropTech customer + SaaS engineer + technical seller_
-Experiment: Fit Map cohort versus conventional application cohort. Measure interviews.
+**H3 — Explicitly connecting my broader career should outperform making employers infer the connection.**\
+**Prediction:** Domain-aligned applications using the Fit Map will convert better than comparable applications where that connection is left implicit.
+My resume contains three unusually complementary bodies of experience:\
+_Software Engineering + Real Estate / Business Operations + Technical Sales / Product Enablement_\
+A generic recruiter may see career changes. A well aligned domain-amplified company may see _PropTech customer + SaaS engineer + technical seller_\
+**Experiment:** Fit Map cohort versus conventional application cohort. Measure interviews.
 
 **H4 — Rails isn't the problem; market concentration might be.**\
-This distinction matters enormously. Maybe Rails skills aren't undesirable. Maybe there simply aren't enough Rails openings relative to Rails applicants.
-Experiment: I'm tracking qualified opportunities found/week, not merely applications, (for Rails, Python backend, Data Engineering, Solutions/Sales Engineering). After several weeks I'll know whether another ecosystem actually gives me materially more addressable opportunities. That's much better evidence than “I'm seeing Python everywhere.”
+**Prediction:** I will find materially more qualified opportunities per week outside the Rails ecosystem than within it, particularly across Python backend and Data Engineering roles.\
+**Experiment:** I'm tracking qualified opportunities found per week, not merely applications, across Rails, Python, Data Engineering, Solutions/Sales Engineering. After several weeks I'll know whether another ecosystem actually gives me materially more addressable opportunities. That's much better evidence than “I'm seeing Python everywhere.”
 
 ### A - Act
 
 This is where it gets experimental, where I want this to become operational rather than philosophical.
 
 **DIVIDE & CONQUER**\
-For the next 30 days, I'm not simply “looking for a job.” I'm running a job-search experiment. I've added additional analytics to my Career Intelligence Application and I'm treating every application like a test case — inputs, lane, expected outcome, actual outcome.
+Break a large problem into smaller, independently observable parts.
+
+For the next 30 days, I'm not simply “looking for a job.” I'm running a job-search experiment. I've added additional analytics to my Career Intelligence application and I'm treating every application like a test case — inputs, lane, expected outcome, actual outcome.
 
 Rather than treating every opportunity as part of one giant job market, I'm dividing the search into distinct career lanes so I can compare how each performs. I'm currently testing four experimental lanes:
 
-A — Software Engineering → Keep pursuing the work I'm demonstrably qualified to do today.
-B — Sales Engineer / Solutions Engineer → Continue testing this part of my earlier career without treating it as a “transition.”
-C — Data Engineering → Begin exposing myself to roles and assessing the actual gaps while learning Python.
+A — Software Engineering → Keep pursuing the work I'm demonstrably qualified to do today.\
+B — Sales Engineer / Solutions Engineer → Continue testing this part of my earlier career without treating it as a “transition.”\
+C — Data Engineering → Begin exposing myself to roles and assessing the actual gaps while learning Python.\
 D — Entry-Level Product Management → Test whether my engineering, business, customer, and product-adjacent experience translates into an entry point on the Product side.
 
 I'm also separating career lane from domain match. Those aren't the same variable. A Software Engineering role at an EdTech company and a Sales Engineering role at that same company belong to different career lanes, but both benefit from my prior EdTech experience. So I'm tracking domain alignment independently as None, Adjacent, Direct, or Deep. That lets me test whether one career lane actually performs better, whether domain experience is the stronger signal, or whether there's an interaction between the two.
@@ -241,7 +230,7 @@ Every Friday, I perform the equivalent of an incident review, or a retro, and as
 I have not yet solved the unemployment problem.
 But I think I've finally reduced it to a much more useful failing case:
 An experienced professional with demonstrably relevant skills is producing insufficient first-round interview opportunities despite substantial application activity.
-Therefore my immediate problem is not interview performance, not offer negotiation, not LeetCode, and not even primarily acquiring more technical capability. It's "Why isn't credible experience reliably crossing the boundary between qualified candidate and first conversation?".
+Therefore my immediate problem is not interview performance, not offer negotiation, not LeetCode, and not even primarily acquiring more technical capability. It's "Why isn't credible experience reliably crossing the boundary between qualified candidate and first conversation?"
 
 That's the breakpoint I'm putting `binding.pry` on and I'm not proceeding to another giant list of things I should do from here. My own framework says that's random debugging.
 
@@ -249,7 +238,7 @@ I don't know what the data will show yet. That's the point. I'll update this art
 
 The next phase is to apply RSIHEVL specifically to that failure point, (_Reproduce → Simplify → Inspect → Isolate → Hypothesize → Experiment → Verify → Learn & Record_), using my actual application history as the logs. That gives me a methodical way to determine whether I'm debugging market selection, discovery, channel, positioning, differentiation, qualification, or something I haven't recognized yet, before prescribing the fix.
 
-In the meantime, you can read more about how I think about systems like this over on my [Lenses project page](https://www.terrythomas.com/lenses).
+In the meantime, you can read more about how I think about systems like this over on my [Lenses Project](https://www.terrythomas.com/lenses).
 
 ---
 
