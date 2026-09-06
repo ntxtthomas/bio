@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown, { type Components } from 'react-markdown';
+import remarkBreaks from 'remark-breaks';
 import AuthorBioCard from '../components/AuthorBioCard';
 import { formatArticleDate, loadArticle, type ArticleContent } from '../utils/articles';
 import { trackPosthogEvent } from '../utils/posthog';
@@ -132,7 +133,9 @@ export default function Article() {
       </header>
 
       <div className="mt-10 space-y-5 text-base leading-7 text-foreground/90">
-        <ReactMarkdown components={markdownComponents}>{body}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkBreaks]} components={markdownComponents}>
+          {body}
+        </ReactMarkdown>
       </div>
 
       <AuthorBioCard />
