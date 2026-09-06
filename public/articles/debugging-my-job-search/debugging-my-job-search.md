@@ -10,7 +10,7 @@ hero: "/articles/debugging-my-job-search/tthomas_3.webp"
 
 After months of getting nowhere in this tech job market, I decided to apply the same problem-solving methods to my unemployment that I'd use on a difficult production problem.
 
-## How I got here
+## How I Got Here
 
 I was laid off after more than eight years as a software engineer in EdTech. My strongest production experience is Ruby on Rails, SaaS, APIs, databases, testing, AWS and CI/CD. I expected that experience, particularly when combined with domain expertise in EdTech or my earlier career in real estate and technical sales, would translate into another role. It hasn't.
 
@@ -24,7 +24,7 @@ None of this happens in a vacuum. I'm navigating a market where listings can rem
 
 I had built a Career Intelligence application to track the roles I was assessing and applying to, but I was still doing what engineers are trained not to do: guessing at root causes.
 
-## The turning point
+## The Turning Point
 
 I'll be the first, and maybe the only, guy to tell you, "I'm a pretty smart guy." And yet, after ten months of this, I couldn't explain why what I was doing wasn't working. So I stopped asking, “What else should I do?” and started asking, “What problem am I actually trying to solve?” That's when I pulled out the same problem solving frameworks I'd use in engineering.
 
@@ -50,7 +50,7 @@ To begin this process I separate the knowns, assumptions, and unknowns so that I
 - My background appears strongest where multiple dimensions intersect: Rails/SaaS + EdTech, Rails/SaaS + PropTech, engineering + integrations.
 - I've begun testing a Fit Map to make those intersections explicit.
 
-**Assumptions**\
+**Assumptions**
 In the absence of a feedback loop or meaningful observability, I've found myself guessing at causes. “The market is dead” certainly feels true from where I'm sitting, but that's an observation about response rate, not an explanation. Other explanations I've entertained:
 
 - Rails is too narrow.
@@ -137,8 +137,8 @@ A root-cause analysis technique that repeatedly asks “why?” to work backward
    _Primarily because I'm not getting enough first interviews._
 
 4. Why am I not getting enough first interviews?
+   _This is where evidence ends. That's actually a breakthrough in defining the problem._
 
-This is where evidence ends. That's actually a breakthrough in defining the problem.
 I can't continue with "because I don't know Python," or "because I'm aged out," or "because AI destroyed software engineering," and so on. Those would be unverified fifth Whys. The root-cause investigation therefore currently terminates here with _Insufficient conversion from qualified application/candidate discovery → first interview._ Everything downstream is starved. That means spending enormous amounts of energy practicing LeetCode, system design, learning Django, studying Kubernetes, earning another certification, etc. cannot currently be justified as the primary intervention. Those optimize later stages of a pipeline we're rarely entering.
 
 **INVERSION**\
