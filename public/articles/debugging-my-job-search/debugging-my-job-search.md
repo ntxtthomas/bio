@@ -14,25 +14,25 @@ After months of getting nowhere in this tech job market, I decided to apply the 
 
 I was laid off after more than eight years as a software engineer in EdTech. My strongest production experience is Ruby on Rails, SaaS, APIs, databases, testing, AWS and CI/CD. I expected that experience, particularly when combined with domain expertise in EdTech or my earlier career in real estate and technical sales, would translate into another role. It hasn't.
 
-The market I returned to looked different from the one I left. System design appeared constantly. Rails roles increasingly wanted React or Hotwire. AI proficiency was showing up everywhere. So I did what seemed reasonable,... I started filling gaps while continuing to apply. React. System design. AWS. CI/CD. AI-assisted development. Certifications. Interview preparation. More recently, Python. Meanwhile, I kept applying to roles that appeared strongly aligned with my experience. Still, almost nothing was converting into first-round interviews.
+The market I returned to looked different from the one I left. System design appeared constantly. Rails roles increasingly wanted React or Hotwire. AI proficiency was showing up everywhere. So I did what seemed reasonable: I started filling gaps while continuing to apply. React. System design. AWS. CI/CD. AI-assisted development. Certifications. Interview preparation. More recently, Python. Meanwhile, I kept applying to roles that appeared strongly aligned with my experience. Still, almost nothing was converting into first-round interviews.
 
 ## The Black Box
 
-The hardest part wasn't rejection. It was that I couldn't observe the system. There were no logs, traces, or error messages. Occasionally I would be able to ask a couple of questions during a round of interviews, but aside from that there was no human feedback to learn from. A rejection email might tell me another candidate was selected, but it couldn't tell me whether my application reached a human, whether the recruiter understood the fit, whether a missing skill mattered, or whether I was ever seriously considered. The system is broken and impersonal. One recent rejection literally began, “Dear Candidate First Name,...”.
+The hardest part wasn't rejection. It was that I couldn't observe the system. There were no logs, traces, or error messages. Occasionally I would be able to ask a couple of questions during a round of interviews, but aside from that there was no human feedback to learn from. A rejection email might tell me another candidate was selected, but it couldn't tell me whether my application reached a human, whether the recruiter understood the fit, whether a missing skill mattered, or whether I was ever seriously considered. The system is broken and impersonal. One recent rejection literally began, “Dear Candidate First Name,...”
 
 None of this happens in a vacuum. I'm navigating a market where listings can remain active for months, visible applicant counts can reach into the hundreds within hours, and much of the application process is automated and anonymous. At the same time, my own positioning isn't particularly simple: software engineering is only one chapter of a career that also includes technical sales, real estate, and business ownership. Any of those things could matter. The problem is that I can't yet tell which ones actually affect the outcome.
 
-I had built a Career Intelligence application to track the roles I was assessing and applying to, but I was still doing what engineers are trained not to do, _guessing at root causes_.
+I had built a Career Intelligence application to track the roles I was assessing and applying to, but I was still doing what engineers are trained not to do: guessing at root causes.
 
 ## The turning point
 
-I'll be the first, and maybe the only, guy to tell you, "I'm a pretty smart guy". And yet, after ten months of this, I couldn't explain why what I was doing wasn't working. So I stopped asking, “What else should I do?” and started asking, “What problem am I actually trying to solve?”. That's when I pulled out the same problem solving frameworks I'd use in engineering.
+I'll be the first, and maybe the only, guy to tell you, "I'm a pretty smart guy." And yet, after ten months of this, I couldn't explain why what I was doing wasn't working. So I stopped asking, “What else should I do?” and started asking, “What problem am I actually trying to solve?” That's when I pulled out the same problem solving frameworks I'd use in engineering.
 
-I decided to use the I-D-E-A-L framework and employ a handful of problem solving methods within that framework in hopes of either solving the problem or gaining some helpful insight. If you're thinking in engineering terms, this can be viewed as a reusable problem-solving engine, with its own methods. Here's my approach;
+I decided to use the I-D-E-A-L framework and employ a handful of problem solving methods within that framework in hopes of either solving the problem or gaining some helpful insight. If you're thinking in engineering terms, this can be viewed as a reusable problem-solving engine, with its own methods. Here's my approach:
 
 ### I - Identify the problem
 
-To be clear, the problem isn't _"I need a job"_, it's bigger than that. That's merely a symptom-level description. A more useful engineering formulation is _"I have marketable professional experience, I am actively presenting it to employers, but the system is not converting that experience into enough interviews to produce an employment offer."_. That gives me something to investigate.
+To be clear, the problem isn't _"I need a job,"_ it's bigger than that. That's merely a symptom-level description. A more useful engineering formulation is _"I have marketable professional experience, I am actively presenting it to employers, but the system is not converting that experience into enough interviews to produce an employment offer."_ That gives me something to investigate.
 
 The desired outcome isn't just to get more applications out, it's to "obtain sustainable, gainful employment that makes reasonable use of my existing professional capital, at compensation sufficient to justify the work, within a timeframe that acknowledges my financial runway."
 
@@ -64,7 +64,7 @@ In the absence of a feedback loop or meaningful observability, I've found myself
 - Recruiters aren't understanding my career throughline.
 - Being unemployed is hurting me.
 - Age is hurting me.
-- No formal degree is hurting me.
+- My lack of a formal degree is hurting me.
 - There are simply too many qualified applicants.
 - Remote-only competition is overwhelming.
 
@@ -73,29 +73,28 @@ Some of these may be true but they haven't been isolated yet.
 **Unknowns**
 
 1. Where exactly does the funnel fail?
-   Search → qualified posting → application → human review → recruiter screen → hiring manager → technical interview → final → offer.
-   Based on what I've experienced, I know overwhelmingly that failure occurs before an interview.
+   _Search → qualified posting → application → human review → recruiter screen → hiring manager → technical interview → final → offer. Based on what I've experienced, I know overwhelmingly that failure occurs before an interview._
 
 2. Are applications actually reaching humans?
-   Unknown.
+   _Unknown._
 
 3. When humans see the application, do they understand the fit?
-   Unknown.
+   _Unknown._
 
 4. Is Rails demand insufficient or oversupplied?
-   Unknown.
+   _Unknown._
 
 5. Would Python materially increase interview conversion?
-   Unknown.
+   _Unknown._
 
 6. Does domain-alignment improve conversion?
-   Some evidence has supported this but sample size is small.
+   _Some evidence has supported this but sample size is small._
 
 7. Does different acquisition channels materially change conversion?
-   I don't have enough controlled data.
+   _I don't have enough controlled data._
 
 8. Is my problem qualification, differentiation, discoverability, positioning, market selection, or some combination?
-   Unknown.
+   _Unknown._
 
 That is the problem I actually need to debug.
 
@@ -140,12 +139,12 @@ A root-cause analysis technique that repeatedly asks “why?” to work backward
 4. Why am I not getting enough first interviews?
 
 This is where evidence ends. That's actually a breakthrough in defining the problem.
-I can't continue with "because I don't know Python", or "because I'm aged out", or "because AI destroyed software engineering", and so on. Those would be unverified fifth Whys. The root-cause investigation therefore currently terminates here with _Insufficient conversion from qualified application/candidate discovery → first interview._ Everything downstream is starved. That means spending enormous amounts of energy practicing LeetCode, system design, learning Django, studying Kubernetes, earning another certification, etc. cannot currently be justified as the primary intervention. Those optimize later stages of a pipeline we're rarely entering.
+I can't continue with "because I don't know Python," or "because I'm aged out," or "because AI destroyed software engineering," and so on. Those would be unverified fifth Whys. The root-cause investigation therefore currently terminates here with _Insufficient conversion from qualified application/candidate discovery → first interview._ Everything downstream is starved. That means spending enormous amounts of energy practicing LeetCode, system design, learning Django, studying Kubernetes, earning another certification, etc. cannot currently be justified as the primary intervention. Those optimize later stages of a pipeline we're rarely entering.
 
 **INVERSION**\
 Instead of asking how to succeed, ask how you could guarantee failure, then examine what that reveals.
 
-How can I guarantee that this job search continues failing? Pretty easy;
+How can I guarantee that this job search continues failing? Pretty easy:
 
 - Apply almost exclusively through high volume job boards.
 - Compete for positions that receive hundreds or thousands of applicants.
@@ -173,7 +172,7 @@ Turn possible explanations into testable predictions, then use evidence to suppo
 Examples:
 Rails + EdTech
 Rails + PropTech
-Sales Engineer/Solutions Engineer + PropTech (or EdTech) + Technical Sales Mgr
+Sales Engineer/Solutions Engineer + PropTech (or EdTech) + Technical Sales Manager
 **Experiment:** Create a cohort of the next 10 unusually domain-aligned positions. Fit Map where appropriate. Tailored resume. Short human cover letter. Measure first-interview conversion separately.
 
 **H3 — Explicitly connecting my broader career should outperform making employers infer the connection.**\
@@ -194,7 +193,7 @@ This is where it gets experimental, where I want this to become operational rath
 **DIVIDE & CONQUER**\
 Break a large problem into smaller, independently observable parts.
 
-For the next 30 days, I'm not simply “looking for a job.” I'm running a job-search experiment. I've added additional analytics to my Career Intelligence application and I'm treating every application like a test case — inputs, lane, expected outcome, actual outcome.
+For the next 30 days, I'm not simply “looking for a job.” I'm running a job-search experiment. I've added additional analytics to my Career Intelligence application and I'm treating every application like a test case, (inputs, lane, expected outcome, actual outcome).
 
 Rather than treating every opportunity as part of one giant job market, I'm dividing the search into distinct career lanes so I can compare how each performs. I'm currently testing four experimental lanes:
 
@@ -208,17 +207,17 @@ I'm also separating career lane from domain match. Those aren't the same variabl
 The unit I'm interested in is **interview conversions / qualified opportunities pursued** not applications sent.
 
 **Define The Invariants**\
-Here are some things that need to remain fundamentally true throughout execution;
-Invariant 1: I don't abandon demonstrated professional capital without evidence.
-Invariant 2: Learning should increase optionality or address an observed deficiency.
-Invariant 3: A rejection does not establish its cause.
-Invariant 4: I don't call an experiment successful because it feels promising.
-Invariant 5: I don't call an experiment failed from one observation.
+Here are some things that need to remain fundamentally true throughout execution;\
+Invariant 1: I don't abandon demonstrated professional capital without evidence.\
+Invariant 2: Learning should increase optionality or address an observed deficiency.\
+Invariant 3: A rejection does not establish its cause.\
+Invariant 4: I don't call an experiment successful because it feels promising.\
+Invariant 5: I don't call an experiment failed from one observation.\
 Invariant 6: Employment is the objective.
 
 ### L - Look back and learn
 
-Every Friday, I perform the equivalent of an incident review, or a retro, and ask questions like;
+Every Friday, I perform the equivalent of an incident review, or a retro, and ask questions like:
 
 - What did we test?
 - What happened?
@@ -229,16 +228,14 @@ Every Friday, I perform the equivalent of an incident review, or a retro, and as
 - What single variable should change next?
 - Where do I think I am right now? Have I moved the needle at all?
 
-I have not yet solved the unemployment problem.
-But I think I've finally reduced it to a much more useful failing case:
-An experienced professional with demonstrably relevant skills is producing insufficient first-round interview opportunities despite substantial application activity.
-Therefore my immediate problem is not interview performance, not offer negotiation, not LeetCode, and not even primarily acquiring more technical capability. It's "Why isn't credible experience reliably crossing the boundary between qualified candidate and first conversation?"
+I have not yet solved the unemployment problem. But I think I've finally reduced it to a much more useful failing case:
+An experienced professional with demonstrably relevant skills is producing insufficient first-round interview opportunities despite substantial application activity. Therefore my immediate problem is not interview performance, not offer negotiation, not LeetCode, and not even primarily acquiring more technical capability. It's "Why isn't credible experience reliably crossing the boundary between qualified candidate and first conversation?"
 
 That's the breakpoint I'm putting `binding.pry` on and I'm not proceeding to another giant list of things I should do from here. My own framework says that's random debugging.
 
 I don't know what the data will show yet. That's the point. I'll update this article as the experiments produce enough evidence to support—or reject—the hypotheses. If the Fit Map does nothing, I'll say so. If Python opens a larger market but doesn't improve conversion, I'll say so. If the thing I've blamed for ten months turns out not to be the problem at all, that may be the most useful result.
 
-The next phase is to apply RSIHEVL specifically to that failure point, (_Reproduce → Simplify → Inspect → Isolate → Hypothesize → Experiment → Verify → Learn & Record_), using my actual application history as the logs. That gives me a methodical way to determine whether I'm debugging market selection, discovery, channel, positioning, differentiation, qualification, or something I haven't recognized yet, before prescribing the fix.
+The next phase is to apply RSIHEVL specifically to that failure point, (_Reproduce → Simplify → Inspect/Isolate → Hypothesize → Experiment → Verify → Learn & Record_), using my actual application history as the logs. That gives me a methodical way to determine whether I'm debugging market selection, discovery, channel, positioning, differentiation, qualification, or something I haven't recognized yet, before prescribing the fix.
 
 ## Social Teasers
 
