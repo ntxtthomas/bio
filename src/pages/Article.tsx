@@ -119,26 +119,28 @@ export default function Article() {
   const { frontmatter, body } = article;
 
   return (
-    <article className="mx-auto max-w-2xl px-6 py-16">
-      <Link to="/articles" className="text-sm text-accent transition-opacity hover:opacity-80">
-        ← Back to Articles
-      </Link>
+    <article className="bg-slate-100 px-6 py-16">
+      <div className="mx-auto max-w-2xl">
+        <Link to="/articles" className="text-sm text-accent transition-opacity hover:opacity-80">
+          ← Back to Articles
+        </Link>
 
-      <header className="mt-6">
-        <p className="text-xs font-semibold uppercase tracking-wide text-muted/70">
-          {formatArticleDate(frontmatter.date)}
-        </p>
-        <h1 className="mt-2 text-3xl font-semibold text-foreground">{frontmatter.title}</h1>
-        <p className="mt-3 text-lg text-muted">{frontmatter.dek}</p>
-      </header>
+        <header className="mt-6">
+          <p className="text-xs font-semibold uppercase tracking-wide text-muted/70">
+            {formatArticleDate(frontmatter.date)}
+          </p>
+          <h1 className="mt-2 text-3xl font-semibold text-foreground">{frontmatter.title}</h1>
+          <p className="mt-3 text-lg text-muted">{frontmatter.dek}</p>
+        </header>
 
-      <div className="mt-10 space-y-5 text-base leading-7 text-foreground/90">
-        <ReactMarkdown remarkPlugins={[remarkBreaks]} components={markdownComponents}>
-          {body}
-        </ReactMarkdown>
+        <div className="mt-10 space-y-5 text-base leading-7 text-foreground/90">
+          <ReactMarkdown remarkPlugins={[remarkBreaks]} components={markdownComponents}>
+            {body}
+          </ReactMarkdown>
+        </div>
+
+        <AuthorBioCard />
       </div>
-
-      <AuthorBioCard />
     </article>
   );
 }

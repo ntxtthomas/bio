@@ -12,13 +12,13 @@ After months of getting nowhere in this tech job market, I decided to apply the 
 
 ## How I Got Here
 
-I was laid off after more than eight years as a software engineer in EdTech. My strongest production experience is Ruby on Rails, SaaS, APIs, databases, testing, AWS and CI/CD. I expected that experience, particularly when combined with domain expertise in EdTech or my earlier career in real estate and technical sales, would translate into another role. It hasn't.
+I was laid off after more than eight years as a software engineer in EdTech. My strongest production experience is Ruby on Rails, SaaS, APIs, databases, testing, AWS and CI/CD. I expected that experience, particularly when combined with domain expertise in EdTech or my earlier career in real estate and technical sales in 3D & Haptics, would translate into another role. It hasn't.
 
 The market I returned to looked different from the one I left. System design appeared constantly. Rails roles increasingly wanted React or Hotwire. AI proficiency was showing up everywhere. So I did what seemed reasonable: I started filling gaps while continuing to apply. React. System design. AWS. CI/CD. AI-assisted development. Certifications. Interview preparation. More recently, Python. Meanwhile, I kept applying to roles that appeared strongly aligned with my experience. Still, almost nothing was converting into first-round interviews.
 
 ## The Black Box
 
-The hardest part wasn't rejection. It was that I couldn't observe the system. There were no logs, traces, or error messages. Occasionally I would be able to ask a couple of questions during a round of interviews, but aside from that there was no human feedback to learn from. A rejection email might tell me another candidate was selected, but it couldn't tell me whether my application reached a human, whether the recruiter understood the fit, whether a missing skill mattered, or whether I was ever seriously considered. The system is broken and impersonal. One recent rejection literally began, “Dear Candidate First Name,...”
+The hardest part wasn't rejection. It was that I couldn't observe the system. There were no logs, traces, or error messages. Occasionally I would be able to ask a couple of questions during a round of interviews, but aside from that there was no human feedback to learn from. A rejection email might tell me another candidate was selected, but it couldn't tell me whether my application reached a human, whether the recruiter understood the fit, whether a missing skill mattered, or whether I was ever seriously considered. The system is broken and impersonal. One recent rejection literally began, _“**Dear Candidate First Name,...**”_
 
 None of this happens in a vacuum. I'm navigating a market where listings can remain active for months, visible applicant counts can reach into the hundreds within hours, and much of the application process is automated and anonymous. At the same time, my own positioning isn't particularly simple: software engineering is only one chapter of a career that also includes technical sales, real estate, and business ownership. Any of those things could matter. The problem is that I can't yet tell which ones actually affect the outcome.
 
@@ -47,7 +47,7 @@ To begin this process I separate the knowns, assumptions, and unknowns so that I
 - I've applied to unusually high-fit positions and still been rejected before round one.
 - 51% of the roles I've applied to have scored 90% or greater using my role-fit rubric.
 - My 11 SE/Solutions applications produced one first-round interview.
-- My background appears strongest where multiple dimensions intersect: Rails/SaaS + EdTech, Rails/SaaS + PropTech, engineering + integrations.
+- My background appears strongest where multiple dimensions intersect — Rails/SaaS with EdTech or PropTech, or Solutions/Sales Engineering with EdTech, PropTech, or 3D/Haptics.
 - I've begun testing a Fit Map to make those intersections explicit.
 
 **Assumptions**
@@ -172,7 +172,8 @@ Turn possible explanations into testable predictions, then use evidence to suppo
 Examples:
 Rails + EdTech
 Rails + PropTech
-Sales Engineer/Solutions Engineer + PropTech (or EdTech) + Technical Sales Manager
+Rails + 3D/Haptics
+Solutions/Sales Engineering + EdTech, PropTech, or 3D/Haptics
 **Experiment:** Create a cohort of the next 10 unusually domain-aligned positions. Fit Map where appropriate. Tailored resume. Short human cover letter. Measure first-interview conversion separately.
 
 **H3 — Explicitly connecting my broader career should outperform making employers infer the connection.**\
