@@ -57,7 +57,7 @@ export default function AuthorBioCard() {
         <div>
           <p className="font-semibold text-foreground">Terry Thomas</p>
           <p className="mt-1 text-sm text-muted">
-            Senior Software Engineer writing about the job search from the inside.<br/>
+            Senior Software Engineer writing from the inside.<br/>
             Rails - Systems Thinking, and treating career problems like production incidents.
           </p>
           <div className="mt-3 flex flex-wrap gap-x-8 gap-y-1 text-sm">
