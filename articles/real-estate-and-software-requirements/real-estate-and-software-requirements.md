@@ -12,15 +12,15 @@ Real Estate is a commission only career. No salary, no health insurance, no guar
 
 As a newer agent I was thrilled to be helping some friends of mine buy their next home. This was a couple I'd known for a while. They were looking to move from their existing house into their next adventure. My presentation, prepared. My knowledge of the local market, informed. They were in full agreement, they both wanted to a new place to call home, and they wanted to use me to help them find it.
 
-He wanted a nice, newer upscale suburban home where he didn't have to sacrifice so many of his Saturday's repairing, maintaining, and renovating. She wanted some property out in the country, something with two to ten acres to move around on. So, according to them, my job was to help them find both. They were in full agreement on what they wanted, and what they wanted were polar opposite requests that required very different efforts. They're plan was to shop for both and when they ran across something that made sense, they'd entertain it. No timeline restrictions. Purchase price "depended" on the value they assigned to the find.
+He wanted a nice, newer upscale suburban home where he didn't have to sacrifice so many of his Saturday's repairing, maintaining, and renovating. She wanted some property out in the country, something with 2–10 acres to move around on. So, according to them, my job was to help them find both. They were in full agreement on what they wanted, and what they wanted were polar opposite requests that required very different efforts. Their plan was to shop for both and when they ran across something that made sense, they'd entertain it. No timeline restrictions. Purchase price "depended" on the value they assigned to the find.
 
 Four months later, after spending countless hours showing them homes and properties, researching the market, drawing up estimates on "what if" scenarios, I handed them off to another agent. I had burned out. There was no end in sight to this journey. I had dedicated all that time, energy, and gas in my car towards helping my friends and had nothing to show for it, and no idea how much further I had to go to reach the finish line. Four months, focused on one client, with nothing to show for it but being burned out. That four months really meant eight months... because it was another four months before I earned a commission again.
 
 So, _how did this happen? What went wrong? And what does this all have to do with engineering?_
 
-Here's where I'll start... with a reflection on this transaction with my friends. I was a newer agent and hadn't been burned like this yet. I didn't smell the warnings. There were several things wrong with how I handled this that could have been prevented. Here are just a few:
+Here's where I'll start... with a reflection on this transaction with my friends. I was a newer agent and hadn't been burned like this yet. I didn't smell the warnings. There were several things wrong with how I handled this that could have prevented this situation, and here are just a few.
 
-The request to help them shop for two very different types of homes tells me they weren't ready to buy. I miss read that. I saw what I wanted to see. One of the consequences for me would be that I'd be working twice as hard for, at best, half pay. In retrospect, I should not have been so eager to start the production line, at least not until I had flushed out some better idea of what they were really looking for.
+The request to help them shop for two very different types of homes tells me they weren't ready to buy. I miss read that. I saw what I wanted to see. One of the consequences for me would be that I'd be working twice as hard for, at best, half the pay. In retrospect, I should not have been so eager to start the production line, at least not until I had flushed out some better idea of what they were really looking for.
 
 Even proceeding with the two different types of property goals, I didn't take the time to drill down. To get specific about each of their goals. To maybe discover what was driving them, what their priorities were, or what they were willing to trade-off.
 
@@ -43,7 +43,7 @@ There are further, if not more important parallels between the real estate examp
 
 - **No prioritization**. Must-have versus nice-to-have versus preference isn't established.
 
-- **No tradeoffs**. Acreage, maintenance, location, price, age, commute, amenities—something eventually has to give.
+- **No tradeoffs**. Acreage, maintenance, location, price, age, commute, amenities,... something eventually has to give.
 
 - **No definition of done**. “We'll know it when we see it” is a terrifying project specification.
 
