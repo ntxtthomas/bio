@@ -1,10 +1,12 @@
 ---
 title: "What Real Estate Taught Me About Software Requirements"
-dek: "Buyers Agent Beware"
+dek: "Don't implement the request until you understand the problem."
 slug: "real-estate-and-software-requirements"
 date: "2026-9-4"
 hero: "/articles/real-estate-and-software-requirements/hero.webp"
 ---
+
+![Real Estate](/articles/real-estate-and-software-requirements/real-estate.webp)
 
 Real Estate is a commission only career. No salary, no health insurance, no guarantee that the work you put in will ever be compensated. Generally speaking, you have to find your own clients as well and without that you're not earning any income at all.
 
@@ -14,7 +16,7 @@ He wanted a nice, newer upscale suburban home where he didn't have to sacrifice 
 
 Four months later, after spending countless hours showing them homes and properties, researching the market, drawing up estimates on "what if" scenarios, I handed them off to another agent. I had burned out. There was no end in sight to this journey. I had dedicated all that time, energy, and gas in my car towards helping my friends and had nothing to show for it, and no idea how much further I had to go to reach the finish line. Four months, focused on one client, with nothing to show for it but being burned out. That four months really meant eight months... because it was another four months before I earned a commission again.
 
-So, how did this happen? What went wrong? And what does this all have to do with engineering?
+So, _how did this happen? What went wrong? And what does this all have to do with engineering?_
 
 Here's where I'll start... with a reflection on this transaction with my friends. I was a newer agent and hadn't been burned like this yet. I didn't smell the warnings. There were several things wrong with how I handled this that could have been prevented. Here are just a few:
 
@@ -47,7 +49,9 @@ There are further, if not more important parallels between the real estate examp
 
 - **Cost of ambiguity**. The clients weren't paying for ambiguity as it accumulated. I was. That's an especially interesting parallel to engineering organizations, because somebody always pays for unresolved requirements eventually.
 
-And finally, requirements discovery isn't order taking. A bad buyer's agent can hear, “Show me suburban homes and country properties", and respond with, “Absolutely.” A better one starts asking questions. Likewise, an engineer can receive, “Build this feature”, and start typing. Or they can ask, "What are we actually trying to accomplish?"
+In my case, these resulted from the same original failure. I began execution before I understood the problem well enough to know what success meant. My clients weren't wrong and they were under no obligation to understand their own requirements and express them in a way that made things clear to me. Discovery was my job. A buyer's agent who merely takes search parameters and opens doors isn't providing much professional judgment. An engineer who merely takes feature requests and converts them into code may be doing something analogous, particularly now that AI can perform more and more of the mechanical conversion from specification to implementation.
+
+My mistake wasn't that I failed to find the right house. My mistake happened before I ever opened the MLS. I started searching before I understood what problem I was trying to solve. Software projects can fail the same way. We can write perfectly good code, satisfy every ticket, pass every test, and still discover that we've faithfully built the wrong thing. Requirements discovery isn't order taking. The request is where the conversation starts.
 
 ## Social Teasers
 
