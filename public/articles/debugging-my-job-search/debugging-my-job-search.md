@@ -2,7 +2,7 @@
 title: "Debugging My Job Search"
 dek: "How I stopped treating my job search like a black box and started treating it like a broken build."
 slug: "debugging-my-job-search"
-date: "2026-9-5"
+date: "2026-8-28"
 hero: "/articles/debugging-my-job-search/tthomas_3.webp"
 ---
 
@@ -49,6 +49,7 @@ To begin this process I separate the knowns, assumptions, and unknowns so that I
 - My 11 SE/Solutions applications produced one first-round interview.
 - My background appears strongest where multiple dimensions intersect — Rails/SaaS with EdTech or PropTech, or Solutions/Sales Engineering with EdTech, PropTech, or 3D/Haptics.
 - I've begun testing a Fit Map to make those intersections explicit.
+- The dependency on somebody else's hiring process has become a risk in its own right.
 
 **Assumptions**
 In the absence of a feedback loop or meaningful observability, I've found myself guessing at causes. “The market is dead” certainly feels true from where I'm sitting, but that's an observation about response rate, not an explanation. Other explanations I've entertained:
@@ -90,7 +91,7 @@ Some of these may be true but they haven't been isolated yet.
 6. Does domain-alignment improve conversion?
    _Some evidence has supported this but sample size is small._
 
-7. Does different acquisition channels materially change conversion?
+7. Do different acquisition channels materially change conversion?
    _I don't have enough controlled data._
 
 8. Is my problem qualification, differentiation, discoverability, positioning, market selection, or some combination?
@@ -191,7 +192,7 @@ A generic recruiter may see career changes. A well aligned domain-amplified comp
 
 This is where it gets experimental, where I want this to become operational rather than philosophical.
 
-**DIVIDE & CONQUER**\
+**DIVIDE & CONQUER**
 Break a large problem into smaller, independently observable parts.
 
 For the next 30 days, I'm not simply “looking for a job.” I'm running a job-search experiment. I've added additional analytics to my Career Intelligence application and I'm treating every application like a test case, (inputs, lane, expected outcome, actual outcome).

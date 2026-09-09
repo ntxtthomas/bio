@@ -21,7 +21,7 @@ const certs: Cert[] = [
     name: 'GitHub Actions',
     code: 'GH-200',
     issuer: 'GitHub',
-    color: 'bg-slate-50 border-slate-200 text-slate-800',
+    color: 'bg-white border-slate-200 text-slate-800',
     timeline: 'Oct 2026',
   },
   {
