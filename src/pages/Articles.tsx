@@ -35,16 +35,20 @@ export default function Articles() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-100 px-6 py-16">
-      <div className="mx-auto max-w-3xl">
-        <h1 className="text-3xl font-semibold text-foreground">Articles</h1>
+    <div className="min-h-screen bg-slate-100 pb-16">
+      <div className="w-full bg-[radial-gradient(circle_at_15%_20%,rgba(56,189,248,0.22),transparent_32%),radial-gradient(circle_at_85%_0%,rgba(16,185,129,0.2),transparent_35%),linear-gradient(145deg,#020617,#0f172a_45%,#111827)] px-6 py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="text-3xl font-semibold text-white text-foreground">Articles</h1>
 
-        {loading && <p className="mt-6 text-sm text-muted">Loading…</p>}
+          {loading && <p className="mt-6 text-white text-sm text-muted">Loading…</p>}
 
-        {!loading && articles.length === 0 && (
-          <p className="mt-6 text-sm text-muted">No articles yet.</p>
-        )}
+          {!loading && articles.length === 0 && (
+            <p className="mt-6 text-white text-sm text-muted">No articles yet.</p>
+          )}
+        </div>
+      </div>
 
+      <div className="mx-auto max-w-3xl px-6">
         <ul className="mt-8 flex flex-col">
           {articles.map(({ slug, frontmatter }) => (
             <li key={slug} className="border-b-[0.5px] border-border py-6 first:pt-0 last:border-b-0">
