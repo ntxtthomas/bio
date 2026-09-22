@@ -46,7 +46,6 @@ To begin this process I separate the knowns, assumptions, and unknowns so that I
 - I've applied across junior/mid/senior SWE roles, predominantly Rails/backend/full-stack.
 - I've applied to unusually high-fit positions and still been rejected before round one.
 - 51% of the roles I've applied to have scored 90% or greater using my role-fit rubric.
-- My 11 SE/Solutions applications produced one first-round interview.
 - My background appears strongest where multiple dimensions intersect — Rails/SaaS with EdTech or PropTech, or Solutions/Sales Engineering with EdTech, PropTech, or 3D/Haptics.
 - I've begun testing a Fit Map to make those intersections explicit.
 - The dependency on somebody else's hiring process has become a risk in its own right.
@@ -55,19 +54,11 @@ To begin this process I separate the knowns, assumptions, and unknowns so that I
 In the absence of a feedback loop or meaningful observability, I've found myself guessing at causes. “The market is dead” certainly feels true from where I'm sitting, but that's an observation about response rate, not an explanation. Other explanations I've entertained:
 
 - Rails is too narrow.
-- Senior expectations have moved beyond my experience.
 - AI has commoditized software engineers.
-- My lack of modern frontend depth is hurting me.
-- My lack of system design depth is hurting me.
-- My lack of Python is hurting me.
 - My resume doesn't differentiate me.
 - ATS is filtering me.
-- Recruiters aren't understanding my career throughline.
-- Being unemployed is hurting me.
-- Age is hurting me.
-- My lack of a formal degree is hurting me.
+- Recruiters aren't understanding my career through line.
 - There are simply too many qualified applicants.
-- Remote-only competition is overwhelming.
 
 Some of these may be true but they haven't been isolated yet.
 
@@ -202,7 +193,7 @@ Rather than treating every opportunity as part of one giant job market, I'm divi
 A — Software Engineering → Keep pursuing the work I'm demonstrably qualified to do today.\
 B — Sales Engineer / Solutions Engineer → Continue testing this part of my earlier career without treating it as a “transition.”\
 C — Data Engineering → Begin exposing myself to roles and assessing the actual gaps while learning Python.\
-D — Entry-Level Product Management → Test whether my engineering, business, customer, and product-adjacent experience translates into an entry point on the Product side.
+D — Adjacent Roles → Test whether my engineering, business, customer, and product-adjacent experience translates into an entry point with adjacent roles.
 
 I'm also separating career lane from domain match. Those aren't the same variable. A Software Engineering role at an EdTech company and a Sales Engineering role at that same company belong to different career lanes, but both benefit from my prior EdTech experience. So I'm tracking domain alignment independently as None, Adjacent, Direct, or Deep. That lets me test whether one career lane actually performs better, whether domain experience is the stronger signal, or whether there's an interaction between the two.
 
