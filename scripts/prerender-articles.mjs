@@ -52,11 +52,15 @@ function buildHead(frontmatter, slug) {
 
   return `<title>${title} — Terry Thomas</title>
     <meta name="description" content="${dek}" />
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${dek}" />
     <meta property="og:image" content="${heroUrl}" />
     <meta property="og:url" content="${pageUrl}" />
-    <meta name="twitter:card" content="summary_large_image" />`;
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${title}" />
+    <meta name="twitter:description" content="${dek}" />
+    <meta name="twitter:image" content="${heroUrl}" />`;
 }
 
 async function main() {
@@ -69,7 +73,10 @@ async function main() {
     const { data: frontmatter } = matter(raw);
 
     const head = buildHead(frontmatter, slug);
-    const html = template.replace(/<title>.*<\/title>/, () => head);
+    // Replace everything from <title> through the closing </head> tag so the
+    // sitewide description/og/twitter meta tags don't linger duplicated below
+    // the per-article ones.
+    const html = template.replace(/<title>[\s\S]*?<\/head>/, () => `${head}\n  </head>`);
 
     const outDir = path.join(distDir, 'articles', slug);
     await mkdir(outDir, { recursive: true });
