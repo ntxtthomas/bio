@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import headshot from '../assets/tthomas_3.png';
+import headshot from '../assets/tthomas_3.webp';
 import { getMeetTerryMediaConfig } from '../utils/meetTerry';
 import ResumeDownload from './ResumeDownload';
 
