@@ -11,11 +11,74 @@ interface Cert {
 
 const certs: Cert[] = [
   {
+    name: 'Critical Thinking for Software Engineers',
+    code: '',
+    issuer: 'LinkedIn Learning',
+    href: 'https://www.linkedin.com/learning/certificates/e9d4fb4684b29e76543b49005273759e7069e0c9a0348b1da207df0ddf984f81',
+    year: '2026',
+    color: 'bg-white border-slate-200 text-slate-800',
+    timeline: 'Feb 2026',
+  },
+  {
+    name: 'Problem Solving Techniques',
+    code: '',
+    issuer: 'LinkedIn Learning',
+    href: 'https://www.linkedin.com/learning/certificates/deb25427509904125f08b9742641b745a85148451b239e13b045bcb848d77d0c',
+    year: '2026',
+    color: 'bg-white border-slate-200 text-slate-800',
+    timeline: 'Feb 2026',
+  },
+  {
+    name: 'React.js: Building an Interface',
+    code: '',
+    issuer: 'LinkedIn Learning',
+    href: 'https://www.linkedin.com/in/ntxtthomas/overlay/Certifications/602999517/treasury?profileId=ACoAAAJeqOABtxiXEcxQoiDBCSTohl-8UCqomeE',
+    year: '2025',
+    color: 'bg-white border-slate-200 text-slate-800',
+    timeline: 'Dec 2025',
+  },
+  {
+    name: 'React Essential Training',
+    code: '',
+    issuer: 'LinkedIn Learning',
+    href: 'https://www.linkedin.com/in/ntxtthomas/overlay/Certifications/602883311/treasury/?profileId=ACoAAAJeqOABtxiXEcxQoiDBCSTohl-8UCqomeE',
+    year: '2025',
+    color: 'bg-white border-slate-200 text-slate-800',
+    timeline: 'Nov 2025',
+  },
+  {
+    name: 'PostgreSQL Essential Training',
+    code: '',
+    issuer: 'LinkedIn Learning',
+    href: 'https://www.linkedin.com/in/ntxtthomas/overlay/Certifications/1642196214/treasury/?profileId=ACoAAAJeqOABtxiXEcxQoiDBCSTohl-8UCqomeE',
+    year: '2025',
+    color: 'bg-white border-slate-200 text-slate-800',
+    timeline: 'Aug 2025',
+  },
+    {
+    name: 'PHP: Object-Oriented Programming',
+    code: '',
+    issuer: 'LinkedIn Learning',
+    href: 'https://www.linkedin.com/in/ntxtthomas/overlay/Certifications/421671076/treasury?profileId=ACoAAAJeqOABtxiXEcxQoiDBCSTohl-8UCqomeE',
+    year: '2025',
+    color: 'bg-white border-slate-200 text-slate-800',
+    timeline: 'May 2025',
+  },
+  {
+    name: 'PHP Essential Training',
+    code: '',
+    issuer: 'LinkedIn Learning',
+    href: 'https://www.linkedin.com/in/ntxtthomas/overlay/Certifications/1642196214/treasury/?profileId=ACoAAAJeqOABtxiXEcxQoiDBCSTohl-8UCqomeE',
+    year: '2025',
+    color: 'bg-white border-slate-200 text-slate-800',
+    timeline: 'April 2025',
+  },
+  {
     name: 'AWS Certified Solutions Architect',
     code: 'SAA-C03',
     issuer: 'Amazon Web Services',
     color: 'bg-white border-slate-200 text-slate-800',
-    timeline: 'Oct 2026',
+    timeline: 'Dec 2026',
   },
   {
     name: 'GitHub Actions',
@@ -39,7 +102,7 @@ const completed = certs.filter((c) => c.year);
 
 export default function Certifications() {
   return (
-    <section className="bg-slate-50 py-16">
+    <section id="credentials" className="bg-slate-50 py-16">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
           Credentials
@@ -73,15 +136,15 @@ export default function Certifications() {
           </div>
         </div>
 
-        {/* Education / Completed */}
+        {/* Completed */}
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-wide text-slate-400">
-            Education
+            Completed
           </p>
           <div className="grid gap-4">
             {completed.map(({ name, code, issuer, color, href, year, language }) => {
               const inner = (
-                <div className={`rounded-xl border p-5 transition-all ${color} ${href ? 'hover:shadow-md' : ''}`}>
+                <div className={`rounded-xl border p-5 transition-all ${color} ${href ? 'hover:shadow-md hover:border-slate-300 hover:bg-slate-50' : ''}`}>
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <p className="font-semibold">{name}</p>

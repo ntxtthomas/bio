@@ -10,6 +10,18 @@ export default function Layout() {
             Terry Thomas
           </Link>
           <nav>
+            <Link to={{ pathname: '/', hash: '#about' }} 
+              className="mr-12 text-sm font-medium text-muted transition-colors hover:text-accent">
+              About Me
+            </Link>
+            <Link to={{ pathname: '/', hash: '#portfolio' }} 
+              className="mr-12 text-sm font-medium text-muted transition-colors hover:text-accent">
+              Portfolio
+            </Link>
+            <Link to={{ pathname: '/', hash: '#credentials' }} 
+              className="mr-12 text-sm font-medium text-muted transition-colors hover:text-accent">
+              Credentials
+            </Link>      
             <Link
               to="/articles"
               className="text-sm font-medium text-muted transition-colors hover:text-accent"
