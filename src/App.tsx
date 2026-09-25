@@ -11,10 +11,19 @@ import LensesProjectPage from './pages/Lenses';
 import ProfessionalStory from './components/ProfessionalStory';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
+    if (hash) {
+      const frame = requestAnimationFrame(() => {
+        document.getElementById(hash.slice(1))?.scrollIntoView({
+          behavior: 'smooth',
+        });
+      });
+      return () => cancelAnimationFrame(frame);
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 }
 
