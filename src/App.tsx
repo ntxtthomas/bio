@@ -48,8 +48,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/:slug" element={<Article />} />
+          <Route path="/lenses" element={<LensesProjectPage />} />
         </Route>
-        <Route path="/lenses" element={<LensesProjectPage />} />
       </Routes>
     </BrowserRouter>
   );
