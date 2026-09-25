@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Links() {
   return (
-    <section className="bg-slate-50 py-16">
+    <section id="portfolio" className="bg-slate-50 py-16">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
           Featured Engineering Work
@@ -12,10 +12,10 @@ export default function Links() {
         </p>
         <div className="grid gap-5 sm:grid-cols-2">
 
-        {/* Live passion projetct */}
+        {/* Live passion project */}
           <Link
             to="/lenses"
-            className="group flex flex-col rounded-2xl border border-indigo-100 bg-white p-7 shadow-sm transition-all hover:border-indigo-300 hover:shadow-md"
+            className="group flex flex-col rounded-2xl border border-indigo-100 bg-white p-7 shadow-sm transition-all hover:border-indigo-300 hover:shadow-md hover:bg-slate-50"
           >
             <div className="flex items-start justify-between gap-4">
               <span className="inline-block rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-600">
@@ -42,7 +42,7 @@ export default function Links() {
               HITL AI orchestration, from concept to code.  
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {['Ruby on Rails', 'AI Context Engineering'].map((tag) => (
+              {['Ruby on Rails', 'AI Context Engineering', 'AWS'].map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500"
@@ -52,12 +52,13 @@ export default function Links() {
               ))}
             </div>
           </Link>
+
           {/* Live demo card */}
           <a
             href="https://mycareerintel.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col rounded-2xl border border-indigo-100 bg-white p-7 shadow-sm transition-all hover:border-indigo-300 hover:shadow-md"
+            className="group flex flex-col rounded-2xl border border-indigo-100 bg-white p-7 shadow-sm transition-all hover:border-indigo-300 hover:shadow-md hover:bg-slate-50"
           >
             <div className="flex items-start justify-between gap-4">
               <span className="inline-block rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-600">
@@ -83,7 +84,7 @@ export default function Links() {
               benchmark roles, and make data-driven career decisions.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {['React', 'Ruby on Rails', 'Hotwire', 'REST API'].map((tag) => (
+              {['Ruby on Rails', 'Hotwire', 'PostgreSQL', 'AWS'].map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500"
@@ -99,7 +100,7 @@ export default function Links() {
             href="https://github.com/ntxtthomas/career_intelligence/#career-intelligence"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:border-slate-400 hover:shadow-md"
+            className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:border-slate-400 hover:shadow-md hover:bg-slate-50"
           >
             <div className="flex items-start justify-between gap-4">
               <span className="inline-block rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600">
@@ -137,7 +138,7 @@ export default function Links() {
             href="https://github.com/ntxtthomas/measurement#readme"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:border-slate-400 hover:shadow-md"
+            className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:border-slate-400 hover:shadow-md hover:bg-slate-50"
           >
             <div className="flex items-start justify-between gap-4">
               <span className="inline-block rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600">

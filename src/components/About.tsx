@@ -36,7 +36,7 @@ export default function About() {
   };
 
   return (
-    <section className="bg-white py-16">
+    <section id="about" className="bg-white py-16">
       <div className="mx-auto max-w-4xl px-6">
 
         <div className="text-justify text-base leading-relaxed text-slate-700">

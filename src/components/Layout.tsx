@@ -10,6 +10,24 @@ export default function Layout() {
             Terry Thomas
           </Link>
           <nav>
+            <a
+              href="#about"
+              className="mr-12 text-sm font-medium text-muted transition-colors hover:text-accent"
+            >
+              About Me
+            </a>
+            <a
+              href="#portfolio"
+              className="mr-12 text-sm font-medium text-muted transition-colors hover:text-accent"
+            >
+              Portfolio
+            </a>
+            <a
+              href="#credentials"
+              className="mr-12 text-sm font-medium text-muted transition-colors hover:text-accent"
+            >
+              Credentials
+            </a>      
             <Link
               to="/articles"
               className="text-sm font-medium text-muted transition-colors hover:text-accent"
