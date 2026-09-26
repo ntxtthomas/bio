@@ -40,7 +40,7 @@ export default function About() {
       <div className="mx-auto max-w-4xl px-6">
 
         <div className="text-justify text-base leading-relaxed text-slate-700">
-          <p className="mb-4">
+          <p className="mt-6 mb-4">
             Work is one part of my story. Outside of role titles, I care about the habits and values that
             carry across every chapter: being useful, staying accountable, and treating people with respect.
           </p>
@@ -54,7 +54,7 @@ export default function About() {
         {/* Divider */}
         <div className="my-8 flex items-center gap-4">
           <div className="h-px flex-1 bg-slate-100" />
-          <span className="text-xs font-semibold uppercase tracking-widest text-slate-300">
+          <span className="text-xs font-semibold uppercase tracking-widest text-slate-400">
             Outside the keyboard
           </span>
           <div className="h-px flex-1 bg-slate-100" />
