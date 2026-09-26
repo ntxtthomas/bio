@@ -129,7 +129,7 @@ export default function ProfessionalStory() {
 
   return (
     <section className="bg-slate-100 py-16">
-      <div className="mx-auto max-w-4xl px-6">
+      <div className="mx-auto mt-6 max-w-4xl px-6">
         <h2 className="text-center text-xs font-semibold uppercase tracking-widest text-slate-500">
           Career Story
         </h2>
