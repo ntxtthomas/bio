@@ -49,7 +49,7 @@ export default function Articles() {
       </div>
 
       <div className="mx-auto max-w-3xl px-6">
-        <ul className="mt-8 flex flex-col">
+        <ul className="mt-12 flex flex-col">
           {articles.map(({ slug, frontmatter }) => (
             <li key={slug} className="border-b-[0.5px] border-border py-6 first:pt-0 last:border-b-0">
               <Link to={`/articles/${slug}`} className="group block">

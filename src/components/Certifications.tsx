@@ -104,7 +104,7 @@ export default function Certifications() {
   return (
     <section id="credentials" className="bg-slate-50 py-16">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
+        <h2 className="mb-3 mt-6 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
           Credentials
         </h2>
         <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-7 text-slate-600">

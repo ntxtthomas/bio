@@ -1,13 +1,72 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import headshot from '../assets/tthomas_3.webp';
 import { getMeetTerryMediaConfig } from '../utils/meetTerry';
+import { trackPosthogEvent } from '../utils/posthog';
 import ResumeDownload from './ResumeDownload';
+
+const VIDEO_PROGRESS_MILESTONES = [50, 90];
 
 export default function Hero() {
   const mediaConfig = useMemo(() => getMeetTerryMediaConfig(), []);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const trackedSectionView = useRef(false);
+  const trackedVideoPlay = useRef(false);
+  const trackedVideoMilestones = useRef(new Set<number>());
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || trackedSectionView.current) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || trackedSectionView.current) return;
+
+      trackedSectionView.current = true;
+      trackPosthogEvent('meet_terry_section_view', {
+        lens: 'engineer',
+        has_video: Boolean(mediaConfig.videoUrl),
+      });
+      observer.disconnect();
+    }, { threshold: 0.35 });
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, [mediaConfig.videoUrl]);
+
+  const handleVideoPlay = () => {
+    if (trackedVideoPlay.current) return;
+
+    trackedVideoPlay.current = true;
+    trackPosthogEvent('meet_terry_video_play', {
+      lens: 'engineer',
+      video_url: mediaConfig.videoUrl || 'unset',
+    });
+  };
+
+  const handleVideoTimeUpdate = (video: HTMLVideoElement) => {
+    if (!Number.isFinite(video.duration) || video.duration <= 0) return;
+
+    const watchedPercent = Math.round((video.currentTime / video.duration) * 100);
+    VIDEO_PROGRESS_MILESTONES.forEach((milestone) => {
+      if (watchedPercent >= milestone && !trackedVideoMilestones.current.has(milestone)) {
+        trackedVideoMilestones.current.add(milestone);
+        trackPosthogEvent('meet_terry_video_progress', {
+          lens: 'engineer',
+          milestone,
+          watched_percent: watchedPercent,
+        });
+      }
+    });
+  };
+
+  const handleVideoComplete = () => {
+    trackPosthogEvent('meet_terry_video_complete', {
+      lens: 'engineer',
+      video_url: mediaConfig.videoUrl || 'unset',
+    });
+  };
 
   return (
-    <section className="bg-[radial-gradient(circle_at_15%_20%,rgba(56,189,248,0.22),transparent_32%),radial-gradient(circle_at_85%_0%,rgba(16,185,129,0.2),transparent_35%),linear-gradient(145deg,#020617,#0f172a_45%,#111827)] px-6 py-16 text-white sm:py-20">
+    <section ref={sectionRef} className="bg-[radial-gradient(circle_at_15%_20%,rgba(56,189,248,0.22),transparent_32%),radial-gradient(circle_at_85%_0%,rgba(16,185,129,0.2),transparent_35%),linear-gradient(145deg,#020617,#0f172a_45%,#111827)] px-6 py-16 text-white sm:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-slate-900/50 p-6 shadow-[0_32px_90px_-40px_rgba(14,165,233,0.45)] backdrop-blur-md sm:p-8">
           <div className="absolute -right-20 top-8 h-48 w-48 rounded-full bg-cyan-300/10 blur-3xl" aria-hidden="true" />
@@ -23,6 +82,9 @@ export default function Hero() {
                     preload="metadata"
                     poster={headshot}
                     className="block aspect-video w-full bg-black"
+                    onPlay={handleVideoPlay}
+                    onTimeUpdate={(event) => handleVideoTimeUpdate(event.currentTarget)}
+                    onEnded={handleVideoComplete}
                   >
                     <source src={mediaConfig.videoUrl} />
                   </video>

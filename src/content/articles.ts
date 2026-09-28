@@ -4,4 +4,6 @@
 // to this array — both the Articles index page and the build-time prerender
 // step (scripts/prerender-articles.mjs) read from this list.
 export const articleSlugs: string[] = ['debugging-my-job-search', 
-                                        'real-estate-and-software-requirements'];
+                                        'real-estate-and-software-requirements', 
+                                        'how-we-decide-what-to-build',
+                                      ];
