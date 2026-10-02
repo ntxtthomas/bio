@@ -11,9 +11,9 @@ export interface ResumeVariant {
 export function getResumeVariant(_lens: CareerLens): ResumeVariant {
   return {
     title: 'Download Resume',
-    preferredPath: assetPath('terry_thomas_software_engineer_2610a.pdf'),
+    preferredPath: assetPath('terry_thomas_software_engineer_2610a2.pdf'),
     fallbackPath: assetPath('resume.pdf'),
-    downloadFileName: 'terry_thomas_software_engineer_2610a.pdf',
+    downloadFileName: 'terry_thomas_software_engineer_2610a2.pdf',
   };
 }
 
