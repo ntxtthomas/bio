@@ -5,5 +5,5 @@
 // step (scripts/prerender-articles.mjs) read from this list.
 export const articleSlugs: string[] = ['debugging-my-job-search', 
                                         'real-estate-and-software-requirements', 
-                                        'how-we-decide-what-to-build',
+                                        // 'how-we-decide-what-to-build',
                                       ];
